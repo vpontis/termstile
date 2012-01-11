@@ -1,0 +1,20 @@
+Education
+	Elementary assignments that are easy to automate
+	Search engine for OCW classes
+	Auto study guide maker
+		Take data from quizlet - Andrew Sutherland
+		Make flashcards
+			
+TV
+	A place where people can chat about a TV show they are watching
+	
+Politics
+	FactCheck.org - politicians submit ahead of time
+
+Other Themes
+	Running website
+	Grade calculator - what you need on the final
+	Joke blog - add in bed to fortune cookie
+	Profile aggregating 
+	A one on one helper - tutor website - how to
+	
