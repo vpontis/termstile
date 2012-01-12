@@ -1,27 +1,38 @@
-body{
-background-color:gray;
+﻿body{
+background-color: #414245;
 font-family:helvetica;
 }
 #mainbox{
-background-color:#D3D3D3;
+background-color:gray;
 border-radius: 5px;
 box-shadow: 3px 5px 5px black;
 width: 800px;
 height: 600px;
-margin-left:auto;
-margin-right:auto;
+margin: 0px auto 0px;
+position:relative;
 }
-h1{
+#topbar{
+width:800px;
+height:75px;
+background-color:green;
+border-radius: 3px;
+position:relative;
+}
+#topbar h1{
 text-align:center;
+padding-top:20px;
 }
 #login{
 float:right;
-background-color:black;
+background-color:#365883;
 border-radius: 5px;
 color:white;
+width: 120px;
+text-align: center;
+margin-right:10px;
 }
 #login:hover{
-background-color:gray;
+background-color:#black;
 }
 #instructions{
 width:310px;
@@ -51,7 +62,15 @@ font-family: helvetica;
 src: url('HelveticaWorld-Regular.ttf');
 }
 #navbar{
-background-color:black;
-border-radius: 5px;
+background-color:none;
+border-radius: 4px;
 color:white;
+width:800px;
+margin-left:auto;
+margin-right:auto;
+position:absolute;
+bottom:0;
+text-align:right;
+margin-bottom:2px;
 }
+

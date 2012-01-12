@@ -4,3 +4,6 @@ Milestone 1 - this sunday
 	Design mockups for the website
 	Submit them on Stellar
 	Guest lecture tomorrow on UI/UX
+	
+MySQL
+Download something to run PHP? Or host it on scripts?
