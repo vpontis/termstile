@@ -1,0 +1,8 @@
+after working: commit pull push
+before working: pull
+vim: 
+: before commands
+esc to enter command mode
+i to enter insert mode
+w to write
+q to quit
