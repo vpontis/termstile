@@ -1,0 +1,76 @@
+﻿body{
+background-color: #414245;
+font-family:helvetica;
+}
+#mainbox{
+background-color:gray;
+border-radius: 5px;
+box-shadow: 3px 5px 5px black;
+width: 800px;
+height: 600px;
+margin: 0px auto 0px;
+position:relative;
+}
+#topbar{
+width:800px;
+height:75px;
+background-color:green;
+border-radius: 3px;
+position:relative;
+}
+#topbar h1{
+text-align:center;
+padding-top:20px;
+}
+#login{
+float:right;
+background-color:#365883;
+border-radius: 5px;
+color:white;
+width: 120px;
+text-align: center;
+margin-right:10px;
+}
+#login:hover{
+background-color:#black;
+}
+#instructions{
+width:310px;
+height:400px;
+float:left;
+background-color:none;
+margin-right:20px;
+}
+#instructions h2{
+text-align:center;
+font-family:helvetica;
+}
+#listarea{
+width:470px;
+height:400px;
+float:left;
+background-color:none;
+}
+#list{
+margin-left:80px;
+margin-right:80px;
+margin-top:20px;
+}
+@font-face
+{
+font-family: helvetica;
+src: url('HelveticaWorld-Regular.ttf');
+}
+#navbar{
+background-color:none;
+border-radius: 4px;
+color:white;
+width:800px;
+margin-left:auto;
+margin-right:auto;
+position:absolute;
+bottom:0;
+text-align:right;
+margin-bottom:2px;
+}
+
