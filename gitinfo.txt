@@ -1,8 +1,16 @@
-after working: commit pull push
-before working: pull
-vim: 
-: before commands
-esc to enter command mode
-i to enter insert mode
-w to write
-q to quit
+Instructions for using Git/Github:
+
+Before you work: 
+	git pull
+After you work: 
+	git commit -am 'enter your message here'
+	git status (read what it says, if there are any errors, also make sure you only touched files you meant to)
+	git pull
+	git push
+	
+When the weird text editor (vim) comes up: 
+	: before commands
+	esc to enter command mode
+	i to enter insert mode
+	w to write
+	q to quit
