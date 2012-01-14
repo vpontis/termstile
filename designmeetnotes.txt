@@ -1,0 +1,27 @@
+Meeting Notes
+
+Features
+	Key terms -> study guide
+		Take a list of terms
+		Produce a study guide
+			Display on screen - popup
+				Print/save/send/download
+				Download notecards
+			Be able to download 'doc'/pdf
+	Notecard maker
+	My docs
+		Local search
+	Search for one item
+	Use autofill
+	
+Not features
+	Global search
+	
+Design 
+	Pros
+		
+	Cons
+		
+		
+Width of text no more than 30 em's
+Line spacing should be 1.2
