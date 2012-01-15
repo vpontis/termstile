@@ -1,0 +1,52 @@
+body{
+	background-color:#000000;
+	padding: 0px;
+	margin: 0px;
+}
+.header{
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 51%, #d3d3d3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#ffffff), color-stop(100%,#d3d3d3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */
+	height:80px;
+}
+.midbar{
+	background-color:#D3D3D3;
+	height: 20px;
+}
+#login{
+	background-color: #00CC33;
+	height: 25px;
+	width: 140px;
+	border-radius: 5px;
+	margin: -5px 0px 0px 0px;
+	padding: 5px 0px 0px 0px;
+	position: relative;
+	left: 860px;
+	text-align: center;
+}
+.container{
+	width:1000px;
+	height: inherit;
+	margin: 0px auto 0px;
+}
+.main{
+	background-color:#FCFCF7;
+	height: 800px;
+	
+}
+.selector{
+	width:500px;
+	background-color: #D3D3D3
+	height: 30px;
+	display: inline;
+	text-align: center;
+}
+#two{
+	position: relative;
+	left: 500px;
+}
