@@ -96,6 +96,6 @@ body{
 .bottom{
 	text-align: right;
 	height: 25px;
-	position:fixed;
-	top: 700px;
+	float: right;
+	color: blue;
 }
