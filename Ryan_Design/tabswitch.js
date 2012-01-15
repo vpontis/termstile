@@ -7,10 +7,16 @@ $(document).ready(function() {
 	});
 
 	$("#multipleTerm").click(function() {
-		$("#singlesearch").hide();
+		$(".singlesearch").hide();
 	});
 	
 	$("#singleTerm").click(function()	{
-		$("#singlesearch").show();
+		$(".singlesearch").show();
+	});
+	$("#multipleTerm").click(function(){
+		$(".multiplesearch").show();
+	});
+	$("#singleTerm").click(function(){
+		$(".multiplesearch").hide();
 	});
 });

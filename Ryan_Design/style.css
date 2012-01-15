@@ -73,6 +73,24 @@ body{
 	left: 250px;
 	border-radius: 6px;
 }
-#singlesearch{
+.singlesearch{
 	height: 200px;
+}
+.multiplesearch{
+	height: 500px;
+	display: none;
+}
+#manyTerm{
+	width: 500px;
+	height: 450px;
+	padding: 0px 10px;
+	position: relative;
+	top: 50px;
+	left: 250 px;
+	border-radius: 6px;
+}
+#submit{
+	position: relative;
+	top: 50px;
+	left: 300px;
 }
