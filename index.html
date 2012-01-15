@@ -6,22 +6,27 @@
 	<link rel=StyleSheet href="stylesheet.css" type="text/css" media=screen> 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	<script type="text/javascript">
-	divNum = 0
+	divNum = 0; //keep track of how many new elements created
 	function createBox() {
-		var boxarea = document.getElementById('boxarea');
-		var newdiv = document.createElement('div');
+		var boxArea = document.getElementById('boxArea');
+		var newDiv = document.createElement('div');
 		var divIdName = 'box' + divNum;
-		newdiv.setAttribute('id', divIdName);
-		newdiv.innerHTML = "Element Number "+divNum+ " has been added! <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
+		var searchBar = document.getElementById('searchBar')
+		newDiv.setAttribute('id', divIdName);
+		newDiv.innerHTML = searchBar.value + " Element Number "+divNum+ " has been added! <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
 		if(divNum == 0){
-			boxarea.appendChild(newdiv);
+			boxArea.appendChild(newDiv);
 		} else {
-			boxarea.insertBefore(newdiv,boxarea.firstChild);
+			
+			//boxArea.insertBefore(newDiv,boxArea.firstChild);
+			var oldDiv = document.getElementById('box' + idnum-1);
+			
+			$(newDiv).insertBefore(boxArea.firstChild).css('opacity',0.0).slideDown('slow').fadeTo(1000,1);
 		}
 		divNum += 1;
 	}
 	function removeElement(id)	{
-		boxarea.removeChild(id);
+		boxArea.removeChild(id);
 	}	
 	</script>
 </head>
@@ -37,9 +42,10 @@
 		Login | Sign Up
 		</div>
 	</div> 
+	<input type="text" placeholder="Enter your search term here." name="wikititle" id="searchBar"/>
 	<button onClick="createBox()">Click to create box</button>
 	<p id="check">This text will change.</p>
-	<div id="boxarea"></div>
+	<div id="boxArea"></div>
 </div>
 
 
