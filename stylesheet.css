@@ -1,7 +1,38 @@
-﻿body{
+﻿#topbar{
+background-color: green;
+height:100px;
+width:800px;
+padding:0px;
+position: relative;
+top: 0;
+}
+#title{
+width:800px;
+margin: 0px auto 0px;
+position:absolute;
+bottom:-5px;
+left:15px;
+}
+#login{
+position:absolute;
+right: 30px;
+top: -1px;
+background-color:blue;
+border-radius:5px;
+padding: 3px;
+}
+#mainbody{
+margin: 0px auto 0px;
+width: 800px;
+height: 1000px;
+background-color: gray;
+}
+body{
 background-color: #414245;
 font-family:helvetica;
+margin: 0px;
 }
+/*
 #mainbox{
 background-color:gray;
 border-radius: 5px;
@@ -74,3 +105,4 @@ text-align:right;
 margin-bottom:2px;
 }
 
+ */
