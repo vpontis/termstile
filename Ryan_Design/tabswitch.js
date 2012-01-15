@@ -9,14 +9,14 @@ $(document).ready(function() {
 	$("#multipleTerm").click(function() {
 		$(".singlesearch").hide();
 	});
-	
-	$("#singleTerm").click(function()	{
+
+	$("#singleTerm").click(function() {
 		$(".singlesearch").show();
 	});
-	$("#multipleTerm").click(function(){
+	$("#multipleTerm").click(function() {
 		$(".multiplesearch").show();
 	});
-	$("#singleTerm").click(function(){
+	$("#singleTerm").click(function() {
 		$(".multiplesearch").hide();
 	});
 });
