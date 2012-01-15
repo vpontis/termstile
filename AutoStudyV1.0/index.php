@@ -7,6 +7,6 @@
 		<button>Click Me</button>
 		<input type="text" id="name" />
 		<div id="wiki"></div>
-		<script type="text/javascript" src="jfunc.js"></script>
+		<script type="text/javascript" src="badrank.js"></script>
 	</body>
 </html>

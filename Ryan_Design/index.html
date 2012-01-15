@@ -1,19 +1,44 @@
 <html>
 	<head>
 		<title>Autostudy</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="tabswitch.js"></script>
+		<script type="text/javascript" src="badrank.js"></script>
 	</head>
 	<body>
-		<div class="topbar">
-			<div class="logo">
-				
-			</div>
-			<div class="login">
-				signup&nbsp;|&nbsp;login
+		<div class="header">
+			<div class="container">
+				<div id="login">
+					SIGN UP&nbsp;&nbsp;|&nbsp;LOGIN
+				</div>
 			</div>
 		</div>
-		<div class="middlebar"></div>
-		<div class="container">	
+		<div class="midbar">
+			<div class="container">
+				<div id="singleTerm" class="tab selected">
+					Instasearch
+				</div>
+				<div id="multipleTerm" class="tab">
+					Generate Guide
+				</div>
+			</div>
+		</div>
+		<div class="container subBar"></div>
+		<div class="main container">
+			<div class="singlesearch">
+				<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" />
+				<button id="submit">Go!</button>
+			</div>
+			<div class="multiplesearch">
+				<form name="many">
+					<textarea id="manyTerm" rows="45" cols="60" placeholder="Input list!"> </textarea>
+				</form>
+			</div>
+		</div>
+		<div class="bottom container">
+			about&nbsp;&nbsp;|&nbsp;&nbsp;contact&nbsp;&nbsp;|&nbsp;&nbsp;donate
 		</div>
 	</body>
 </html>
