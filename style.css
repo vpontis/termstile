@@ -5,13 +5,13 @@ body{
 }
 .header{
 	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top,  #ffffff 51%, #d3d3d3 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#ffffff), color-stop(100%,#d3d3d3)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* IE10+ */
-	background: linear-gradient(top,  #ffffff 51%,#d3d3d3 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top,  #ffffff 30%, #BBBBBB 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%,#ffffff), color-stop(100%,#BBBBBB)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 30%,#BBBBBB 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 30%,#BBBBBB 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 30%,#BBBBBB 100%); /* IE10+ */
+	background: linear-gradient(top,  #ffffff 30%,#BBBBBB 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#BBBBBB',GradientType=0 ); /* IE6-9 */
 	height:80px;
 }
 .midbar{
@@ -39,14 +39,40 @@ body{
 	height: 800px;
 	
 }
-.selector{
-	width:500px;
-	background-color: #D3D3D3
+.midbar{
 	height: 30px;
-	display: inline;
+	background-color: #999999;
+}
+.tab{
+	width:500px;
+	background-color: #999999;
+	height: 30px;
 	text-align: center;
 }
-#two{
+#multipleTerm{
 	position: relative;
+	bottom: 30px;
 	left: 500px;
+}
+
+.selected{
+	background-color:#FCFCF7;
+}
+#oneTerm{
+	background: url('button.png') repeat-x;
+	color:#888;
+	border: 1px solid #ccc;
+	font-family: Cantarell, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	width: 500px;
+	height: 35px;
+	padding: 0 10px;
+	position:relative;
+	top: 50px;
+	left: 250px;
+	border-radius: 6px;
+}
+#singlesearch{
+	height: 200px;
 }
