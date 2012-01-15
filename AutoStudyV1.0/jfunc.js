@@ -5,21 +5,23 @@ $(document).ready(function(){
 			console.log(data);
 			var id = data.query.pageids[0];
 			var text = data.query.pages[id].revisions[0]['*'];
-			var patt = /<ref[\s\S]*?<\/ref>|<[\s\S]*?>|{{[^{]*?}}/gim;
+			var patt = new RegExp("<ref[\s\S*?>[\s\S]*?</ref>|<[\s\S]*?>|{{[^{]*?}}","im");
 			while(patt.test(text))
 			{
 				text = text.replace(patt,"");
 			}
 			var beginning = text.substring(0,text.indexOf("=="));
-			var sentenceSplitter = /\s+(?=[\.\!\?])(?!\.rM|\.srM|\.sM|\.rJ|\.rD|\.forP|\.rS|\.A|\.B|\.C|\.D|\.E|\.F|\.G|\.H|\.I|\.J|\.K|\.L|\.M|\.N|\.O|\.P|\.Q|\.R|\.S|\.T|\.U|\.V|\.W|\.X|\.Y|\.Z)/gm;
+			var sentenceSplitter = /\s+(?=[\.\!\?]|[\'\"][\.\!\?])(?!\.rM|\.srM|\.sM|\.rJ|\.rD|\.forP|\.rS|\.[A-Z]\s)/gm;
 			var sentences = beginning.split("").reverse().join("").split(sentenceSplitter);
 			var map = new Array();
+			for(var i=0; i<sentences.length; i++){
+				sentences[i] = sentences[i].split("").reverse().join("");
+			}
+			sentences = sentences.reverse();
 			for(var i=0; i<sentences.length; i++)
 			{
-				sentences[i]=sentences[i].split("").reverse().join("");
 				map[sentences[i].replace(/\[\[[^\[]*?\||\[\[|\]\]/gim,"")] = rankSentences(sentences[i],text);
 			}
-			map.sort(sortNumber);
 			var count = 0;
 			var answer = "";
 			var bestRanks = new Array(0,0,0);
@@ -64,10 +66,7 @@ function rankSentences(sentence, text){
 			var patt = new RegExp(linkWords[i],"gi");
 			rank+= text.match(patt).length;
 		}
+		return rank/Math.sqrt(linkWords.length);
 	}
-	return rank;
-}
-
-function sortNumber(a,b){
-	return b - a;
+	else return rank;
 }

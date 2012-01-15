@@ -6,8 +6,6 @@
 	<body>
 		<button>Click Me</button>
 		<input type="text" id="name" />
-		<div id="name_feedback">
-		</div>
 		<div id="wiki"></div>
 		<script type="text/javascript" src="jfunc.js"></script>
 	</body>
