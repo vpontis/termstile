@@ -11,9 +11,11 @@ function createBox() {
 	} else {
 		
 		//boxArea.insertBefore(newDiv,boxArea.firstChild);
-		var oldDiv = document.getElementById('box' + idnum-1);
+		//var oldDiv = document.getElementById('box' + idnum-1);
 		
-		$(newDiv).insertBefore(boxArea.firstChild).css('opacity',0.0).slideDown('slow').fadeTo(1000,1);
+		$(newDiv).insertBefore(boxArea.firstChild)
+			.css('opacity','0.0')
+			.fadeTo(1000,1);
 	}
 	divNum += 1;
 }

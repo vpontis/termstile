@@ -6,6 +6,7 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="tabswitch.js"></script>
 		<script type="text/javascript" src="badrank.js"></script>
+		<script type="text/javascript" src="boxes.js"></script>
 	</head>
 	<body>
 		<div class="header">
@@ -29,7 +30,10 @@
 		<div class="main container">
 			<div class="singlesearch">
 				<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" />
-				<button id="submit">Go!</button>
+				<button id="submit" onClick="createBox()">Go!</button>
+				
+				<div id="boxArea" style="position:relative; top:50px; right:-10px;">
+				</div>
 			</div>
 			<div class="multiplesearch">
 				<form name="many">
