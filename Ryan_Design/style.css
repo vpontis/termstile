@@ -25,8 +25,7 @@ body{
 	border-radius: 5px;
 	margin: -5px 0px 0px 0px;
 	padding: 5px 0px 0px 0px;
-	position: relative;
-	left: 860px;
+	float: right;
 	text-align: center;
 }
 .container{
@@ -36,7 +35,7 @@ body{
 }
 .main{
 	background-color:#FCFCF7;
-	height: 800px;
+	height: 650px;
 	
 }
 .midbar{
@@ -93,4 +92,10 @@ body{
 	position: relative;
 	top: 50px;
 	left: 300px;
+}
+.bottom{
+	text-align: right;
+	height: 25px;
+	position:fixed;
+	top: 700px;
 }
