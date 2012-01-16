@@ -8,17 +8,14 @@ function createBox() {
 	newDiv.setAttribute('id', divIdName);
 	newDiv.innerHTML = text + " " + searchBar.value + " Element Number "+divNum+ " has been added! <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
 	if(divNum == 0){
+		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
 	} else {
-		
-		//boxArea.insertBefore(newDiv,boxArea.firstChild);
-		//var oldDiv = document.getElementById('box' + idnum-1);
-		
 		$(newDiv).insertBefore(boxArea.firstChild)
-			.css('opacity','0.0')
-			.fadeTo(1000,1);
+			.css('display','none');
 	}
 	getText(searchBar.value, newDiv);
+	$(newDiv).slideDown('slow');
 	divNum += 1;
 }
 function removeElement(id)	{

@@ -1,5 +1,6 @@
 divNum = 0; //keep track of how many new elements created
 function createBox() {
+	//divNum += 1;
 	var boxArea = document.getElementById('boxArea');
 	var newDiv = document.createElement('div');
 	var divIdName = 'box' + divNum;
@@ -7,6 +8,7 @@ function createBox() {
 	newDiv.setAttribute('id', divIdName);
 	newDiv.innerHTML = searchBar.value + " Element Number "+divNum+ " has been added! <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
 	if(divNum == 0){
+		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
 	} else {
 		
@@ -14,12 +16,14 @@ function createBox() {
 		//var oldDiv = document.getElementById('box' + idnum-1);
 		
 		$(newDiv).insertBefore(boxArea.firstChild)
-			.css('opacity','0.0')
-			.fadeTo(1000,1);
+			.css('display','none');
 	}
+	$(newDiv).slideDown('slow')
+		.fadeTo(1000,1);
 	divNum += 1;
 }
 function removeElement(id)	{
-	boxArea.removeChild(id);
+	//boxArea.removeChild(id);
+	$(id).fadeOut(1000);
 }	
 

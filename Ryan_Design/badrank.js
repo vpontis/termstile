@@ -57,6 +57,7 @@ function getText(title, boxId){
 		}
 		answer = bestSentences[0]+" "+bestSentences[1]+" "+bestSentences[2];					
 		$(boxId).html(answer);
+		
 		return answer;
 	});	
 }
