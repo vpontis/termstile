@@ -77,6 +77,7 @@ function getText(title, boxId){
 		}
 		answer = bestRanked[0][0]+" "+bestRanked[1][0]+" "+bestRanked[2][0];					
 		$(boxId).html(answer);
+		
 		return answer;
 	});	
 }
