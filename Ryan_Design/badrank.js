@@ -21,41 +21,61 @@ function getText(title, boxId){
 		var beginning = text.substring(0,text.indexOf("=="));
 		var sentenceSplitter = /\s+(?=[\.\!\?]|[\'\"][\.\!\?])(?!\.rM|\.srM|\.sM|\.rJ|\.rD|\.forP|\.rS|\.[A-Z]\s)/gm;
 		var sentences = beginning.split("").reverse().join("").split(sentenceSplitter);
-		var map = new Array();
+		var map = new Array(sentences.length);
+		sentences = sentences.reverse();
 		for(var i=0; i<sentences.length; i++)
 		{
 			sentences[i]=sentences[i].split("").reverse().join("");
-			map[sentences[i].replace(/\[\[[^\[]*?\||\[\[|\]\]/gim,"")] = rankSentences(sentences[i],text);
+			map[i]= new Array(2);
+			map[i][0] = sentences[i].replace(/\[\[[^\[]*?\||\[\[|\]\]/gim,"");
+			map[i][1] = rankSentences(sentences[i],text);
 		}
-		var count = 0;
 		var answer = "";
-		var bestRanks = new Array(0,0,0);
-		var bestSentences = new Array("","","");
-		for(var key in map){
-			if(map[key]>bestRanks[2]){
-				if(map[key]>bestRanks[1]){
-					if(map[key]>bestRanks[0]){
-						bestSentences[2] = bestSentences[1];
-						bestRanks[2] = bestRanks[1];
-						bestSentences[1] = bestSentences[0];
-						bestRanks[1] = bestRanks[0];
-						bestSentences[0] = key;
-						bestRanks[0] = map[key];
+		var bestRanked = new Array(3);
+		for(var i=0; i<bestRanked.length; i++){
+			bestRanked[i]= new Array(0,0,0);
+		}
+		for(var i=0; i<map.length; i++){
+			if(map[i][1]>bestRanked[2][1]){
+				if(map[i][1]>bestRanked[1][1]){
+					if(map[i][1]>bestRanked[0][1]){
+						for(var j=0; j<3; j++){bestRanked[2][j] = bestRanked[1][j];}
+						for(var j=0; j<3; j++){bestRanked[1][j] = bestRanked[0][j];}
+						bestRanked[0][0] = map[i][0];
+						bestRanked[0][1] = map[i][1];
+						bestRanked[0][2] = i;
 					}
 					else{
-						bestSentences[2] = bestSentences[1];
-						bestRanks[2] = bestRanks[1];
-						bestSentences[1] = key;
-						bestRanks[1] = map[key];
+						for(var j=0; j<3; j++){bestRanked[2][j] = bestRanked[1][j];}
+						bestRanked[1][0] = map[i][0];
+						bestRanked[1][1] = map[i][1];
+						bestRanked[1][2] = i;
 					}
 				}
 				else{
-					bestSentences[2] = key;
-					bestRanks[2] = map[key];
+					bestRanked[2][0] = map[i][0];
+					bestRanked[2][1] = map[i][1];
+					bestRanked[2][2] = i;
 				}
 			}
 		}
-		answer = bestSentences[0]+" "+bestSentences[1]+" "+bestSentences[2];					
+		var temp = new Array(3);
+		if(bestRanked[0][2]>bestRanked[2][2]){
+			for(var j=0; j<3; j++){temp[j] = bestRanked[0][j];}
+			for(var j=0; j<3; j++){bestRanked[0][j] = bestRanked[2][j];}
+			for(var j=0; j<3; j++){bestRanked[2][j] = temp[j];}
+		}
+		if(bestRanked[1][2]>bestRanked[2][2]){
+			for(var j=0; j<3; j++){temp[j] = bestRanked[1][j];}
+			for(var j=0; j<3; j++){bestRanked[1][j] = bestRanked[2][j];}
+			for(var j=0; j<3; j++){bestRanked[2][j] = temp[j];}
+		}
+		if(bestRanked[0][2]>bestRanked[1][2]){
+			for(var j=0; j<3; j++){temp[j] = bestRanked[0][j];}
+			for(var j=0; j<3; j++){bestRanked[0][j] = bestRanked[1][j];}
+			for(var j=0; j<3; j++){bestRanked[1][j] = temp[j];}
+		}
+		answer = bestRanked[0][0]+" "+bestRanked[1][0]+" "+bestRanked[2][0];					
 		$(boxId).html(answer);
 		return answer;
 	});	
