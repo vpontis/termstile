@@ -15,9 +15,16 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	getText(searchBar.value, newDiv);
-	$(newDiv).slideDown('slow');
-	divNum += 1;
+	var answer = "";
+	answer = getText(searchBar.value, newDiv);
+	while(true){
+		if(answer!=""){
+			$(newDiv).slideDown('slow');
+			divNum += 1;
+			break;
+		}			
+	}
+
 }
 function removeElement(id)	{
 	boxArea.removeChild(id);
