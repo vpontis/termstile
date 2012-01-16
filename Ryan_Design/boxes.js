@@ -6,6 +6,7 @@ function createBox() {
 	var searchBar = document.getElementById('oneTerm')
 	var text = getText(searchBar.value);
 	newDiv.setAttribute('id', divIdName);
+	newDiv.setAttribute('class', 'box');
 	newDiv.innerHTML = text + " " + searchBar.value + " Element Number "+divNum+ " has been added! <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
 	if(divNum == 0){
 		$(newDiv).css('display','none');
