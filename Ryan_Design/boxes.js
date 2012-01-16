@@ -16,7 +16,7 @@ function createBox() {
 			.css('display','none');
 	}
 	var answer = "";
-	answer = getText(searchBar.value, newDiv);
+	answer = getText(searchBar.value, newDiv, divIdName);
 	while(true){
 		if(answer!=""){
 			$(newDiv).slideDown('slow');
@@ -27,6 +27,6 @@ function createBox() {
 
 }
 function removeElement(id)	{
-	boxArea.removeChild(id);
+	//boxArea.removeChild(id);
+	$(id).slideUp('slow');
 }	
-

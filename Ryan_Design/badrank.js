@@ -1,4 +1,4 @@
-function getText(title, boxId){
+function getText(title, boxId, boxIdTitle){
 	$.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
 	function(data){
 		var id = data.query.pageids[0];
@@ -6,6 +6,7 @@ function getText(title, boxId){
 		var patt1 = /{{[^{]*?}}/im;
 		var patt2 = /<ref[\s\S]*?<\/ref>/im;
 		var patt3 = /<[\s\S]*?>/im;
+		var patt4 = /^\[\[.*?$/gim;
 		while(patt1.test(text))
 		{
 			text = text.replace(patt1,"");
@@ -18,6 +19,7 @@ function getText(title, boxId){
 		{
 			text = text.replace(patt3,"");
 		}
+		text = text.replace(patt4,"");
 		var beginning = text.substring(0,text.indexOf("=="));
 		var sentenceSplitter = /\s+(?=[\.\!\?]|[\'\"][\.\!\?])(?!\.rM|\.srM|\.sM|\.rJ|\.rD|\.forP|\.rS|\.[A-Z]\s)/gm;
 		var sentences = beginning.split("").reverse().join("").split(sentenceSplitter);
@@ -75,7 +77,10 @@ function getText(title, boxId){
 			for(var j=0; j<3; j++){bestRanked[0][j] = bestRanked[1][j];}
 			for(var j=0; j<3; j++){bestRanked[1][j] = temp[j];}
 		}
-		answer = bestRanked[0][0]+" "+bestRanked[1][0]+" "+bestRanked[2][0];					
+		answer = "<strong>"+bestRanked[0][0]+"</strong> "+bestRanked[1][0]+" "+bestRanked[2][0];
+		answer += " <a href=\'#\' onclick=\'removeElement("+boxIdTitle+")\'>x</a>";
+		//answer += "<a onClick=\"removeElement("boxID")\"> x </a>";
+
 		$(boxId).html(answer);
 		return answer;
 	});	

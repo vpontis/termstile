@@ -35,7 +35,9 @@ body {
 }
 .main {
 	background-color: #FCFCF7;
-	height: 650px;
+	height: 850px;
+	position: relative;
+	border-radius: 0px 0px 5px 5px;
 }
 .midbar {
 	height: 30px;
@@ -99,4 +101,15 @@ body {
 	height: 25px;
 	float: right;
 	color: blue;
+	position:absolute;
+	bottom:2px;
+	right: 8px;
+}
+.box {
+	border-style: solid;
+	border-radius: 5px;
+	border-color: blue;
+	margin: 3px 0px 3px;
+	padding: 5px;
+	background-color: gray;
 }
