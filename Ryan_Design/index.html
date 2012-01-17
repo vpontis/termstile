@@ -13,8 +13,11 @@
 		<div class="bigthing">
 			<div class="header">
 				<div class="container">
+					<div id="title">
+						<img src="..\media\samplelogo.png" height="80px" width="200px"/>
+					</div>
 					<!-- Login Start-->
-					<div id="container1">
+					<div id="container1" style="position:relative;top:-80px;">
 						<div id="topnav" class="topnav">
 							<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 						</div>
@@ -28,7 +31,7 @@
 									<label for="password">Password</label>
 									<input id="password" name="password" placeholder="Password" title="password" tabindex="5" type="password">
 								</p>
-								<p class="remember">
+								<!--<p class="remember">
 									<input id="signin_submit" value="Sign in" tabindex="6" type="submit">
 									<input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
 									<label for="remember">Remember me</label>
@@ -40,7 +43,7 @@
 									<a id=forgot_username_link
 									title="If you remember your password, try logging in with your email"
 									href="#">Forgot your username?</a>
-								</p>
+								</p>-->
 							</form>
 						</fieldset>
 						<!-- Login form end-->
@@ -95,9 +98,22 @@
 					<div id="guideBox" style="display:none"></div>
 				</div>
 				<div class="bottom container">
-					<a href="/report">report problem</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/about">about</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/contact">contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/donate">donate</a>
+					<a id="report">Report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/about">about</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/contact">contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/donate">donate</a>
 				</div>
 			</div>
 		</div>
+		<div id="popupContact">  
+        	<a id="popupClose">x</a>  
+        	<h1>Title of our cool popup, yay!</h1>  
+        	<p id="change">  
+            Here we have a simple but interesting sample of our new stuning and smooth popup. As you can see jQuery and CSS does it easy...  
+            <br/><br/>  
+            We can use it for popup-forms and more... just experiment!  
+            <br/><br/>  
+            Press ESCAPE, Click on X (right-top) or Click Out from the popup to close the popup!  
+            <br/><br/>  
+        </p>  
+    </div> 
+	<div id="backgroundPopup"></div>  
 	</body>
 </html>

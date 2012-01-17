@@ -268,6 +268,7 @@ a#login.menu-open span {
     clear:both;
     margin:5px 0;
 }
+
 .signin_menu p a {
     color:#27B!important;
 }
@@ -360,6 +361,27 @@ border:0;
 	right: 2px;
 	text-decoration:none;
 	color: green;
-	
 	background-color: red;
 }
+#popupContact{  
+	display:none;  
+	position:fixed;  
+	height:384px;  
+	width:408px;  
+	background:#FFFFFF;  
+	border:2px solid #cecece;  
+	z-index:2;  
+	padding:12px;  
+	font-size:13px;  
+}
+#backgroundPopup{  
+	display:none;  
+	position:fixed;  
+	height:100%;  
+	width:100%;  
+	top:0;  
+	left:0;  
+	background:#000000;  
+	border:1px solid #cecece;  
+	z-index:1;  
+}    

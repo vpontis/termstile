@@ -20,17 +20,17 @@ function createBox() {
 	var summary = new Array(3);
 	getText(searchBar.value,function(summary){
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
-		answer += " <a class=\'close\' href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
-		answer += "<a class=\'wikifavicon\' href=\'http:\\en.wikipedia.org/wiki/" + searchBarValue + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
+		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>x</a>";
+		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\en.wikipedia.org/wiki/" + searchBarValue + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	})
 }
+
 function removeElement(id)	{
 	//boxArea.removeChild(id);
 	$(id).animate({opacity:0.0});
 	$(id).slideUp('slow');
 }	
-
 
 function enterPressed(e)	{
 	var code = (e.keyCode ? e.keyCode : e.which);
@@ -44,3 +44,45 @@ function enterPressed(e)	{
 function focusCursor()	{
 	document.getElementById('oneTerm').focus();
 }
+
+$(document).ready(function(){
+	$('#report').click(function(){
+		centerPopup();
+		loadPopup();
+	});
+	$('#popupClose').click(function(){
+		disablePopup();
+	});
+	$('#backgroundPopup').click(function(){
+		disablePopup();
+	});
+});
+
+var popupStatus = 0;
+
+function loadPopup()	{
+	if(popupStatus==0){
+		$('#backgroundPopup').css({'opacity':'.7'});
+		$('#backgroundPopup').fadeIn('slow');
+		$('#popupContact').fadeIn('slow');
+		popupStatus=1;
+	}
+}
+
+function disablePopup()	{
+	if(popupStatus==1){
+		$('#backgroundPopup').fadeOut('slow');
+		$('#popupContact').fadeOut('slow');
+		popupStatus=0;
+	}
+}
+
+function centerPopup(){
+	var windowWidth = document.documentElement.clientWidth;  
+	var windowHeight = document.documentElement.clientHeight;  
+	var popupHeight = $("#popupContact").height();  
+	var popupWidth = $("#popupContact").width();  
+	$("#popupContact").css({"position": "absolute",  "top": windowHeight/2-popupHeight/2,  "left": windowWidth/2-popupWidth/2  });  
+	  
+	$("#backgroundPopup").css({"height": windowHeight}); 
+}   
