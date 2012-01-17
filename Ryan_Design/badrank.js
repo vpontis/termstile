@@ -98,9 +98,3 @@ function rankSentences(sentence, text){
 	}
 	return rank;
 }
-
-function setSummary(text){
-	summary[0] = text[0];
-	summary[1] = text[1];
-	summary[2] = text[2];
-}
