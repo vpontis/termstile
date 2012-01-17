@@ -24,6 +24,7 @@ function createBox() {
 }
 function removeElement(id)	{
 	//boxArea.removeChild(id);
-	$(id).fadeOut(1000);
+	$(id).animate({opacity:0.0});
+	$(id).slideUp('slow');
 }	
 
