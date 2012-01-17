@@ -1,5 +1,6 @@
+var answerText = "";
 function getText(title, boxId, boxIdTitle){
-	$.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
+	return $.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
 	function(data){
 		var id = data.query.pageids[0];
 		var text = data.query.pages[id].revisions[0]['*'];
@@ -79,10 +80,8 @@ function getText(title, boxId, boxIdTitle){
 		}
 		answer = "<strong>"+bestRanked[0][0]+"</strong> "+bestRanked[1][0]+" "+bestRanked[2][0];
 		answer += " <a href=\'#\' onclick=\'removeElement("+boxIdTitle+")\'>x</a>";
-		//answer += "<a onClick=\"removeElement("boxID")\"> x </a>";
-
 		$(boxId).html(answer);
-		return answer;
+		setAnswerText(answer);
 	});	
 }
 
@@ -98,4 +97,12 @@ function rankSentences(sentence, text){
 		}
 	}
 	return rank;
+}
+
+function setAnswerText(text){
+	answerText = text;
+}
+
+function getAnswerText(){
+	return answerText;
 }

@@ -106,6 +106,7 @@ body {
 	right: 8px;
 }
 .box {
+	text-align: justify;
 	border-style: solid;
 	border-radius: 5px;
 	border-color: blue;

@@ -16,15 +16,13 @@ function createBox() {
 			.css('display','none');
 	}
 	var answer = "";
-	answer = getText(searchBar.value, newDiv, divIdName);
-	while(true){
-		if(answer!=""){
+	//answer = getText(searchBar.value, newDiv, divIdName);
+	$.when(getText(searchBar.value, newDiv, divIdName))
+		.then(function(){
+			answer = getAnswerText();
 			$(newDiv).slideDown('slow');
 			divNum += 1;
-			break;
-		}			
-	}
-
+		});			
 }
 function removeElement(id)	{
 	//boxArea.removeChild(id);
