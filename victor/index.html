@@ -7,23 +7,41 @@
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	<script type="text/javascript"src="boxes.js"></script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+	<script type="text/javascript">
+		function focusCursor(){
+			document.getElementById('searchBar').focus();
+		}
+		$('searchBar').keypress(function(event) {
+    		if (((event.keyCode || event.which) == 13) && !event.shiftKey) {
+				$('text').text('changes');
+				createBox();
+    		}
+		});
+	</script>
 </head>
 
-<body>
+<body onLoad="focusCursor()">
 
 <div id="mainbody">
 	<div id="topbar"><!--Top bar. -->
 		<div id="title"><!--Area with title/logo-->
-		<img src="media/samplelogo.png" alt="AutoStudy" height="100px" width="200px" /><!--Site logo-->
+		<img src="../media/samplelogo.png" alt="AutoStudy" height="100px" width="200px" /><!--Site logo-->
 		</div>
 		<div id="login"><!--Login and signup section -->
 		Login | Sign Up
 		</div>
 	</div> 
-	<input type="text" placeholder="Enter your search term here." name="wikititle" id="searchBar"/>
-	<button onClick="createBox()">Click to create box</button>
+	<input type="text" placeholder="Enter your search term here." name="wikititle" id="searchBar" onKeyPress="enterPressed(event)" />
+	<button id="createBoxButton" onClick="createBox()">Click to create box</button>
+
 	<div id="check"><p>This text will change.</p></div>
-	<div id="boxArea"></div>
+	<div id="boxArea">
+		<div id="box0">
+			<strong>AutoStudy Instructions:</strong> AutoStudy will define any term you ask this. We summarize Wikipedia to get your answer.
+			</br>
+			Go ahead, try it out. <a id="close" onClick="removeElement(box0)">x</a>
+		</div>
+	</div>
 </div>
 
 
