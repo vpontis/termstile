@@ -9,7 +9,7 @@
 		<script type="text/javascript" src="boxes.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
 	</head>
-	<body>
+	<body onLoad="focusCursor()">
 		<div class="bigthing">
 			<div class="header">
 				<div class="container">
@@ -81,7 +81,7 @@
 			<!-- Main Section Begin -->
 			<div class="main container">
 				<div class="singlesearch">
-					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" />
+					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
 					<button class="submit" onClick="createBox()">
 						Go!
 					</button>

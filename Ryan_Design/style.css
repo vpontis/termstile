@@ -28,7 +28,7 @@ body {
 	height: 80%;
 	position: relative;
 	border-radius: 0px 0px 5px 5px;
-	min-height: 600px;
+	min-height: 580px;
 }
 .midbar {
 	height: 30px;
@@ -103,6 +103,14 @@ body {
 	margin: 3px 0px 3px;
 	padding: 5px;
 	background-color: gray;
+	position:relative;
+	padding: 10px;
+}
+.box img{
+	display:inline;
+	height:15px;
+	width:15px;
+	vertical-align:-2px;
 }
 #boxarea{
 	margin-top: 5px;
@@ -339,4 +347,17 @@ border:0;
 }
 .signup_menu p a {
     color:#27B!important;
+}
+.wikifavicon	{
+	display:inline;
+	height:15px;
+	width:15px;
+	vertical-align:-2px; 
+}
+.close	{
+	position: absolute;
+	top: -1px;
+	right: 2px;
+	text-decoration:none;
+	color: green;
 }
