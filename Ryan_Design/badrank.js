@@ -1,5 +1,4 @@
-var summary = new Array(3);
-function getText(title){
+function getText(title, callback){
 	return $.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
 	function(data){
 		var id = data.query.pageids[0];
@@ -82,7 +81,7 @@ function getText(title){
 		{
 			answer[i] = bestRanked[i][0];
 		}
-		setSummary(answer);
+		callback(answer);
 	});	
 }
 
@@ -104,8 +103,4 @@ function setSummary(text){
 	summary[0] = text[0];
 	summary[1] = text[1];
 	summary[2] = text[2];
-}
-
-function getSummary(){
-	return summary;
 }
