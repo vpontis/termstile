@@ -13,18 +13,15 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\">Generating Text...<a href=\'#\' onclick=\'removeElement(\"+divIdName+\")\'>x</a></div>"
+	var text = "<div style=\"text-align:center\">Generating Text...<a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a></div>"
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 	divNum += 1;
 	var summary = new Array(3);
-	//answer = getText(searchBar.value, newDiv, divIdName);
-	$.when(getText(searchBar.value))
-		.then(function(){
-			summary = getSummary();
-			var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2]+" <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
-			$(newDiv).html(answer);
-		});			
+	getText(searchBar.value,function(summary){
+		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2]+" <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
+		$(newDiv).html(answer);
+	})
 }
 function removeElement(id)	{
 	//boxArea.removeChild(id);
