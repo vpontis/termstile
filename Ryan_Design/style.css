@@ -18,16 +18,6 @@ body {
 	background-color: #D3D3D3;
 	height: 20px;
 }
-#login {
-	background-color: #00CC33;
-	height: 25px;
-	width: 140px;
-	border-radius: 5px;
-	margin: -5px 0px 0px 0px;
-	padding: 5px 0px 0px 0px;
-	float: right;
-	text-align: center;
-}
 .container {
 	width: 1000px;
 	height: inherit;
@@ -88,7 +78,7 @@ body {
 #manyTerm {
 	width: 500px;
 	height: 450px;
-	padding: 0px 10px;
+	padding: 0px;
 	float: left;
 	border-radius: 6px;
 }
@@ -172,11 +162,18 @@ a img {
     text-decoration:none;
     font-weight:bold;
     color:#fff;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    border-radius:4px;
     *background:transparent url("images/signin-nav-bg-ie.png") no-repeat 0 0;
     *padding:4px 12px 6px;
+}
+#login{
+	-webkit-border-radius:4px 0px 0px 4px;
+    -moz-border-radius:4px 0px 0px 4px;
+    border-radius:4px 0px 0px 4px;
+}
+#signup{
+	-webkit-border-radius:0px 4px 4px 0px;
+    -moz-border-radius:0px 4px 4px 0px;
+    border-radius:0px 4px 4px 0px;
 }
 #topnav a.signin:hover {
     background:#59B;
@@ -189,7 +186,7 @@ a img {
 
 a.signin {
     position:relative;
-    margin-left:3px;
+    margin: 0px -2px;
 }
 a.signin span {
     background-image:url("images/toggle_down_light.png");
@@ -209,11 +206,11 @@ a.signin span {
     margin:25px 0 0;
     width:170px;
 }
-a.signin.menu-open span {
+a#login.menu-open span {
     background-image:url("images/toggle_up_dark.png");
     color:#789;
 }
-#signin_menu {
+.signin_menu {
     -moz-border-radius-topleft:5px;
     -moz-border-radius-bottomleft:5px;
     -moz-border-radius-bottomright:5px;
@@ -229,7 +226,7 @@ a.signin.menu-open span {
     text-align:left;
     padding:12px;
     top: 24.5px; 
-    right: 0px; 
+    right: -2px; 
     margin-top:5px;
     margin-right: 0px;
     *margin-right: -1px;
@@ -237,7 +234,7 @@ a.signin.menu-open span {
     font-size:11px;
 }
 
-#signin_menu input[type=text], #signin_menu input[type=password] {
+.signin_menu input[type=text], .signin_menu input[type=password] {
     display:block;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -247,23 +244,23 @@ a.signin.menu-open span {
     padding:5px;
     width:203px;
 }
-#signin_menu p {
+.signin_menu p {
     margin:0;
 }
-#signin_menu a {
+.signin_menu a {
     color:#6AC;
 }
-#signin_menu label {
+.signin_menu label {
     font-weight:normal;
 }
-#signin_menu p.remember {
+.signin_menu p.remember {
     padding:10px 0;
 }
-#signin_menu p.forgot, #signin_menu p.complete {
+.signin_menu p.forgot, .signin_menu p.complete {
     clear:both;
     margin:5px 0;
 }
-#signin_menu p a {
+.signin_menu p a {
     color:#27B!important;
 }
 #signin_submit {
@@ -291,3 +288,55 @@ border:0;
 	height: 100%;
 }
 
+.signup_menu{
+	    -moz-border-radius-topleft:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    display:none;
+    background-color:#ddeef6;
+    position:absolute;
+    width:210px;
+    z-index:100;
+    border:1px transparent;
+    text-align:left;
+    padding:12px;
+    top: 24.5px; 
+    right: -2px; 
+    margin-top:5px;
+    margin-right: 0px;
+    *margin-right: -1px;
+    color:#789;
+    font-size:11px;
+}
+.signup_menu input[type=text], .signup_menu input[type=password] {
+    display:block;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border:1px solid #ACE;
+    font-size:13px;
+    margin:0 0 5px;
+    padding:5px;
+    width:203px;
+}
+.signup_menu p {
+    margin:0;
+}
+.signup_menu a {
+    color:#6AC;
+}
+.signup_menu label {
+    font-weight:normal;
+}
+.signup_menu p.remember {
+    padding:10px 0;
+}
+.signup_menu p.forgot, .signup_menu p.complete {
+    clear:both;
+    margin:5px 0;
+}
+.signup_menu p a {
+    color:#27B!important;
+}
