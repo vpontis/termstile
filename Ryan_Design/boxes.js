@@ -3,11 +3,9 @@ function createBox() {
 	var boxArea = document.getElementById('boxArea');
 	var newDiv = document.createElement('div');
 	var divIdName = 'box' + divNum;
-	var searchBar = document.getElementById('oneTerm')
-	var text = getText(searchBar.value);
+	var searchBar = document.getElementById('oneTerm');
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'box');
-	newDiv.innerHTML = text + " " + searchBar.value + " Element Number "+divNum+ " has been added! <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
 	if(divNum == 0){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
@@ -15,13 +13,17 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var answer = "";
+	var text = "<div style=\"text-align:center\">Generating Text...<a href=\'#\' onclick=\'removeElement(\"+divIdName+\")\'>x</a></div>"
+	$(newDiv).html(text);
+	$(newDiv).slideDown('slow');
+	divNum += 1;
+	var summary = new Array(3);
 	//answer = getText(searchBar.value, newDiv, divIdName);
-	$.when(getText(searchBar.value, newDiv, divIdName))
+	$.when(getText(searchBar.value))
 		.then(function(){
-			answer = getAnswerText();
-			$(newDiv).slideDown('slow');
-			divNum += 1;
+			summary = getSummary();
+			var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2]+" <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
+			$(newDiv).html(answer);
 		});			
 }
 function removeElement(id)	{

@@ -1,5 +1,5 @@
-var answerText = "";
-function getText(title, boxId, boxIdTitle){
+var summary = new Array(3);
+function getText(title){
 	return $.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
 	function(data){
 		var id = data.query.pageids[0];
@@ -33,7 +33,7 @@ function getText(title, boxId, boxIdTitle){
 			map[i][0] = sentences[i].replace(/\[\[[^\[]*?\||\[\[|\]\]/gim,"");
 			map[i][1] = rankSentences(sentences[i],text);
 		}
-		var answer = "";
+		var answer = new Array(3);
 		var bestRanked = new Array(3);
 		for(var i=0; i<bestRanked.length; i++){
 			bestRanked[i]= new Array(0,0,0);
@@ -78,10 +78,11 @@ function getText(title, boxId, boxIdTitle){
 			for(var j=0; j<3; j++){bestRanked[0][j] = bestRanked[1][j];}
 			for(var j=0; j<3; j++){bestRanked[1][j] = temp[j];}
 		}
-		answer = "<strong>"+bestRanked[0][0]+"</strong> "+bestRanked[1][0]+" "+bestRanked[2][0];
-		answer += " <a href=\'#\' onclick=\'removeElement("+boxIdTitle+")\'>x</a>";
-		$(boxId).html(answer);
-		setAnswerText(answer);
+		for(var i=0; i<3; i++)
+		{
+			answer[i] = bestRanked[i][0];
+		}
+		setSummary(answer);
 	});	
 }
 
@@ -99,10 +100,12 @@ function rankSentences(sentence, text){
 	return rank;
 }
 
-function setAnswerText(text){
-	answerText = text;
+function setSummary(text){
+	summary[0] = text[0];
+	summary[1] = text[1];
+	summary[2] = text[2];
 }
 
-function getAnswerText(){
-	return answerText;
+function getSummary(){
+	return summary;
 }
