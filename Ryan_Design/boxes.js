@@ -6,7 +6,7 @@ function createBox() {
 	var searchBar = document.getElementById('oneTerm');
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'box');
-	if(divNum == 0){
+	if(boxArea.firstChild == null){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
 	} else {
@@ -19,7 +19,9 @@ function createBox() {
 	divNum += 1;
 	var summary = new Array(3);
 	getText(searchBar.value,function(summary){
-		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2]+" <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
+		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
+		answer += " <a class=\'close\' href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a>";
+		answer += "<a class=\'wikifavicon\' href=\'http:\\en.wikipedia.org/wiki/" + searchBarValue + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	})
 }
@@ -28,3 +30,17 @@ function removeElement(id)	{
 	$(id).animate({opacity:0.0});
 	$(id).slideUp('slow');
 }	
+
+
+function enterPressed(e)	{
+	var code = (e.keyCode ? e.keyCode : e.which);
+	if(code == 13) {
+		createBox();
+		searchBarValue = oneTerm.value;
+		 $("#oneTerm").val(""); 	
+	}
+}
+
+function focusCursor()	{
+	document.getElementById('oneTerm').focus();
+}
