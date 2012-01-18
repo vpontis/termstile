@@ -84,7 +84,7 @@
 			<div class="main container">
 				<div class="singlesearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
-					<button class="submit" onClick="createBox()">
+					<button class="submit" onClick="createBox()" id="summarize">
 						Summarize!
 					</button>
 					<div id="boxArea" style="float: left;">

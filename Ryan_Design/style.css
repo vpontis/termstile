@@ -409,6 +409,7 @@ border:0;
 #createGuide{
 	border-radius: 5px;
 	margin-top: 15px;
+	cursor: pointer;
 } 
 #createGuidePopup{
 	width: 800px;
@@ -435,4 +436,7 @@ border:0;
 #guideInput	{
 	width: 400px;
 	float: left;
+}
+#summarize {
+	cursor: pointer;
 }
