@@ -6,7 +6,7 @@ body {
 }
 @font-face {
 font-family: HelveticaLight;
-src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf'),
+src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf');
 }
 .header {
 	background: #ffffff; /* Old browsers */
