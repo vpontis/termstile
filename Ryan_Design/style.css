@@ -5,8 +5,8 @@ body {
 	font-family: HelveticaLight;
 }
 @font-face {
-font-family: HelveticaLight;
-src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf');
+	font-family: HelveticaLight;
+	src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf');
 }
 .header {
 	background: #ffffff; /* Old browsers */
@@ -47,9 +47,11 @@ src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf');
 }
 #multipleTerm {
 	float: right;
+	cursor: pointer;
 }
 #singleTerm {
 	float: left;
+	cursor: pointer;
 }
 .selected {
 	background-color: #FCFCF7;
@@ -100,6 +102,9 @@ src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf');
 	position:absolute;
 	bottom:2px;
 	right: 8px;
+}
+.bottom a{
+	cursor: pointer;
 }
 .box {
 	border-style: solid;
@@ -365,6 +370,7 @@ border:0;
 	top: -1px;
 	right: 2px;
 	text-decoration:none;
+	cursor: pointer;
 }
 .close a{
 	color: green;
@@ -387,6 +393,7 @@ border:0;
 	position:absolute;
 	top: 5px;
 	right: 5px;
+	cursor: pointer;
 }
 #backgroundPopup{  
 	display:none;  
