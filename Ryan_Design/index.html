@@ -14,15 +14,15 @@
 			<div class="header">
 				<div class="container">
 					<div id="title">
-						<img src="../media/samplelogo.png" height="80px" width="200px"/>
+						<img src="media/samplelogo.png"style="display: inline; float: left;" height="80px" width="200px"/>
 					</div>
 					<!-- Login Start-->
-					<div id="container1" style="position:relative;top:-80px;">
+					<div id="container1" style="float: right;">
 						<div id="topnav" class="topnav">
 							<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 						</div>
 						<!-- Login form -->
-						<fieldset class="signin_menu">
+						<div class="signin_menu">
 							<form method="post" id="signin" action="https://twitter.com/sessions">
 								<label for="email">Email</label>
 								<input id="email" name="email" placeholder="Email" title="Email" tabindex="4" type="text">
@@ -31,12 +31,12 @@
 									<label for="password">Password</label>
 									<input id="password" name="password" placeholder="Password" title="password" tabindex="5" type="password">
 								</p>
-								<!--<p class="remember">
+								<p class="remember">
 									<input id="signin_submit" value="Sign in" tabindex="6" type="submit">
-									<input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
-									<label for="remember">Remember me</label>
+									<!--<input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
+									<label for="remember">Remember me</label>-->
 								</p>
-								<p class="forgot">
+								<!--<p class="forgot">
 									<a href="#" id="resend_password_link">Forgot your password?</a>
 								</p>
 								<p class="forgot-username">
@@ -45,11 +45,11 @@
 									href="#">Forgot your username?</a>
 								</p>-->
 							</form>
-						</fieldset>
+						</div>
 						<!-- Login form end-->
 						<!-- Sign Up form -->
-						<fieldset class="signup_menu">
-							<!--<form method="post" id="signup" action="https://twitter.com/sessions">-->
+						<div class="signup_menu">
+							<form method="post" id="signup" action="https://twitter.com/sessions">
 								<label for="email">Email</label>
 								<input id="email" name="email" placeholder="Email" title="email" tabindex="9" type="text">
 								</br>
@@ -61,9 +61,9 @@
 									<label for="password">Repeat Password</label>
 									<input id="password" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
 								</p>
-								<button id="signup">Sign up!</button>
-						<!--</form>-->
-						</fieldset>
+								<button>Sign up!</button>
+							</form>
+						</div>
 						<!-- Sign Up form End -->
 					</div>
 					<!-- Login End -->
@@ -101,7 +101,7 @@
 						<div id="guideInput">
 							<center>
 								<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
-								<textarea id="manyTerm" rows="43" cols="60" placeholder="Input text..."></textarea>
+								<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!" value=""> </textarea>
 								<button onClick="createGuide()" id="createGuide">
 									Create Study Guide!
 								</button>
@@ -117,7 +117,7 @@
 							</ol>
 							<strong>Note: </strong> if your list does not appear it is because one of your terms is giving an error. You can check to see which term is giving an error under InstaSearch. We are working on getting this fixed. 
 						</div>
-					
+
 					<div id="guideBox" style="display:none"></div>
 				</div>
 				<div class="bottom container">
@@ -156,11 +156,6 @@
     <div id="donatePopup" class="popup">
     	<h1>donate</h1>
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
-    	<a class="popupClose">X</a>
-    </div>
-    <div id="signupPopup" class="popup">
-    	<h1>Sign Up!</h1>
-		<p>Sign Up Complete</p>
     	<a class="popupClose">X</a>
     </div>
     <div id="createGuidePopup" class="popup">
