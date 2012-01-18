@@ -22,12 +22,13 @@ function makeDoc(terms, summaries){
 		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
 	}
 	var guideTitle = document.getElementById('guideTitle');
-	guideTitle = guideTitle.value;
-	if(guideTitle != null){
-		$('#guidePopupTitle').html(guideTitle);
+	var guideTitleVal = guideTitle.value;
+	if(guideTitleVal != null && guideTitleVal != ""){
+		$('#guidePopupTitle').html(guideTitleVal);
 	}
 	//var gM = document.getElementById('guideMaterial');
 	$('#guideMaterial').html(guideText);
+	//$('.bigthing').css('overflow','hidden');
 	popupOpen = "#createGuidePopup";
 	centerPopup('#createGuidePopup');
 	loadPopup('#createGuidePopup');
