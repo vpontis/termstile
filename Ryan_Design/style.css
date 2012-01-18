@@ -181,7 +181,7 @@ a img {
 #login{
 	-webkit-border-radius:4px 0px 0px 4px;
     -moz-border-radius:4px 0px 0px 4px;
-    border-radius:4px 0px 0px 4px;
+    border-radius:4px 4px 4px 4px;
 }
 #signup{
 	-webkit-border-radius:0px 4px 4px 0px;

@@ -58,7 +58,4 @@ $(document).ready(function() {
 	$("#signup").click(function() {
 		$(".signin_menu").hide();
 	});
-	$("#login").click(function() {
-		$("#login").css({"border-radius":"4px 4px 0px 0px"});
-	});
 });
