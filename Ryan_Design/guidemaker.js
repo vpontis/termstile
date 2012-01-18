@@ -21,8 +21,13 @@ function makeDoc(terms, summaries){
 	for(var i=0; i<terms.length; i++){
 		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
 	}
-	var gM = document.getElementById('guideMaterial');
-	$(gM).html(guideText);
+	var guideTitle = document.getElementById('guideTitle');
+	guideTitle = guideTitle.value;
+	if(guideTitle != null){
+		$('#guidePopupTitle').html(guideTitle);
+	}
+	//var gM = document.getElementById('guideMaterial');
+	$('#guideMaterial').html(guideText);
 	popupOpen = "#createGuidePopup";
 	centerPopup('#createGuidePopup');
 	loadPopup('#createGuidePopup');

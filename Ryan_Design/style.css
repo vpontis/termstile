@@ -407,15 +407,18 @@ border:0;
 #guideTitle	{
 	border-radius: 5px;
 	margin-bottom: 10px;
-	width: 380px;
+	width: 200px;
 	padding: 0px;
 	border-color: black;
 	border-width: 1px;
+	margin-left: 50px;
+	margin-right: 50px;
 }
 #guideInstructions	{
 	float: left;
 	width: 300px;
 	margin-left: 20px;
+	margin-top: 70px;
 }
 #guideInput	{
 	width: 400px;
