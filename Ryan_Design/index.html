@@ -14,15 +14,15 @@
 			<div class="header">
 				<div class="container">
 					<div id="title">
-						<img src="../media/samplelogo.png" height="80px" width="200px"/>
+						<img src="media/samplelogo.png"style="display: inline; float: left;" height="80px" width="200px"/>
 					</div>
 					<!-- Login Start-->
-					<div id="container1" style="position:relative;top:-80px;">
+					<div id="container1" style="float: right;">
 						<div id="topnav" class="topnav">
 							<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 						</div>
 						<!-- Login form -->
-						<fieldset class="signin_menu">
+						<div class="signin_menu">
 							<form method="post" id="signin" action="https://twitter.com/sessions">
 								<label for="email">Email</label>
 								<input id="email" name="email" placeholder="Email" title="Email" tabindex="4" type="text">
@@ -31,12 +31,12 @@
 									<label for="password">Password</label>
 									<input id="password" name="password" placeholder="Password" title="password" tabindex="5" type="password">
 								</p>
-								<!--<p class="remember">
+								<p class="remember">
 									<input id="signin_submit" value="Sign in" tabindex="6" type="submit">
-									<input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
-									<label for="remember">Remember me</label>
+									<!--<input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
+									<label for="remember">Remember me</label>-->
 								</p>
-								<p class="forgot">
+								<!--<p class="forgot">
 									<a href="#" id="resend_password_link">Forgot your password?</a>
 								</p>
 								<p class="forgot-username">
@@ -45,10 +45,10 @@
 									href="#">Forgot your username?</a>
 								</p>-->
 							</form>
-						</fieldset>
+						</div>
 						<!-- Login form end-->
 						<!-- Sign Up form -->
-						<fieldset class="signup_menu">
+						<div class="signup_menu">
 							<form method="post" id="signup" action="https://twitter.com/sessions">
 								<label for="email">Email</label>
 								<input id="email" name="email" placeholder="Email" title="email" tabindex="9" type="text">
@@ -63,7 +63,7 @@
 								</p>
 								<button>Sign up!</button>
 							</form>
-						</fieldset>
+						</div>
 						<!-- Sign Up form End -->
 					</div>
 					<!-- Login End -->

@@ -19,31 +19,31 @@ $(document).ready(function() {
 	// Login JS
 	$("#login").click(function(e) {
 		e.preventDefault();
-		$("fieldset.signin_menu").toggle();
+		$("div.signin_menu").toggle();
 		$("#login").toggleClass("menu-open");
 	});
 
-	$("fieldset.signin_menu").mouseup(function() {
+	$("div.signin_menu").mouseup(function() {
 		return false
 	});
-	$("fieldset.signup_menu").mouseup(function() {
+	$("div.signup_menu").mouseup(function() {
 		return false
 	});
 	$(document).mouseup(function(e) {
 		if($(e.target).parent("a.signin").length == 0) {
 			$(".signin").removeClass("menu-open");
-			$("fieldset.signin_menu").hide();
+			$("div.signin_menu").hide();
 		}
 	});
 	$(document).mouseup(function(e) {
 		if($(e.target).parent("a.signin").length == 0) {
 			$(".signin").removeClass("menu-open");
-			$("fieldset.signup_menu").hide();
+			$("div.signup_menu").hide();
 		}
 	});
 	$("#signup").click(function(e) {
 		e.preventDefault();
-		$("fieldset.signin_menu").toggle();
+		$("div.signin_menu").toggle();
 		$("#signup").toggleClass("menu-open");
 	});
 	$("#login").click(function() {
@@ -57,5 +57,8 @@ $(document).ready(function() {
 	});
 	$("#signup").click(function() {
 		$(".signin_menu").hide();
+	});
+	$("#login").click(function() {
+		$("#login").css({"border-radius":"4px 4px 0px 0px"});
 	});
 });
