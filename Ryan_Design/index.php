@@ -8,6 +8,7 @@
 		<script type="text/javascript" src="badrank.js"></script>
 		<script type="text/javascript" src="boxes.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
+		<script type="text/javascript" src="usermanagement.js"></script>
 	</head>
 	<body onLoad="focusCursor()">
 		<div class="bigthing">
@@ -49,20 +50,18 @@
 						<!-- Login form end-->
 						<!-- Sign Up form -->
 						<div class="signup_menu">
-							<form method="post" id="signup" action="https://twitter.com/sessions">
-								<label for="email">Email</label>
-								<input id="email" name="email" placeholder="Email" title="email" tabindex="9" type="text">
+								<label for="suEmail">Email</label>
+								<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
 								</br>
 								<p>
-									<label for="password">Password</label>
-									<input id="password" name="password" placeholder="Password" title="password" tabindex="10" type="password">
+									<label for="suPassword">Password</label>
+									<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
 								</p>
 								<p>
-									<label for="password">Repeat Password</label>
-									<input id="password" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
+									<label for="suAltPassword">Repeat Password</label>
+									<input id="suPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
 								</p>
-								<button>Sign up!</button>
-							</form>
+								<button id="signupButton" onClick="signUp()">Sign up!</button>
 						</div>
 						<!-- Sign Up form End -->
 					</div>
@@ -163,6 +162,11 @@
     	<div id="guideMaterial">
     		Guide Information
     	</div>
+    	<a class="popupClose">X</a>
+    </div>
+         <div id="signupPopup" class="popup">
+    	<h1>donate</h1>
+    	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
 	<div id="backgroundPopup"></div>  
