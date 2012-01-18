@@ -49,7 +49,7 @@
 						<!-- Login form end-->
 						<!-- Sign Up form -->
 						<fieldset class="signup_menu">
-							<form method="post" id="signup" action="https://twitter.com/sessions">
+							<!--<form method="post" id="signup" action="https://twitter.com/sessions">-->
 								<label for="email">Email</label>
 								<input id="email" name="email" placeholder="Email" title="email" tabindex="9" type="text">
 								</br>
@@ -61,8 +61,8 @@
 									<label for="password">Repeat Password</label>
 									<input id="password" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
 								</p>
-								<button>Sign up!</button>
-							</form>
+								<button id="signup">Sign up!</button>
+						<!--</form>-->
 						</fieldset>
 						<!-- Sign Up form End -->
 					</div>
@@ -101,7 +101,7 @@
 						<div id="guideInput">
 							<center>
 								<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
-								<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!" value=""> </textarea>
+								<textarea id="manyTerm" rows="43" cols="60" placeholder="Input text..."></textarea>
 								<button onClick="createGuide()" id="createGuide">
 									Create Study Guide!
 								</button>
@@ -156,6 +156,11 @@
     <div id="donatePopup" class="popup">
     	<h1>donate</h1>
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
+    	<a class="popupClose">X</a>
+    </div>
+    <div id="signupPopup" class="popup">
+    	<h1>Sign Up!</h1>
+		<p>Sign Up Complete</p>
     	<a class="popupClose">X</a>
     </div>
     <div id="createGuidePopup" class="popup">
