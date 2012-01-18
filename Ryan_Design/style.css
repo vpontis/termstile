@@ -2,6 +2,11 @@ body {
 	background-color: #000000;
 	padding: 0px;
 	margin: 0px;
+	font-family: HelveticaLight;
+}
+@font-face {
+font-family: HelveticaLight;
+src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf'),
 }
 .header {
 	background: #ffffff; /* Old browsers */
@@ -53,7 +58,7 @@ body {
 	background: url('form.png') repeat-x;
 	color: #888;
 	border: 1px solid #ccc;
-	font-family: Cantarell, Verdana, sans-serif;
+	font-family: HelveticaLight;
 	font-weight: bold;
 	font-size: 15px;
 	width: 500px;
