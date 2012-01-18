@@ -91,29 +91,55 @@
 					<div id="boxArea" style="float: left;"></div>
 				</div>
 				<div class="multiplesearch">
-					<textarea id="manyTerm" rows="45" cols="60" placeholder="Input list!"> </textarea>
-					<button class="submit" onClick="createGuide()">
-						Create Study Guide!
-					</button>
+					<center>
+						<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!"> </textarea>
+						<button onClick="createGuide()" id="createGuide">
+							Create Study Guide!
+						</button>
+					</center>
 					<div id="guideBox" style="display:none"></div>
 				</div>
 				<div class="bottom container">
-					<a id="report">Report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/about">about</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/contact">contact</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/donate">donate</a>
+					<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
 				</div>
 			</div>
 		</div>
-		<div id="popupContact">  
-        	<a id="popupClose">x</a>  
-        	<h1>Title of our cool popup, yay!</h1>  
-        	<p id="change">  
-            Here we have a simple but interesting sample of our new stuning and smooth popup. As you can see jQuery and CSS does it easy...  
-            <br/><br/>  
-            We can use it for popup-forms and more... just experiment!  
-            <br/><br/>  
-            Press ESCAPE, Click on X (right-top) or Click Out from the popup to close the popup!  
-            <br/><br/>  
-        </p>  
-    </div> 
+	<div id="reportPopup" class="popup">  
+    	<center>
+	    	<h1>what's wrong!?</h1>  
+	    	<p>Do you have a problem? Please tell us about it and we will work on fixing it!</p>
+	    	<textarea rows="15" cols="30" placeholder="Enter problem here."/></textarea><br />
+	    	<button>Submit</button>
+	    	<h2>Thanks!</h2>
+	    </center>
+	    <a class="popupClose">X</a> 
+    </div>
+    <div id="aboutPopup" class="popup">
+    	<h1>about us</h1>
+    	<p>We are three MIT freshman who made this site for 6.470 which is a web development compeition.</p>
+    	<p><strong>Victor Pontis</strong> Victor is from San Diego and can do a triple backflip.</p>
+    	<p><strong>Ryan Lau</strong> Ryan is from Hawaii and surfs every day, even at MIT!</p>
+    	<p><strong>Akash Badshah</strong> Akash is from Seattle and is Sean White's new big competitor.</p>
+    	<a class="popupClose">X</a>
+    </div>
+    <div id="contactUsPopup" class="popup">
+    	<h1>contact us</h1>
+    	<center>
+	    	<p>The best way to contact us would be by email.</p>
+	    	<p><strong>Victor Pontis:</strong> vpontis@mit.edu <a href="mailto:vpontis@mit.edu">compose</a></p>
+	    	<p><strong>Akash Badshah:</strong> akashbad@mit.edu <a href="mailto:akashbad@mit.edu">compose</a></p>
+	    	<p><strong>Ryan Lau:</strong> rlau@mit.edu <a href="mailto:rlau@mit.edu">compose</a></p>
+	    	<a class="popupClose">X</a>
+    	</center>
+    </div>
+    <div id="donatePopup" class="popup">
+    	<h1>donate</h1>
+    	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
+    	<a class="popupClose">X</a>
+    </div>
+    <div id="createGuidePopup" class="popup">
+    	<a class="popupClose">X</a>
+    </div>
 	<div id="backgroundPopup"></div>  
 	</body>
 </html>

@@ -13,14 +13,14 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\">Generating Text...<a href=\'#\' onclick=\'removeElement("+divIdName+")\'>x</a></div>"
+	var text = "<div style=\"text-align:center\">Generating Text...  <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>X</a></div>"
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 	divNum += 1;
 	var summary = new Array(3);
 	getText(searchBar.value,function(summary){
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
-		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>x</a>";
+		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>X</a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\en.wikipedia.org/wiki/" + searchBarValue + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	})
@@ -45,12 +45,36 @@ function focusCursor()	{
 	document.getElementById('oneTerm').focus();
 }
 
+var popupOpen = "";
+var popupStatus = 0;
+
 $(document).ready(function(){
 	$('#report').click(function(){
-		centerPopup();
-		loadPopup();
+		popupOpen = "#reportPopup";
+		centerPopup('#reportPopup');
+		loadPopup('#reportPopup');
 	});
-	$('#popupClose').click(function(){
+	$('#about').click(function(){
+		popupOpen = "#aboutPopup";
+		centerPopup('#aboutPopup');
+		loadPopup('#aboutPopup');
+	});
+	$('#contactUs').click(function(){
+		popupOpen = "#contactUsPopup";
+		centerPopup('#contactUsPopup');
+		loadPopup('#contactUsPopup');
+	});
+	$('#createGuide').click(function(){
+		popupOpen = "#createGuidePopup";
+		centerPopup('#createGuidePopup');
+		loadPopup('#createGuidePopup');
+	});
+	$('#donate').click(function(){
+		popupOpen = "#donatePopup";
+		centerPopup('#donatePopup');
+		loadPopup('#donatePopup');
+	});
+	$('.popupClose').click(function(){
 		disablePopup();
 	});
 	$('#backgroundPopup').click(function(){
@@ -58,13 +82,19 @@ $(document).ready(function(){
 	});
 });
 
-var popupStatus = 0;
+//If escape is pressed when popup is open, close popup
+$(document).keypress(function(e){  
+	var code = (e.keyCode ? e.keyCode : e.which);
+	if(code == 27 && popupStatus == 1) {
+		disablePopup();	
+	}
+});
 
-function loadPopup()	{
+function loadPopup(id)	{
 	if(popupStatus==0){
 		$('#backgroundPopup').css({'opacity':'.7'});
+		$(id).fadeIn('slow');
 		$('#backgroundPopup').fadeIn('slow');
-		$('#popupContact').fadeIn('slow');
 		popupStatus=1;
 	}
 }
@@ -72,17 +102,16 @@ function loadPopup()	{
 function disablePopup()	{
 	if(popupStatus==1){
 		$('#backgroundPopup').fadeOut('slow');
-		$('#popupContact').fadeOut('slow');
+		$(popupOpen).fadeOut('slow');
 		popupStatus=0;
 	}
 }
 
-function centerPopup(){
+function centerPopup(id){
 	var windowWidth = document.documentElement.clientWidth;  
 	var windowHeight = document.documentElement.clientHeight;  
-	var popupHeight = $("#popupContact").height();  
-	var popupWidth = $("#popupContact").width();  
-	$("#popupContact").css({"position": "absolute",  "top": windowHeight/2-popupHeight/2,  "left": windowWidth/2-popupWidth/2  });  
-	  
+	var popupHeight = $(id).height();  
+	var popupWidth = $(id).width();  
+	$(id).css({"position": "absolute",  "top": windowHeight/2-popupHeight/2,  "left": windowWidth/2-popupWidth/2  });  
 	$("#backgroundPopup").css({"height": windowHeight}); 
 }   

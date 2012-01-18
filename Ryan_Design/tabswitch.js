@@ -12,9 +12,11 @@ $(document).ready(function() {
 
 	$("#singleTerm").click(function() {
 		$(".singlesearch").show();
+		$("#oneTerm").focus();
 	});
 	$("#multipleTerm").click(function() {
 		$(".multiplesearch").show();
+		$("#manyTerm").focus();
 	});
 	$("#singleTerm").click(function() {
 		$(".multiplesearch").hide();

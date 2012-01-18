@@ -77,7 +77,7 @@ body {
 }
 #manyTerm {
 	width: 500px;
-	height: 450px;
+	height: 400px;
 	padding: 0px;
 	float: left;
 	border-radius: 6px;
@@ -360,19 +360,28 @@ border:0;
 	top: -1px;
 	right: 2px;
 	text-decoration:none;
-	color: green;
-	background-color: red;
 }
-#popupContact{  
+.close a{
+	color: green;
+}
+.popup{  
 	display:none;  
 	position:fixed;  
-	height:384px;  
-	width:408px;  
+	/*height:500px; */ 
+	width:450px;  
 	background:#FFFFFF;  
 	border:2px solid #cecece;  
 	z-index:2;  
 	padding:12px;  
 	font-size:13px;  
+}
+.popup h1{
+	text-align:center;
+}
+.popupClose	{
+	position:absolute;
+	top: 5px;
+	right: 5px;
 }
 #backgroundPopup{  
 	display:none;  
@@ -384,4 +393,11 @@ border:0;
 	background:#000000;  
 	border:1px solid #cecece;  
 	z-index:1;  
-}    
+}  
+#createGuide{
+	border-radius: 5px;
+	margin-top: 15px;
+} 
+#createGuidePopup{
+	width: 800px;
+}
