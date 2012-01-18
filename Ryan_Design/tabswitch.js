@@ -6,20 +6,15 @@ $(document).ready(function() {
 		});
 	});
 
-	$("#multipleTerm").click(function() {
-		$(".singlesearch").hide();
-	});
-
 	$("#singleTerm").click(function() {
 		$(".singlesearch").show();
+		$(".multiplesearch").hide();
 		$("#oneTerm").focus();
 	});
 	$("#multipleTerm").click(function() {
 		$(".multiplesearch").show();
+		$(".singlesearch").hide();
 		$("#manyTerm").focus();
-	});
-	$("#singleTerm").click(function() {
-		$(".multiplesearch").hide();
 	});
 	// Login JS
 	$("#login").click(function(e) {
