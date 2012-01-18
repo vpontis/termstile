@@ -77,8 +77,8 @@ body {
 }
 #manyTerm {
 	width: 500px;
-	height: 400px;
-	padding: 0px;
+	height: 350px;
+	/*padding: 0px;*/
 	float: left;
 	border-radius: 6px;
 }
@@ -400,4 +400,15 @@ border:0;
 } 
 #createGuidePopup{
 	width: 800px;
+}
+#guideTitle::-webkit-input-placeholder { 
+	text-align: center;
+}
+#guideTitle	{
+	border-radius: 5px;
+	margin-bottom: 10px;
+	width: 380px;
+	padding: 0px;
+	border-color: black;
+	border-width: 1px;
 }

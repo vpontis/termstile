@@ -92,7 +92,8 @@
 				</div>
 				<div class="multiplesearch">
 					<center>
-						<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!"> </textarea>
+						<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
+						<div><textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!"> </textarea></div>
 						<button onClick="createGuide()" id="createGuide">
 							Create Study Guide!
 						</button>
@@ -138,6 +139,10 @@
     	<a class="popupClose">X</a>
     </div>
     <div id="createGuidePopup" class="popup">
+    	<h1>Your Study Guide</h1>
+    	<div id="guideMaterial">
+    		Guide Information
+    	</div>
     	<a class="popupClose">X</a>
     </div>
 	<div id="backgroundPopup"></div>  

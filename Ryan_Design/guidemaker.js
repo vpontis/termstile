@@ -19,9 +19,11 @@ function createGuide() {
 function makeDoc(terms, summaries){
 	var guideText = "";
 	for(var i=0; i<terms.length; i++){
-		guideText += "<strong>"+terms[i]+"</strong><br />"+summaries[i]+"<br />";
+		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
 	}
-	var guideBox = document.getElementById('guideBox');
-	$(guideBox).html = guideText;
-	$(guideBox).css('display','block');
+	var gM = document.getElementById('guideMaterial');
+	$(gM).html(guideText);
+	popupOpen = "#createGuidePopup";
+	centerPopup('#createGuidePopup');
+	loadPopup('#createGuidePopup');
 }

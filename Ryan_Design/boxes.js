@@ -64,11 +64,11 @@ $(document).ready(function(){
 		centerPopup('#contactUsPopup');
 		loadPopup('#contactUsPopup');
 	});
-	$('#createGuide').click(function(){
-		popupOpen = "#createGuidePopup";
-		centerPopup('#createGuidePopup');
-		loadPopup('#createGuidePopup');
-	});
+	//$('#createGuide').click(function(){
+		//popupOpen = "#createGuidePopup";
+		//centerPopup('#createGuidePopup');
+		//loadPopup('#createGuidePopup');
+	//});
 	$('#donate').click(function(){
 		popupOpen = "#donatePopup";
 		centerPopup('#donatePopup');
