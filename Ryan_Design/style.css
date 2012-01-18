@@ -70,13 +70,13 @@ body {
 }
 .multiplesearch {
 	height: 500px;
-	width: 500px;
+	width: 750px;
 	margin: 0px auto 0px;
 	padding: 50px 0px 0px 0px;
 	display: none;
 }
 #manyTerm {
-	width: 500px;
+	width: 400px;
 	height: 350px;
 	/*padding: 0px;*/
 	float: left;
@@ -411,4 +411,13 @@ border:0;
 	padding: 0px;
 	border-color: black;
 	border-width: 1px;
+}
+#guideInstructions	{
+	float: left;
+	width: 300px;
+	margin-left: 20px;
+}
+#guideInput	{
+	width: 400px;
+	float: left;
 }

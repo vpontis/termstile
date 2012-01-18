@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Autostudy</title>
+		<title>AutoStudy: get Wikipedia summaries</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
@@ -14,7 +14,7 @@
 			<div class="header">
 				<div class="container">
 					<div id="title">
-						<img src="..\media\samplelogo.png" height="80px" width="200px"/>
+						<img src="../media/samplelogo.png" height="80px" width="200px"/>
 					</div>
 					<!-- Login Start-->
 					<div id="container1" style="position:relative;top:-80px;">
@@ -88,16 +88,35 @@
 					<button class="submit" onClick="createBox()">
 						Go!
 					</button>
-					<div id="boxArea" style="float: left;"></div>
+					<div id="boxArea" style="float: left;">
+						<div id="box0" class="box">
+							<strong>AutoStudy Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If \'Generating text...\' appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
+							<br /><br />
+							<strong>AutoStudy is still in alpha--we just started working on it this week. So expect some bugs.</strong>
+							Thank you and enjoy!
+						</div>
+					</div>
 				</div>
 				<div class="multiplesearch">
-					<center>
-						<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
-						<div><textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!"> </textarea></div>
-						<button onClick="createGuide()" id="createGuide">
-							Create Study Guide!
-						</button>
-					</center>
+						<div id="guideInput">
+							<center>
+								<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
+								<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!"> </textarea>
+								<button onClick="createGuide()" id="createGuide">
+									Create Study Guide!
+								</button>
+							</center>
+						</div>
+						<div id="guideInstructions" style="float:left">
+							<h2>Instructions</h2>
+							<ol>
+								<li>Enter a title.</li>
+								<li>Enter in your terms. Put each term on a new line or seperate with commas. </li>
+								<li>Click "Create Guide"</li>
+								<li><strong>Enjoy!</strong></li>
+							</ol>
+						</div>
+					
 					<div id="guideBox" style="display:none"></div>
 				</div>
 				<div class="bottom container">

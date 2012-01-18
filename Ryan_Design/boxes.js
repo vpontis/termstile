@@ -1,4 +1,4 @@
-divNum = 0; //keep track of how many new elements created
+divNum = 1; //keep track of how many new elements created
 function createBox() {
 	var boxArea = document.getElementById('boxArea');
 	var newDiv = document.createElement('div');
