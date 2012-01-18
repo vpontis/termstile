@@ -21,9 +21,10 @@ function createBox() {
 	getText(searchBar.value,function(summary){
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
 		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>X</a>";
-		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\en.wikipedia.org/wiki/" + searchBarValue + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
+		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\en.wikipedia.org/wiki/" + searchBar.Value + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
-	})
+	});
+	$("#oneTerm").val("");
 }
 
 function removeElement(id)	{
@@ -36,8 +37,6 @@ function enterPressed(e)	{
 	var code = (e.keyCode ? e.keyCode : e.which);
 	if(code == 13) {
 		createBox();
-		searchBarValue = oneTerm.value;
-		 $("#oneTerm").val(""); 	
 	}
 }
 

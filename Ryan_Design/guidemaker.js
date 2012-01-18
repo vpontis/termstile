@@ -26,9 +26,7 @@ function makeDoc(terms, summaries){
 	if(guideTitleVal != null && guideTitleVal != ""){
 		$('#guidePopupTitle').html(guideTitleVal);
 	}
-	//var gM = document.getElementById('guideMaterial');
 	$('#guideMaterial').html(guideText);
-	//$('.bigthing').css('overflow','hidden');
 	popupOpen = "#createGuidePopup";
 	centerPopup('#createGuidePopup');
 	loadPopup('#createGuidePopup');
