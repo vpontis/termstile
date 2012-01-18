@@ -73,6 +73,11 @@ $(document).ready(function(){
 		centerPopup('#donatePopup');
 		loadPopup('#donatePopup');
 	});
+	$('#signup').click(function(){
+		popupOpen = "#signupPopup";
+		centerPopup('#signupPopup');
+		loadPopup('#signupPopup');
+	});
 	$('.popupClose').click(function(){
 		disablePopup();
 	});
