@@ -11,23 +11,40 @@
 		<script type="text/javascript" src="usermanagement.js"></script>
 
 		<?php
-			if(isset($_COOKIE)){
-			echo "<style type='text/css'>
-			#signedout{
-				display: none;
+			if(isset($_COOKIE['email'])){
+				$con=mysql_connect("127.0.0.1","root","");
+				if(!$con)
+				{
+					die('Could not connect:'.mysql_error());
 				}
-			#signedin {
-				float: right;
-			}</style>";
+				mysql_select_db('autostudy', $con);
+				$email =  $_COOKIE['email'];
+				$passhash = $_COOKIE['passhash'];
+				$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");
+				if(mysql_num_rows($getUsers)!=0){
+					while($info = mysql_fetch_array($getUsers)){
+						if($passhash == $info['PassHash']){
+							echo "<style type='text/css'>
+							#signedout{
+								display: none;
+							}		
+						#signedin {
+							float: right;
+						}</style>";
+						}
+					}		
+		  
+				}
+					
 			}
 			else{
-			echo "<style type='text/css'>
-			#signedout{
-				}
-			#signedin {
-				display: none;
-				float: right;
-			}</style>";
+				echo "<style type='text/css'>
+				#signedout{
+					}
+				#signedin {
+					display: none;
+					float: right;
+				}</style>";
 			}
 		?>
 	</head>
@@ -44,7 +61,7 @@
 							<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 						</div>
 						<div id="signedin" class="topnav">
-							<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a href="logout" id="logout" class="signin">Logout</a></span>
+							<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a onclick="logOut()" id="logout" class="signin">Logout</a></span>
 						</div>
 						<!-- Login form -->
 						<div class="signin_menu">
@@ -78,18 +95,6 @@
 					<!-- Login End -->
 				</div>
 			</div>
-			<!-- Tab Bar -->
-			<!--<div class="midbar">
-				<div class="container">
-					<div id="singleTerm" class="tab selected">
-						<img src="../media/instasearch.png" width="150px" height="30px" alt="Instasearch" />
-					</div>
-					<div id="multipleTerm" class="tab">
-						<img src="../media/generateguide.png" width="200px" height="30px" alt="Generate Guide" />
-					</div>
-				</div>
-			</div>-->
-			<!-- Tab Bar end-->
 			<!-- Main Section Begin -->
 			<div class="main container">
 				<div class="singlesearch">
