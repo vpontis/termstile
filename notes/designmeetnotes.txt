@@ -1,5 +1,9 @@
 Meeting Notes
 
+New title: Termstile
+Incorporate green up arrow into logo, as "T"
+Do not enter symbol can be used for close button
+
 Features
 	Key terms -> study guide
 		Take a list of terms

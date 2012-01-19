@@ -1,11 +1,15 @@
 divNum = 1; //keep track of how many new elements created
+sessionTerms = [];
+sessionSummaries =[];
 function createBox() {
 	var boxArea = document.getElementById('boxArea');
 	var newDiv = document.createElement('div');
 	var divIdName = 'box' + divNum;
 	var searchBar = document.getElementById('oneTerm');
+	var searchTerm = searchBar.value;
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'box');
+	newDiv.setAttribute('name',searchTerm);
 	if(boxArea.firstChild == null){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
@@ -18,7 +22,6 @@ function createBox() {
 	$(newDiv).slideDown('slow');
 	divNum += 1;
 	var summary = new Array(3);
-	var searchTerm = searchBar.value;
 	getText(searchTerm,function(summary){
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
 		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>X</a>";

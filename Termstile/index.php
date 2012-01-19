@@ -108,6 +108,16 @@
 							Thank you and enjoy!
 						</div>
 					</div>
+					<div id="createButtons">
+						<center>
+							<div id="createGuide">
+								<button id="createGuideButton">Create Study Guide</button>
+							</div>
+							<div id="createCards">
+								<button id="createGuideButton">Create Flash Cards</button>
+							</div>
+						</center>
+					</div>
 				</div>
 				<!--
 				<div class="multiplesearch">
