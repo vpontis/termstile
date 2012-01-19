@@ -141,7 +141,8 @@ li {
 	vertical-align:-2px;
 }
 #boxarea{
-	margin-top: 5px;
+	width: 650px;
+	margin: 5px auto 0px;
 	max-height: 450px;
 	overflow: auto;
 }
@@ -465,10 +466,11 @@ border:0;
 	float: left;
 }
 #createCards{
-	float: left;
+	float: right;
 }
 #createButtons{
 	margin-left: auto;
 	margin-right: auto;
 	height: 40px;
+	width: 300px;
 }

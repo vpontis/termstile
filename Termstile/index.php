@@ -100,24 +100,22 @@
 					<button class="submit" onClick="createBox()" id="summarize">
 						Summarize!
 					</button>
-					<div id="boxArea" style="float: left;">
-						<div id="box0" class="box">
-							<strong>AutoStudy Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
-							<br /><br />
-							<strong>AutoStudy is still in alpha--we just started working on it this week. So expect some bugs.</strong>
-							Thank you and enjoy!
+				</div>
+				<div id="boxArea" style="float: left;">
+					<div id="box0" class="box">
+						<strong>AutoStudy Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
+						<br /><br />
+						<strong>AutoStudy is still in alpha--we just started working on it this week. So expect some bugs.</strong>
+						Thank you and enjoy!
+					</div>
+				</div>
+				<div id="createButtons">
+						<div id="createGuide">
+							<button id="createGuideButton" onClick="saveAsGuide("")">Create Study Guide</button>
 						</div>
-					</div>
-					<div id="createButtons">
-						<center>
-							<div id="createGuide">
-								<button id="createGuideButton">Create Study Guide</button>
-							</div>
-							<div id="createCards">
-								<button id="createGuideButton">Create Flash Cards</button>
-							</div>
-						</center>
-					</div>
+						<div id="createCards">
+							<button id="createGuideButton">Create Flash Cards</button>
+						</div>
 				</div>
 				<!--
 				<div class="multiplesearch">
