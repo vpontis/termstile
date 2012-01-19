@@ -12,7 +12,7 @@
 		if(!strpos($email,"@") | !strpos($email,".")){
 			die('You did not enter a valid email.');
 		}
-		$checkUsers = mysql_query("SELECT email FROM users WHERE email = '$email'");
+		$checkUsers = mysql_query("SELECT Email FROM users WHERE Email = '$email'");
 		if(mysql_num_rows($checkUsers)!=0){
 			die("That email is already registered, please log in or try a different email.");
 		}
@@ -21,7 +21,7 @@
 		}
 		
 		$passhash = sha1($email . $_POST['password']);
-		$insert = "INSERT INTO users (email, passhash) VALUES('$email', '$passhash')";
+		$insert = "INSERT INTO users (Email, PassHash) VALUES('$email', '$passhash')";
 		if(mysql_query($insert)){
 			echo "Thanks for signing up!";
 		}
@@ -30,8 +30,8 @@
 		}
 		
 		$hour = time() + 3600;
-		setcookie(email,$email,$hour);
-		setcookie(passhash,$passhash,$hour);
+		setcookie('email',$email,$hour);
+		setcookie('passhash',$passhash,$hour);
 		
 		mysql_close($con);
 ?>

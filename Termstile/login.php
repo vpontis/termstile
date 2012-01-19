@@ -9,19 +9,21 @@
 		if(!$email | !$_POST['password']){
 			die('You did not complete all fo the required fields.');
 		}
-		$getUsers = mysql_query("SELECT email FROM users WHERE email = '$email'");
+		$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");
 		if(mysql_num_rows($getUsers)==0){
 			die("That email is not registered, make sure you typed it correctly. Otherwise you can sign up!");
 		}		
 		while($info = mysql_fetch_array($getUsers)){
 			$passhash = sha1($email . $_POST['password']);
-			if($passhash != $info['passhash']){
-				die('Incorrect password, please try again.');
-			}  
+			//echo $passhash."<br />";
+			echo $info['passhash'];
+			//if($passhash != sha1($info['email'].$info['passhash'])){
+				//die('Incorrect password, please try again.');
+			//}  
 		}		
 		$hour = time() + 3600;
-		setcookie(email,$email,$hour);
-		setcookie(passhash,$passhash,$hour);
+		setcookie('email',$email,'$hour');
+		setcookie('passhash',$passhash,'$hour');
 		
 		mysql_close($con);
 ?>
