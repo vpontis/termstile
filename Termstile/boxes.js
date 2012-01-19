@@ -23,6 +23,8 @@ function createBox() {
 	divNum += 1;
 	var summary = new Array(3);
 	getText(searchTerm,function(summary){
+		sessionTerms[divNum] = searchTerm;
+		sessionSummaries[divNum] = summary[0]+" "+summary[1]+" "+summary[2];
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
 		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>X</a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\\\en.wikipedia.org/wiki/" + searchTerm + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"

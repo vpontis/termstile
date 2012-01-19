@@ -24,7 +24,6 @@ function saveAsGuide(title){
 	}
 	var summaries = sessionSummaries;
 	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
-		
 	})
 	makeDoc(terms, summaries);
 	
