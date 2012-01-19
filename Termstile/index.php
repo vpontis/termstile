@@ -29,7 +29,6 @@
 								display: none;
 							}		
 						#signedin {
-							float: right;
 						}</style>";
 						}
 					}		
@@ -43,7 +42,6 @@
 					}
 				#signedin {
 					display: none;
-					float: right;
 				}</style>";
 			}
 		?>
@@ -60,7 +58,7 @@
 						<div id="signedout" class="topnav" >
 							<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 						</div>
-						<div id="signedin" class="topnav">
+						<div id="signedin" class="topnav floats_r">
 							<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a onclick="logOut()" id="logout" class="signin">Logout</a></span>
 						</div>
 						<!-- Login form -->
