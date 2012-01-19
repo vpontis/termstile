@@ -19,6 +19,8 @@ body {
 	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#BBBBBB',GradientType=0 ); /* IE6-9 */
 	height: 80px;
 }
+/*Autocomplete*/
+ui-menu-item
 .title{
 	display: inline;
 	float: left;
@@ -194,6 +196,9 @@ a img {
     color:#fff;
     *background:transparent url("images/signin-nav-bg-ie.png") no-repeat 0 0;
     *padding:4px 12px 6px;
+}
+.floats_r{
+	float: right;
 }
 #login{
 	-webkit-border-radius:4px 0px 0px 4px;
