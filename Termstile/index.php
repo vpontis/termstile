@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			<!-- Tab Bar -->
-			<div class="midbar">
+			<!--<div class="midbar">
 				<div class="container">
 					<div id="singleTerm" class="tab selected">
 						<img src="../media/instasearch.png" width="150px" height="30px" alt="Instasearch" />
@@ -67,7 +67,7 @@
 						<img src="../media/generateguide.png" width="200px" height="30px" alt="Generate Guide" />
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<!-- Tab Bar end-->
 			<!-- Main Section Begin -->
 			<div class="main container">
