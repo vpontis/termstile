@@ -19,8 +19,11 @@
 					</div>
 					<!-- Login Start-->
 					<div id="container1" style="float: right;">
-						<div id="topnav" class="topnav">
+						<div id="signedout" class="topnav" >
 							<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
+						</div>
+						<div id="signedin" class="topnav">
+							<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a href="logout" id="logout" class="signin">Logout</a></span>
 						</div>
 						<!-- Login form -->
 						<div class="signin_menu">

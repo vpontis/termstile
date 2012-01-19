@@ -19,6 +19,10 @@ body {
 	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#BBBBBB',GradientType=0 ); /* IE6-9 */
 	height: 80px;
 }
+.title{
+	display: inline;
+	float: left;
+}
 .midbar {
 	background-color: #D3D3D3;
 	height: 20px;
@@ -28,6 +32,7 @@ body {
 	height: inherit;
 	margin: 0px auto 0px;
 }
+
 .main {
 	background-color: #FCFCF7;
 	height: 80%;
@@ -168,13 +173,25 @@ a:hover {
 a img {
     border-width:0;
 }
-#topnav {
+#signedout{
+	display: none;
+}
+#signedin {
+	float: right;
+}
+#home {
+	border-radius: 4px 4px 4px 4px;
+}
+#logout{
+	border-radius: 4px 4px 4px 4px;
+}
+.topnav {
     padding:10px 0px 12px;
     font-size:11px;
     line-height:23px;
     text-align:right;
 }
-#topnav a.signin {
+.topnav a.signin {
     background:#88bbd4;
     padding:4px 6px 6px;
     text-decoration:none;
@@ -193,12 +210,12 @@ a img {
     -moz-border-radius:0px 4px 4px 0px;
     border-radius:0px 4px 4px 0px;
 }
-#topnav a.signin:hover {
+.topnav a.signin:hover {
     background:#59B;
     *background:transparent url("images/signin-nav-bg-hover-ie.png") no-repeat 0 0;
     *padding:4px 12px 6px;
 }
-#topnav a.signin, #topnav a.signin:hover {
+.topnav a.signin, .topnav a.signin:hover {
     *background-position:0 3px!important;
 }
 
@@ -212,7 +229,7 @@ a.signin span {
     background-position:100% 50%;
     padding:4px 16px 6px 0;
 }
-#topnav a.menu-open {
+.topnav a.menu-open {
     background:#ddeef6!important;
     color:#666!important;
     outline:none;
