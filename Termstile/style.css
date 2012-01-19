@@ -173,13 +173,7 @@ a:hover {
 a img {
     border-width:0;
 }
-#signedout{
-	/*display: none;*/
-}
-#signedin {
-	float: right;
-	display:none;
-}
+
 #home {
 	border-radius: 4px 4px 4px 4px;
 }

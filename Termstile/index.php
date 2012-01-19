@@ -9,6 +9,27 @@
 		<script type="text/javascript" src="boxes.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
 		<script type="text/javascript" src="usermanagement.js"></script>
+
+		<?php
+			if(isset($_COOKIE)){
+			echo "<style type='text/css'>
+			#signedout{
+				display: none;
+				}
+			#signedin {
+				float: right;
+			}</style>";
+			}
+			else{
+			echo "<style type='text/css'>
+			#signedout{
+				}
+			#signedin {
+				display: none;
+				float: right;
+			}</style>";
+			}
+		?>
 	</head>
 	<body onLoad="focusCursor()">
 		<div class="bigthing">
