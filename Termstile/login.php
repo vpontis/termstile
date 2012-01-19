@@ -16,14 +16,14 @@
 		while($info = mysql_fetch_array($getUsers)){
 			$passhash = sha1($email . $_POST['password']);
 			//echo $passhash."<br />";
-			echo $info['passhash'];
-			//if($passhash != sha1($info['email'].$info['passhash'])){
-				//die('Incorrect password, please try again.');
-			//}  
+			if($passhash != $info['PassHash']){
+				die('Incorrect password, please try again.');
+			}  
 		}		
 		$hour = time() + 3600;
-		setcookie('email',$email,'$hour');
-		setcookie('passhash',$passhash,'$hour');
+		setcookie('email',$email,$hour);
+		setcookie('passhash',$passhash,$hour);
+		echo "Login Successful!";
 		
 		mysql_close($con);
 ?>
