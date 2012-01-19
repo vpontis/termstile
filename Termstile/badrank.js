@@ -1,5 +1,4 @@
 function getText(title, callback){
-	
 	$.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
 	function(data){
 		if(data.query!=undefined){
@@ -87,21 +86,13 @@ function getText(title, callback){
 				callback(answer);
 			}
 			else{
-				var error = new Array(3);
-				error[0] = "We're sorry but we can't find "+title+".";
-				error[1] = "Wikipedia may not have an article for that term."
-				error[2] = "Please check the spelling and try again.";
-				callback(error);
+				handleError(title,callback);
 			}
 		}
 		else{
-			var error = new Array(3);
-			error[0] = "We're sorry but we can't find "+title+".";
-			error[1] = "Wikipedia may not have an article for that term."
-			error[2] = "Please check the spelling and try again.";
-			callback(error);
+			handleError(title,callback);
 		}
-	});	
+	});
 }
 
 function rankSentences(sentence, text){
@@ -116,4 +107,12 @@ function rankSentences(sentence, text){
 		}
 	}
 	return rank;
+}
+
+function handleError(title,callback){
+	var error = new Array(3);
+	error[0] = "We're sorry but we can't find "+title+".";
+	error[1] = "Wikipedia may not have an article for that term."
+	error[2] = "Please check the spelling and try again.";
+	callback(error);
 }

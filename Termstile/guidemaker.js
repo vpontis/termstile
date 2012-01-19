@@ -16,6 +16,20 @@ function createGuide() {
 	});
 }
 
+function saveAsGuide(title){
+	var terms = sessionTerms;
+	var termsList = "";
+	for(var i=0; i<terms.length; i++){
+		termsList+=terms[i]+"|";
+	}
+	var summaries = sessionSummaries;
+	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
+		
+	})
+	makeDoc(terms, summaries);
+	
+}
+
 function makeDoc(terms, summaries){
 	var guideText = "";
 	for(var i=0; i<terms.length; i++){
