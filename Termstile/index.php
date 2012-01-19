@@ -111,6 +111,7 @@
 						</div>
 					</div>
 				</div>
+				<!--
 				<div class="multiplesearch">
 						<div id="guideInput">
 							<center>
@@ -131,9 +132,9 @@
 							</ol>
 							<strong>Note: </strong> if your list does not appear it is because one of your terms is giving an error. You can check to see which term is giving an error under InstaSearch. We are working on getting this fixed. 
 						</div>
-
 					<div id="guideBox" style="display:none"></div>
 				</div>
+				-->
 				<div class="bottom container">
 					<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
 				</div>
