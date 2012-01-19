@@ -1,5 +1,6 @@
 function getText(title, callback){
-	return $.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
+	
+	$.getJSON("http://en.wikipedia.org//w/api.php?action=query&prop=revisions&format=json&rvprop=content&rvlimit=1&redirects&indexpageids&titles="+title+"&callback=?",
 	function(data){
 		if(data.query!=undefined){
 			var id = data.query.pageids[0];
