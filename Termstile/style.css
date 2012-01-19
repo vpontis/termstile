@@ -20,7 +20,17 @@ body {
 	height: 80px;
 }
 /*Autocomplete*/
-ui-menu-item
+ul {
+	list-style: none;
+	padding: 7px 0px;
+}
+li {
+	background-color: white;
+	padding: 4px 6px;
+	width: 492px;
+	font-size: 10pt;
+}
+
 .title{
 	display: inline;
 	float: left;
