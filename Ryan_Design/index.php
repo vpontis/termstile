@@ -24,28 +24,14 @@
 						</div>
 						<!-- Login form -->
 						<div class="signin_menu">
-							<form method="post" id="signin" action="https://twitter.com/sessions">
-								<label for="email">Email</label>
-								<input id="email" name="email" placeholder="Email" title="Email" tabindex="4" type="text">
+								<label for="liEmail">Email</label>
+								<input id="liEmail" name="email" placeholder="Email" title="Email" tabindex="4" type="text">
 								</br>
 								<p>
-									<label for="password">Password</label>
-									<input id="password" name="password" placeholder="Password" title="password" tabindex="5" type="password">
+									<label for="liPassword">Password</label>
+									<input id="liPassword" name="password" placeholder="Password" title="password" tabindex="5" type="password">
 								</p>
-								<p class="remember">
-									<input id="signin_submit" value="Sign in" tabindex="6" type="submit">
-									<!--<input id="remember" name="remember_me" value="1" tabindex="7" type="checkbox">
-									<label for="remember">Remember me</label>-->
-								</p>
-								<!--<p class="forgot">
-									<a href="#" id="resend_password_link">Forgot your password?</a>
-								</p>
-								<p class="forgot-username">
-									<a id=forgot_username_link
-									title="If you remember your password, try logging in with your email"
-									href="#">Forgot your username?</a>
-								</p>-->
-							</form>
+								<button id="loginButton" onClick="logIn()">Log in!</button>
 						</div>
 						<!-- Login form end-->
 						<!-- Sign Up form -->
@@ -59,7 +45,7 @@
 								</p>
 								<p>
 									<label for="suAltPassword">Repeat Password</label>
-									<input id="suPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
+									<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
 								</p>
 								<button id="signupButton" onClick="signUp()">Sign up!</button>
 						</div>
@@ -164,7 +150,12 @@
     	</div>
     	<a class="popupClose">X</a>
     </div>
-         <div id="signupPopup" class="popup">
+    <div id="signupPopup" class="popup">
+    	<h1>donate</h1>
+    	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
+    	<a class="popupClose">X</a>
+    </div>
+        <div id="loginPopup" class="popup">
     	<h1>donate</h1>
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
