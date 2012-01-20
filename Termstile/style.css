@@ -23,13 +23,18 @@ body {
 /*Autocomplete*/
 ul {
 	list-style: none;
-	padding: 7px 0px;
+	padding: 5px 0px;
+	border: 2px solid gray;
+	width: 496px;
 }
 li {
 	background-color: white;
 	padding: 4px 6px;
-	width: 492px;
+	width: 484px;
 	font-size: 10pt;
+}
+li:hover{
+	background-color: gray;
 }
 
 .title{
@@ -424,7 +429,7 @@ border:0;
 	z-index:1;  
 }  
 
-#createGuidePopup{
+$#GuidePopup{
 	width: 800px;
 }
 #guideTitle::-webkit-input-placeholder { 
