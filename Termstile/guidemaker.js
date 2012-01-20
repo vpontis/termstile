@@ -12,6 +12,12 @@ function createGuide() {
 			if(--left==0){
 				var guideTitle = document.getElementById('guideTitle');
 				var title = guideTitle.value;
+				var termsList = "";
+				for(var i=0; i<terms.length; i++){
+					termsList+=terms[i]+"|";
+				}
+				$.post("saveguide.php", {title:title, terms:termsList}, function(data){
+				})
 				makeDoc(title,terms, summaries);
 			}
 		});
@@ -26,9 +32,9 @@ function saveAsGuide(title){
 	}
 	var summaries = sessionSummaries;
 	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
+		console.log(data);
 	})
 	makeDoc(title, terms, summaries);
-	
 }
 
 function makeDoc(title,terms, summaries){

@@ -112,8 +112,8 @@
 				</div>
 				<div id="createButtons">
 						<div id="createGuide">
-							<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>
-							<!--<button id="createGuideButton" onClick="saveAsGuide('')">Create Study Guide</button>-->
+							<!--<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>-->
+							<button id="createGuideButton" onClick="saveAsGuide('')">Create Study Guide</button>
 						</div>
 						<div id="createCards">
 							<button id="createCardsButton">Create Flash Cards</button>
@@ -197,9 +197,9 @@
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
-	<div id="liveStudyGuide" class="popup">
+	<!--<div id="liveStudyGuide" class="popup">
 		<h1 id="liveStudyGuideTitle">Your Study Guide</h1>
-	</div>
+	</div>-->
 	<div id="backgroundPopup"></div>  
 	</body>
 </html>

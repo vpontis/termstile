@@ -5,6 +5,7 @@ function createBox() {
 	var boxArea = document.getElementById('boxArea');
 	var newDiv = document.createElement('div');
 	var divIdName = 'box' + divNum;
+	var thisDivNum = divNum;
 	var searchBar = document.getElementById('oneTerm');
 	var searchTerm = searchBar.value;
 	newDiv.setAttribute('id', divIdName);
@@ -20,25 +21,27 @@ function createBox() {
 	var text = "<div style=\"text-align:center\">Generating Text...  <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>X</a></div>"
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
-	divNum += 1;
 	var summary = new Array(3);
+	divNum += 1;
 	getText(searchTerm,function(summary){
-		sessionTerms[divNum-2] = searchTerm;
-		sessionSummaries[divNum-2] = summary[0]+" "+summary[1]+" "+summary[2];
+		sessionTerms[thisDivNum-1] = searchTerm;
+		sessionSummaries[thisDivNum-1] = summary[0]+" "+summary[1]+" "+summary[2];
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
 		var shortAnswer = answer;
-		updateStudyGuide(searchTerm, shortAnswer);
-		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+searchTerm+")\'>X</a>";
+		//updateStudyGuide(searchTerm, shortAnswer);
+		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+thisDivNum+")\'>X</a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\\\en.wikipedia.org/wiki/" + searchTerm + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	});
 	$("#oneTerm").val("");
+	
 }
 
-function removeElement(id, searchTerm)	{
-	$(id).animate({opacity:0.0});
-	$(id).slideUp('slow');	
-	$(searchTerm).remove();
+function removeElement(divIdName, idNum)	{
+	sessionTerms.splice(idNum-1,1,"");
+	sessionSummaries.splice(idNum-1,1,"");
+	$(divIdName).animate({opacity:0.0});
+	$(divIdName).slideUp('slow');	
 }	
 
 function enterPressed(e)	{
@@ -76,11 +79,11 @@ $(document).ready(function(){
 		centerPopup('#contactUsPopup');
 		loadPopup('#contactUsPopup');
 	});
-	$('#createGuideButton').click(function(){
+	/*$('#createGuideButton').click(function(){
 		popupOpen = "#liveStudyGuide";
 		centerPopup('#liveStudyGuide');
 		loadPopup('#liveStudyGuide');
-	});
+	});*/
 	$('#donate').click(function(){
 		popupOpen = "#donatePopup";
 		centerPopup('#donatePopup');

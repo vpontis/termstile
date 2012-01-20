@@ -13,7 +13,8 @@
 	$id = mysql_insert_id();
 	$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");
 	while($info = mysql_fetch_array($getUsers)){
-			$guides = $id."|".$info['guides'];	
+			 $guides = $id."|".$info['guides'];
+		     echo $guides;	
 			 $update = "UPDATE users SET MyGuides='$guides' WHERE Email='$email'";
 			 mysql_query($update);
 	}	
