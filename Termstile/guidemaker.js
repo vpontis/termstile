@@ -30,17 +30,24 @@ function saveAsGuide(){
 	var title = titleBar.value;
 	var terms = sessionTerms;
 	var termsList = "";
-	for(var i=0; i<terms.length; i++){
-		termsList+=terms[i]+"|";
-	}
 	var summaries = sessionSummaries;
+	var cleanTerms = new Array(0);
+	var cleanSummaries = new Array(0);
+	for(var i=0; i<terms.length; i++){
+		if(terms[i]!="")
+		{
+			termsList+=terms[i]+"|";
+			cleanTerms.push(terms[i]);
+			cleanSummaries.push(summaries[i]);
+		}
+	}
 	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
 		console.log(data);
 	})
-	makeDoc(title, terms, summaries);
+	makeDoc(title, cleanTerms, cleanSummaries);
 }
 
-function makeDoc(title,terms, summaries){
+function makeDoc(title,terms,summaries){
 	var guideText = "";
 	for(var i=0; i<terms.length; i++){
 		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
