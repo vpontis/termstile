@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="tabswitch.js"></script>
 		<script type="text/javascript" src="badrank.js"></script>
 		<script type="text/javascript" src="boxes.js"></script>
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 			<!-- Main Section Begin -->
-			<div class="main container" id="mainContainer">
+			<div class="container" id="main">
 				<div style="width:200px; margin:0px auto; text-align:center"><button id="multipleTermSlider" onClick="slideDownMultiSearch()">multiple term search</button></div>
 				<div class="singlesearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
@@ -160,7 +160,7 @@
     </div>
     <div id="aboutPopup" class="popup">
     	<h1>about us</h1>
-    	<p>We are three MIT freshman who made this site for 6.470 which is a web development compeition.</p>
+    	<p>We are three MIT freshman who made this site for 6.470, a web development competition.</p>
     	<p><strong>Victor Pontis</strong> Victor is from San Diego and can do a triple backflip.</p>
     	<p><strong>Ryan Lau</strong> Ryan is from Hawaii and surfs every day, even at MIT!</p>
     	<p><strong>Akash Badshah</strong> Akash is from Seattle and is Sean White's new big competitor.</p>
@@ -170,9 +170,9 @@
     	<h1>contact us</h1>
     	<center>
 	    	<p>The best way to contact us would be by email.</p>
-	    	<p><strong>Victor Pontis:</strong> vpontis@mit.edu <a href="mailto:vpontis@mit.edu">compose</a></p>
-	    	<p><strong>Akash Badshah:</strong> akashbad@mit.edu <a href="mailto:akashbad@mit.edu">compose</a></p>
-	    	<p><strong>Ryan Lau:</strong> rlau@mit.edu <a href="mailto:rlau@mit.edu">compose</a></p>
+	    	<p><strong><a href="mailto:vpontis@mit.edu">Victor Pontis</a></strong></p>
+	    	<p><strong><a href="mailto:akashbad@mit.edu">Akash Badshah</a></strong></p>
+	    	<p><strong><a href="mailto:rlau@mit.edu">Ryan Lau</a></strong></p>
 	    	<a class="popupClose">X</a>
     	</center>
     </div>

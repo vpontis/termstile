@@ -76,3 +76,16 @@ $(document).ready(function() {
 		},
 	});
 });
+//$(init);
+function init() {
+	$('#box0').draggable({
+		containment : '#boxArea',
+		cursor : 'move',
+		snap : '#boxArea'
+	});
+	$('#box1').draggable({
+		containment : '#boxArea',
+		cursor : 'move',
+		snap : '#boxArea'
+	});
+}

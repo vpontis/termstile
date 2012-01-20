@@ -13,6 +13,9 @@ body {
 	font-family: HelveticaBold;
 	src: url('http://web.mit.edu/rlau/www/Fonts/HelveticaBlack.ttf')
 }
+strong {
+	font-family: HelveticaBold;
+}
 .header {
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffffff 30%, #BBBBBB 100%); /* FF3.6+ */
@@ -61,7 +64,7 @@ li {
 	margin: 0px auto 0px;
 }
 
-.main {
+#main {
 	background-color: #FCFCF7;
 	/*height: 80%;*/
 	position: relative;
@@ -146,7 +149,8 @@ li {
 	margin: 3px 0px 3px;
 	padding: 5px;
 	background-color: white;
-	position:relative;
+	/*position:relative;*/
+	float:right;
 	padding: 10px;
 }
 .box img{
@@ -416,7 +420,7 @@ border:0;
 	border:2px solid #cecece;  
 	z-index:2;  
 	padding:12px;  
-	font-size:13px;  
+	font-size:13px; 
 }
 .popup h1{
 	text-align:center;
