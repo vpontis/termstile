@@ -46,7 +46,7 @@
 			}
 		?>
 	</head>
-	<body onLoad="focusCursor()">
+	<body onLoad="initializePage()">
 		<!--<div class="bigthing">-->
 			<div class="header" id="headerContainer">
 				<div class="container">
@@ -95,9 +95,7 @@
 			</div>
 			<!-- Main Section Begin -->
 			<div class="main container" id="mainContainer">
-				<div style:"text-align:center;">
-					<input type="button" value="multiple term search">
-				</div>
+				<div style="width:200px; margin:0px auto; text-align:center"><button id="multipleTermSlider" onClick="slideDownMultiSearch()">multiple term search</button></div>
 				<div class="singlesearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
 					<button class="submit" onClick="createBox()" id="summarize">
@@ -114,36 +112,35 @@
 				</div>
 				<div id="createButtons">
 						<div id="createGuide">
-							<button id="createGuideButton" onClick="saveAsGuide("")">Create Study Guide</button>
+							<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>
 						</div>
 						<div id="createCards">
 							<button id="createGuideButton">Create Flash Cards</button>
 						</div>
 				</div>
-				<!--
-				<div class="multiplesearch">
-						<div id="guideInput">
-							<center>
-								<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
-								<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!" value=""> </textarea>
-								<button onClick="createGuide()" id="createGuide">
-									Create Study Guide!
-								</button>
-							</center>
-						</div>
-						<div id="guideInstructions" style="float:left">
-							<h2>Instructions</h2>
-							<ol>
-								<li>Enter a title.</li>
-								<li>Enter in your terms. Put each term on a new line or seperate with commas. </li>
-								<li>Click "Create Guide"</li>
-								<li><strong>Enjoy!</strong></li>
-							</ol>
-							<strong>Note: </strong> if your list does not appear it is because one of your terms is giving an error. You can check to see which term is giving an error under InstaSearch. We are working on getting this fixed. 
-						</div>
-					<div id="guideBox" style="display:none"></div>
+				<div class="multiplesearch" style="display:none;">
+					<div id="guideInput">
+						<center>
+							<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
+							<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!" value=""> </textarea>
+							<button onClick="createGuide()" id="createGuide">
+								Create Study Guide!
+							</button>
+						</center>
+					</div>
+					<div id="guideInstructions" style="float:left">
+						<h2>Instructions</h2>
+						<ol>
+							<li>Enter a title.</li>
+							<li>Enter in your terms. Put each term on a new line or seperate with commas. </li>
+							<li>Click "Create Guide"</li>
+							<li><strong>Enjoy!</strong></li>
+						</ol>
+						<strong>Note: </strong> if your list does not appear it is because one of your terms is giving an error. You can check to see which term is giving an error under InstaSearch. We are working on getting this fixed. 
+					</div>
 				</div>
-				-->
+
+
 				<div class="bottom container" id="bottomContainer">
 					<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
 				</div>
@@ -199,6 +196,9 @@
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
+	<div id="liveStudyGuide">
+		
+	</div>
 	<div id="backgroundPopup"></div>  
 	</body>
 </html>

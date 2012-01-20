@@ -31,6 +31,7 @@ function createBox() {
 		$(newDiv).html(answer);
 	});
 	$("#oneTerm").val("");
+	updateStudyGuide(searchTerm, answer);
 }
 
 function removeElement(id)	{
@@ -46,7 +47,7 @@ function enterPressed(e)	{
 	}
 }
 
-function focusCursor()	{
+function initializePage()	{
 	document.getElementById('oneTerm').focus();
 	var windowHeight = document.documentElement.clientHeight;  
 	var headerHeight = $('#headerContainer').height();
@@ -74,7 +75,7 @@ $(document).ready(function(){
 		centerPopup('#contactUsPopup');
 		loadPopup('#contactUsPopup');
 	});
-	//$('#createGuide').click(function(){
+	//$('#createGuideButton').click(function(){
 		//popupOpen = "#createGuidePopup";
 		//centerPopup('#createGuidePopup');
 		//loadPopup('#createGuidePopup');
@@ -125,3 +126,10 @@ function centerPopup(id){
 	$(id).css({"position": "absolute",  "top": windowHeight/2-popupHeight/2,  "left": windowWidth/2-popupWidth/2  });  
 	$("#backgroundPopup").css({"height": windowHeight}); 
 }   
+
+function updateStudyGuide(searchTerm, summary){
+	newDiv.setAttribute('id', divIdName);
+	newDiv.setAttribute('class', 'box');
+	newDiv.setAttribute('name',searchTerm);
+
+}
