@@ -113,7 +113,7 @@
 				<div id="createButtons">
 						<div id="createGuide">
 							<!--<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>-->
-							<button id="createGuideButton" onClick="saveAsGuide('')">Create Study Guide</button>
+							<button id="createGuideButton">Create Study Guide</button>
 						</div>
 						<div id="createCards">
 							<button id="createCardsButton">Create Flash Cards</button>
@@ -180,11 +180,16 @@
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
-    <div id="createGuidePopup" class="popup">
+    <div id="guidePopup" class="popup">
     	<h1 id="guidePopupTitle">Your Study Guide</h1>
     	<div id="guideMaterial">
     		Guide Information
     	</div>
+    	<a class="popupClose">X</a>
+    </div>
+    <div id="guideTitlePopup" class="popup">
+    	<input type="text" name="titleMaker" id="titleMaker" alt="Input a guide title" placeholder="Study Guide Title!" onKeyPress="enterPressed(event)"/>
+		<button class="submit" onClick="saveAsGuide()" id="makeTitle">Save!</button>
     	<a class="popupClose">X</a>
     </div>
     <div id="signupPopup" class="popup">
@@ -192,14 +197,11 @@
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
-        <div id="loginPopup" class="popup">
+    <div id="loginPopup" class="popup">
     	<h1>donate</h1>
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
-	<!--<div id="liveStudyGuide" class="popup">
-		<h1 id="liveStudyGuideTitle">Your Study Guide</h1>
-	</div>-->
 	<div id="backgroundPopup"></div>  
 	</body>
 </html>

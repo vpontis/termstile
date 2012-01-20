@@ -28,7 +28,6 @@ function createBox() {
 		sessionSummaries[thisDivNum-1] = summary[0]+" "+summary[1]+" "+summary[2];
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
 		var shortAnswer = answer;
-		//updateStudyGuide(searchTerm, shortAnswer);
 		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+thisDivNum+")\'>X</a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\\\en.wikipedia.org/wiki/" + searchTerm + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
@@ -79,15 +78,15 @@ $(document).ready(function(){
 		centerPopup('#contactUsPopup');
 		loadPopup('#contactUsPopup');
 	});
-	/*$('#createGuideButton').click(function(){
-		popupOpen = "#liveStudyGuide";
-		centerPopup('#liveStudyGuide');
-		loadPopup('#liveStudyGuide');
-	});*/
 	$('#donate').click(function(){
 		popupOpen = "#donatePopup";
 		centerPopup('#donatePopup');
 		loadPopup('#donatePopup');
+	});
+	$('#createGuideButton').click(function(){
+		popupOpen = "#guideTitlePopup";
+		centerPopup('#guideTitlePopup');
+		loadPopup('#guideTitlePopup');
 	});
 	$('.popupClose').click(function(){
 		disablePopup();
@@ -95,6 +94,7 @@ $(document).ready(function(){
 	$('#backgroundPopup').click(function(){
 		disablePopup();
 	});
+	
 });
 
 //If escape is pressed when popup is open, close popup
@@ -130,12 +130,3 @@ function centerPopup(id){
 	$(id).css({"position": "absolute",  "top": windowHeight/2-popupHeight/2,  "left": windowWidth/2-popupWidth/2  });  
 	$("#backgroundPopup").css({"height": windowHeight}); 
 }   
-
-function updateStudyGuide(searchTerm, summary){
-	var liveStudyGuide = document.getElementById('liveStudyGuide');
-	var text = "<strong>" + searchTerm + ":</strong> " + summary + "<br /> <br />";
-	var newDiv = document.createElement('div');
-	newDiv.setAttribute('id', searchTerm);
-	liveStudyGuide.appendChild(newDiv);
-	$(newDiv).html(text);
-}

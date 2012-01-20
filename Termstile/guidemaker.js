@@ -24,7 +24,10 @@ function createGuide() {
 	});
 }
 
-function saveAsGuide(title){
+function saveAsGuide(){
+	disablePopup();
+	var titleBar = document.getElementById('titleMaker');
+	var title = titleBar.value;
 	var terms = sessionTerms;
 	var termsList = "";
 	for(var i=0; i<terms.length; i++){
@@ -47,7 +50,7 @@ function makeDoc(title,terms, summaries){
 		$('#guidePopupTitle').html(guideTitleVal);
 	}
 	$('#guideMaterial').html(guideText);
-	popupOpen = "#createGuidePopup";
-	centerPopup('#createGuidePopup');
-	loadPopup('#createGuidePopup');
+	popupOpen = "#guidePopup";
+	centerPopup('#guidePopup');
+	loadPopup('#guidePopup');
 }

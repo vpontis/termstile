@@ -429,7 +429,7 @@ border:0;
 	z-index:1;  
 }  
 
-$#GuidePopup{
+#guidePopup{
 	width: 800px;
 }
 #guideTitle::-webkit-input-placeholder { 
