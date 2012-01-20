@@ -121,7 +121,7 @@ display: none;
 			<div id="createButtons">
 				<div id="createGuide">
 					<!--<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>-->
-					<button id="createGuideButton" onClick="saveAsGuide('')">
+					<button id="createGuideButton">Create Study Guide</button>
 						Create Study Guide
 					</button>
 				</div>
@@ -222,7 +222,7 @@ display: none;
 			</p>
 			<a class="popupClose">X</a>
 		</div>
-		<div id="createGuidePopup" class="popup">
+		<div id="guidePopup" class="popup">
 			<h1 id="guidePopupTitle">Your Study Guide</h1>
 			<div id="guideMaterial">
 				Guide Information
