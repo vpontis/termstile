@@ -42,16 +42,16 @@ li {
 }
 .container {
 	width: 1000px;
-	height: inherit;
+	/*height: inherit;*/
 	margin: 0px auto 0px;
 }
 
 .main {
 	background-color: #FCFCF7;
-	height: 80%;
+	/*height: 80%;*/
 	position: relative;
 	border-radius: 0px 0px 5px 5px;
-	min-height: 580px;
+	min-height: 500px;
 }
 .midbar {
 	height: 30px;
@@ -319,9 +319,10 @@ border:0;
     cursor:pointer;
 }
 /* Login CSS End */
-.bigthing{
+
+/*.bigthing{
 	height: 100%;
-}
+}*/
 
 .signup_menu{
 	    -moz-border-radius-topleft:5px;
@@ -473,4 +474,7 @@ border:0;
 	margin-right: auto;
 	height: 40px;
 	width: 300px;
+}
+#multipleTermSlider{
+	margin: 0px auto 0px;
 }

@@ -47,8 +47,8 @@
 		?>
 	</head>
 	<body onLoad="focusCursor()">
-		<div class="bigthing">
-			<div class="header">
+		<!--<div class="bigthing">-->
+			<div class="header" id="headerContainer">
 				<div class="container">
 					<div id="title">
 						<img src="../media/samplelogo.png"style="display: inline; float: left;" height="80px" width="200px"/>
@@ -94,14 +94,17 @@
 				</div>
 			</div>
 			<!-- Main Section Begin -->
-			<div class="main container">
+			<div class="main container" id="mainContainer">
+				<div style:"text-align:center;">
+					<input type="button" value="multiple term search">
+				</div>
 				<div class="singlesearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
 					<button class="submit" onClick="createBox()" id="summarize">
 						Summarize!
 					</button>
 				</div>
-				<div id="boxArea" style="float: left;">
+				<div id="boxArea">
 					<div id="box0" class="box">
 						<strong>AutoStudy Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
 						<br /><br />
@@ -141,11 +144,11 @@
 					<div id="guideBox" style="display:none"></div>
 				</div>
 				-->
-				<div class="bottom container">
+				<div class="bottom container" id="bottomContainer">
 					<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
 				</div>
 			</div>
-		</div>
+		<!--</div>-->
 	<div id="reportPopup" class="popup">  
     	<center>
 	    	<h1>what's wrong!?</h1>  

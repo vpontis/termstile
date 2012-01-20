@@ -48,6 +48,11 @@ function enterPressed(e)	{
 
 function focusCursor()	{
 	document.getElementById('oneTerm').focus();
+	var windowHeight = document.documentElement.clientHeight;  
+	var headerHeight = $('#headerContainer').height();
+	//var bottomHeight = $('#bottomConatiner').height();
+	var mainHeight = windowHeight - headerHeight;
+	$("#mainContainer").height(mainHeight);
 }
 
 var popupOpen = "";
