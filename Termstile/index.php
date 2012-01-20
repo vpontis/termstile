@@ -97,7 +97,7 @@ display: none;
 			</div>
 		</div>
 		<!-- Main Section Begin -->
-		<div class="container" id="main">
+		<div class="main container" id="mainContainer">
 			<div style="width:200px; margin:0px auto; text-align:center">
 				<button id="multipleTermSlider" onClick="slideDownMultiSearch()">
 					multiple term search

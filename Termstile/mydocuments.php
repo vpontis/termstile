@@ -37,7 +37,7 @@
 					
 			}
 			else{
-				header('Location:http:\\google.com');
+				header('Location:index.php');
 			}
 		?>
 	</head>
@@ -77,7 +77,7 @@
 				</div>
 			</div>
 			<!-- Main Section Begin -->
-			<div class="container" id="main">
+			<div class="main container" id="mainContainer">
 				<div class="singlesearch">
 				</div>
 				<div id="boxArea">

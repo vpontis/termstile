@@ -64,7 +64,7 @@ li {
 	margin: 0px auto 0px;
 }
 
-#main {
+.main {
 	background-color: #FCFCF7;
 	/*height: 80%;*/
 	position: relative;
