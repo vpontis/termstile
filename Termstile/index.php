@@ -112,11 +112,8 @@
 				</div>
 				<div id="createButtons">
 						<div id="createGuide">
-<<<<<<< HEAD
 							<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>
-=======
-							<button id="createGuideButton" onClick="saveAsGuide('')">Create Study Guide</button>
->>>>>>> d34a2db10709f811b078d18dd2b6584779f831da
+							<!--<button id="createGuideButton" onClick="saveAsGuide('')">Create Study Guide</button>-->
 						</div>
 						<div id="createCards">
 							<button id="createCardsButton">Create Flash Cards</button>
@@ -201,7 +198,7 @@
     	<a class="popupClose">X</a>
     </div>
 	<div id="liveStudyGuide" class="popup">
-		
+		<h1 id="liveStudyGuideTitle">Your Study Guide</h1>
 	</div>
 	<div id="backgroundPopup"></div>  
 	</body>
