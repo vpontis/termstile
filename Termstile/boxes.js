@@ -23,22 +23,20 @@ function createBox() {
 	divNum += 1;
 	var summary = new Array(3);
 	getText(searchTerm,function(summary){
-		sessionTerms[divNum] = searchTerm;
-		sessionSummaries[divNum] = summary[0]+" "+summary[1]+" "+summary[2];
+		sessionTerms[divNum-2] = searchTerm;
+		sessionSummaries[divNum-2] = summary[0]+" "+summary[1]+" "+summary[2];
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
-		var shortAnswer = answer;
-		updateStudyGuide(searchTerm, shortAnswer);
-		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+searchTerm+")\'>X</a>";
+		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>X</a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\\\en.wikipedia.org/wiki/" + searchTerm + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	});
 	$("#oneTerm").val("");
 }
 
-function removeElement(id, searchTerm)	{
+function removeElement(id)	{
+	//boxArea.removeChild(id);
 	$(id).animate({opacity:0.0});
-	$(id).slideUp('slow');	
-	$(searchTerm).remove();
+	$(id).slideUp('slow');
 }	
 
 function enterPressed(e)	{
@@ -48,7 +46,7 @@ function enterPressed(e)	{
 	}
 }
 
-function initializePage()	{
+function focusCursor()	{
 	document.getElementById('oneTerm').focus();
 	var windowHeight = document.documentElement.clientHeight;  
 	var headerHeight = $('#headerContainer').height();
@@ -76,11 +74,11 @@ $(document).ready(function(){
 		centerPopup('#contactUsPopup');
 		loadPopup('#contactUsPopup');
 	});
-	$('#createGuideButton').click(function(){
-		popupOpen = "#liveStudyGuide";
-		centerPopup('#liveStudyGuide');
-		loadPopup('#liveStudyGuide');
-	});
+	//$('#createGuide').click(function(){
+		//popupOpen = "#createGuidePopup";
+		//centerPopup('#createGuidePopup');
+		//loadPopup('#createGuidePopup');
+	//});
 	$('#donate').click(function(){
 		popupOpen = "#donatePopup";
 		centerPopup('#donatePopup');
@@ -127,12 +125,3 @@ function centerPopup(id){
 	$(id).css({"position": "absolute",  "top": windowHeight/2-popupHeight/2,  "left": windowWidth/2-popupWidth/2  });  
 	$("#backgroundPopup").css({"height": windowHeight}); 
 }   
-
-function updateStudyGuide(searchTerm, summary){
-	var liveStudyGuide = document.getElementById('liveStudyGuide');
-	var text = "<strong>" + searchTerm + ":</strong> " + summary + "<br /> <br />";
-	var newDiv = document.createElement('div');
-	newDiv.setAttribute('id', searchTerm);
-	liveStudyGuide.appendChild(newDiv);
-	$(newDiv).html(text);
-}

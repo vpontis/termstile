@@ -91,7 +91,7 @@ li {
 	height: 35px;
 	width: 600px;
 	margin: 0px auto 0px;
-	padding: 20px 0px 0px 0px;
+	padding: 50px 0px 0px 0px;
 }
 .multiplesearch {
 	height: 500px;
@@ -130,7 +130,7 @@ li {
 	border-color: blue;
 	margin: 3px 0px 3px;
 	padding: 5px;
-	background-color: white;
+	background-color: gray;
 	position:relative;
 	padding: 10px;
 }
@@ -476,5 +476,5 @@ border:0;
 	width: 300px;
 }
 #multipleTermSlider{
-		border-radius:10px;
+	margin: 0px auto 0px;
 }
