@@ -2,6 +2,7 @@
 	<head>
 		<title>Termstile: get Wikipedia summaries for terms</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
 		<script type="text/javascript" src="tabswitch.js"></script>
@@ -113,7 +114,7 @@
 				<div id="createButtons">
 						<div id="createGuide">
 							<!--<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>-->
-							<button id="createGuideButton">Create Study Guide</button>
+							<button id="createGuideButton" onClick="saveAsGuide('')">Create Study Guide</button>
 						</div>
 						<div id="createCards">
 							<button id="createCardsButton">Create Flash Cards</button>
@@ -180,28 +181,26 @@
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
-    <div id="guidePopup" class="popup">
+    <div id="createGuidePopup" class="popup">
     	<h1 id="guidePopupTitle">Your Study Guide</h1>
     	<div id="guideMaterial">
     		Guide Information
     	</div>
     	<a class="popupClose">X</a>
     </div>
-    <div id="guideTitlePopup" class="popup">
-    	<input type="text" name="titleMaker" id="titleMaker" alt="Input a guide title" placeholder="Study Guide Title!" onKeyPress="enterPressed(event)"/>
-		<button class="submit" onClick="saveAsGuide()" id="makeTitle">Save!</button>
+    <!-- Is this necessary? RML <div id="signupPopup" class="popup">
+    	<h1>donate</h1>
+    	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
-    </div>
-    <div id="signupPopup" class="popup">
+    </div> -->
+        <div id="loginPopup" class="popup">
     	<h1>donate</h1>
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
-    <div id="loginPopup" class="popup">
-    	<h1>donate</h1>
-    	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
-    	<a class="popupClose">X</a>
-    </div>
+	<!--<div id="liveStudyGuide" class="popup">
+		<h1 id="liveStudyGuideTitle">Your Study Guide</h1>
+	</div>-->
 	<div id="backgroundPopup"></div>  
 	</body>
 </html>

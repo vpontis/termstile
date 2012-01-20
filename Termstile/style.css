@@ -9,6 +9,10 @@ body {
 	font-family: HelveticaLight;
 	src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf');
 }
+@font-face{
+	font-family: HelveticaBold;
+	src: url('http://web.mit.edu/rlau/www/Fonts/HelveticaBlack.ttf')
+}
 .header {
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffffff 30%, #BBBBBB 100%); /* FF3.6+ */
@@ -33,10 +37,16 @@ li {
 	width: 484px;
 	font-size: 10pt;
 }
-li:hover{
+/*li:hover{
 	background-color: gray;
 }
-
+#ui-active-menuitem{
+	font-family: HelveticaBold;
+	background-color: red;
+}
+.ui-menu-item:focus{
+	background-color:gray;
+}*/
 .title{
 	display: inline;
 	float: left;
