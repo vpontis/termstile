@@ -114,10 +114,10 @@
 				</div>
 				<div id="createButtons">
 						<div id="createGuide">
-							<button id="createGuideButton" onClick="saveAsGuide("")">Create Study Guide</button>
+							<button id="createGuideButton" onClick="saveAsGuide('')">Create Study Guide</button>
 						</div>
 						<div id="createCards">
-							<button id="createGuideButton">Create Flash Cards</button>
+							<button id="createCardsButton">Create Flash Cards</button>
 						</div>
 				</div>
 				<!--

@@ -10,7 +10,9 @@ function createGuide() {
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 			console.log(summaries[index]);
 			if(--left==0){
-				makeDoc(terms, summaries);
+				var guideTitle = document.getElementById('guideTitle');
+				var title = guideTitle.value;
+				makeDoc(title,terms, summaries);
 			}
 		});
 	});
@@ -25,17 +27,16 @@ function saveAsGuide(title){
 	var summaries = sessionSummaries;
 	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
 	})
-	makeDoc(terms, summaries);
+	makeDoc(title, terms, summaries);
 	
 }
 
-function makeDoc(terms, summaries){
+function makeDoc(title,terms, summaries){
 	var guideText = "";
 	for(var i=0; i<terms.length; i++){
 		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
 	}
-	var guideTitle = document.getElementById('guideTitle');
-	var guideTitleVal = guideTitle.value;
+	var guideTitleVal = title;
 	if(guideTitleVal != null && guideTitleVal != ""){
 		$('#guidePopupTitle').html(guideTitleVal);
 	}
