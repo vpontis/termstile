@@ -149,8 +149,7 @@ li {
 	margin: 3px 0px 3px;
 	padding: 5px;
 	background-color: white;
-	/*position:relative;*/
-	float:right;
+	position:relative;
 	padding: 10px;
 }
 .box img{
