@@ -26,18 +26,19 @@ function createBox() {
 		sessionTerms[divNum] = searchTerm;
 		sessionSummaries[divNum] = summary[0]+" "+summary[1]+" "+summary[2];
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
-		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+")\'>X</a>";
+		var shortAnswer = answer;
+		updateStudyGuide(searchTerm, shortAnswer);
+		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+searchTerm+")\'>X</a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\\\en.wikipedia.org/wiki/" + searchTerm + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	});
 	$("#oneTerm").val("");
-	updateStudyGuide(searchTerm, answer);
 }
 
-function removeElement(id)	{
-	//boxArea.removeChild(id);
+function removeElement(id, searchTerm)	{
 	$(id).animate({opacity:0.0});
-	$(id).slideUp('slow');
+	$(id).slideUp('slow');	
+	$(searchTerm).remove();
 }	
 
 function enterPressed(e)	{
@@ -75,11 +76,11 @@ $(document).ready(function(){
 		centerPopup('#contactUsPopup');
 		loadPopup('#contactUsPopup');
 	});
-	//$('#createGuideButton').click(function(){
-		//popupOpen = "#createGuidePopup";
-		//centerPopup('#createGuidePopup');
-		//loadPopup('#createGuidePopup');
-	//});
+	$('#createGuideButton').click(function(){
+		popupOpen = "#liveStudyGuide";
+		centerPopup('#liveStudyGuide');
+		loadPopup('#liveStudyGuide');
+	});
 	$('#donate').click(function(){
 		popupOpen = "#donatePopup";
 		centerPopup('#donatePopup');
@@ -128,8 +129,10 @@ function centerPopup(id){
 }   
 
 function updateStudyGuide(searchTerm, summary){
-	newDiv.setAttribute('id', divIdName);
-	newDiv.setAttribute('class', 'box');
-	newDiv.setAttribute('name',searchTerm);
-
+	var liveStudyGuide = document.getElementById('liveStudyGuide');
+	var text = "<strong>" + searchTerm + ":</strong> " + summary + "<br /> <br />";
+	var newDiv = document.createElement('div');
+	newDiv.setAttribute('id', searchTerm);
+	liveStudyGuide.appendChild(newDiv);
+	$(newDiv).html(text);
 }

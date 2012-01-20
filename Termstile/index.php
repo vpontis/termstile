@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>AutoStudy: get Wikipedia summaries</title>
+		<title>Termstile: get Wikipedia summaries for terms</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
@@ -9,7 +9,7 @@
 		<script type="text/javascript" src="boxes.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
 		<script type="text/javascript" src="usermanagement.js"></script>
-
+		<link rel="icon" type="image/png" href="../media/termstilelogo.png" />
 		<?php
 			if(isset($_COOKIE['email'])){
 				$con=mysql_connect("127.0.0.1","root","");
@@ -196,7 +196,7 @@
     	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
     	<a class="popupClose">X</a>
     </div>
-	<div id="liveStudyGuide">
+	<div id="liveStudyGuide" class="popup">
 		
 	</div>
 	<div id="backgroundPopup"></div>  
