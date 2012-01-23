@@ -1,7 +1,7 @@
 function createBox(id, title) {
 	var boxArea = document.getElementById('boxArea');
 	var newDiv = document.createElement('div');
-	var divIdName = 'box' + id;
+	var divIdName = id;
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'box');
 	if(boxArea.firstChild == null){
@@ -75,9 +75,26 @@ function initializePage(email)	{
 	$.post("getguideids.php",function(data){
 		var guideIds = data.split("|");
 		guideIds.pop();
+		var left = guideIds.length;
 		$.each(guideIds, function(index, value){
 			$.post("getguidetitles.php",{id:value},function(data){
 				createBox(value, data);
+				if(--left==0){
+					var boxArea = document.getElementById('boxArea');
+					var sorted = $('#boxArea>div').toArray().sort( function(a,b) {
+						 return a.id - b.id ;
+					});
+					$(boxArea).html("");
+					$.each(sorted, function(index, value){
+						if(boxArea.firstChild == null){
+							boxArea.appendChild(value);
+						} 
+						else {
+							$(value).insertBefore(boxArea.firstChild);
+						}
+					});		
+					console.log(sorted);
+				}
 			});
 		});
 	});
