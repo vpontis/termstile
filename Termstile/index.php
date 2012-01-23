@@ -231,6 +231,12 @@ display: none;
 			</div>
 			<a class="popupClose">X</a>
 		</div>
+		<div id="noteCardPopup" class="popup">
+			<h1 id="noteCardPopupTitle">Your NoteCards</h1>
+			<div id="noteCardMaterial">
+			</div>
+			<a class="popupClose">X</a>
+		</div>
 		<div id="signupPopup" class="popup">
 			<h1>donate</h1>
 			<p>
@@ -245,9 +251,6 @@ display: none;
 			</p>
 			<a class="popupClose">X</a>
 		</div>
-		<!--<div id="liveStudyGuide" class="popup">
-		<h1 id="liveStudyGuideTitle">Your Study Guide</h1>
-		</div>-->
 		<div id="backgroundPopup"></div>
 	</body>
 </html>

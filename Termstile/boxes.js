@@ -83,11 +83,6 @@ $(document).ready(function(){
 		centerPopup('#donatePopup');
 		loadPopup('#donatePopup');
 	});
-	$('#createGuideButton').click(function(){
-		popupOpen = "#guideTitlePopup";
-		centerPopup('#guideTitlePopup');
-		loadPopup('#guideTitlePopup');
-	});
 	$('.popupClose').click(function(){
 		disablePopup();
 	});

@@ -25,7 +25,28 @@ function createGuide() {
 }
 
 function saveAsGuide(){
-	disablePopup();
+	var titleBar = document.getElementById('titleMaker');
+	var title = titleBar.value;
+	var terms = sessionTerms;
+	var termsList = "";
+	var summaries = sessionSummaries;
+	var cleanTerms = new Array(0);
+	var cleanSummaries = new Array(0);
+	for(var i=0; i<terms.length; i++){
+		if(terms[i]!="")
+		{
+			termsList+=terms[i]+"|";
+			cleanTerms.push(terms[i]);
+			cleanSummaries.push(summaries[i]);
+		}
+	}
+	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
+		console.log(data);
+	})
+	makeDoc(title, cleanTerms, cleanSummaries);
+}
+
+function saveAsCards(){
 	var titleBar = document.getElementById('titleMaker');
 	var title = titleBar.value;
 	var terms = sessionTerms;
