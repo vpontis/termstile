@@ -119,14 +119,16 @@ display: none;
 				</div>
 			</div>
 			<div id="createButtons">
+				<div id="guideTitle">
+					<input type="text" id="titleMaker" placeholder="Title">
+				</div>
 				<div id="createGuide">
-					<!--<button id="createGuideButton" onClick="createGuideFromBoxes("")">Create Study Guide</button>-->
-					<button id="createGuideButton">Create Study Guide</button>
+					<button id="createGuideButton" onClick="saveAsGuide()">
 						Create Study Guide
 					</button>
 				</div>
 				<div id="createCards">
-					<button id="createCardsButton">
+					<button id="createCardsButton" onClick="saveAsCards()">
 						Create Flash Cards
 					</button>
 				</div>
@@ -227,13 +229,6 @@ display: none;
 			<div id="guideMaterial">
 				Guide Information
 			</div>
-			<a class="popupClose">X</a>
-		</div>
-		<div id="guideTitlePopup" class="popup">
-			<input type="text" name="titleMaker" id="titleMaker" alt="Input a guide title" placeholder="Study Guide Title!" onKeyPress="enterPressed(event)"/>
-			<button class="submit" onClick="saveAsGuide()" id="makeTitle">
-				Save!
-			</button>
 			<a class="popupClose">X</a>
 		</div>
 		<div id="signupPopup" class="popup">

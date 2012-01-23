@@ -18,7 +18,7 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\">Generating Text...  <a href=\'#\' onclick=\'removeElement("+divIdName+")\'>X</a></div>"
+	var text = "<div style=\"text-align:center\"><img src='../media/loading.gif'><a href=\'#\' onclick=\'removeElement("+divIdName+")\'>X</a></div>"
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 	var summary = new Array(3);
