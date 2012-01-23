@@ -18,7 +18,7 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\"><img src='../media/loading.gif'><a href=\'#\' onclick=\'removeElement("+divIdName+")\'>X</a></div>"
+	var text = "<div style=\"text-align:center\"><img src='../media/loading.gif'><a id=\'loadingclose\' onclick=\'removeElement("+divIdName+")\'><img src=\'closebutton.png\' /></a></div>"
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 	var summary = new Array(3);
@@ -28,7 +28,7 @@ function createBox() {
 		sessionSummaries[thisDivNum-1] = summary[0]+" "+summary[1]+" "+summary[2];
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
 		var shortAnswer = answer;
-		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+thisDivNum+")\'>X</a>";
+		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+thisDivNum+")\'><img src=\'closebutton.png\' /></a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\\\en.wikipedia.org/wiki/" + searchTerm + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	});

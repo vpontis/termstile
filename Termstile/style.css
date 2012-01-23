@@ -125,17 +125,11 @@ strong {
 	position:relative;
 	padding: 10px;
 }
-.box img{
-	display:inline;
-	height:15px;
-	width:15px;
-	vertical-align:-2px;
-}
+
 #boxarea{
 	width: 650px;
 	margin: 5px auto 0px;
 	max-height: 450px;
-	overflow: auto;
 }
 a{
 	text-decoration:none;
@@ -365,7 +359,7 @@ border:0;
 .signup_menu p a {
     color:#27B!important;
 }
-.wikifavicon	{
+.wikifavicon img{
 	display:inline;
 	height:15px;
 	width:15px;
@@ -373,13 +367,18 @@ border:0;
 }
 .close	{
 	position: absolute;
-	top: -1px;
-	right: 2px;
+	top: -12px;
+	right: -12px;
 	text-decoration:none;
 	cursor: pointer;
+	z-index: 1;
 }
 .close a{
 	color: green;
+}
+.close img{
+	height: 25px;
+	width: 25px;
 }
 .popup{  
 	display:none;  
@@ -443,8 +442,17 @@ border:0;
 	cursor: pointer;
 	float: right;
 	height: 35px;
-	border-radius: 6px;
-	background-color: #88bbd4;
+	border-radius: 4px;
+	background-image: url(button.gif);
+	background-repeat-x: repeat;
+	background-color: #DDDDDD;
+	border-top-color: #BBBBBB;
+	border-right-color: #BBBBBB;
+	border-left-color: #BBBBBB;
+	border-bottom-color: #999999;
+	border: 1px solid #BBBBBB;
+	box-shadow: 0px 1px 0px #F8F8F8;
+	text-shadow: 0px 1px #F0F0F0;
 	text-align: center;
 	font-size: 10pt;
 }
@@ -476,3 +484,13 @@ border:0;
 #liveStudyGuide	{
 	width: 800px;
 }
+#loadingclose {
+	position: absolute;
+	top: -12px;
+	right: -12px;
+}
+#loadingclose img{
+	height: 25px;
+	width: 25px;
+}
+/*Autocomplete*/

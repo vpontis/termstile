@@ -105,9 +105,9 @@ display: none;
 			</div>
 			<div class="singlesearch">
 				<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
-				<div onClick="createBox()" id="summarize">
+				<button onClick="createBox()" id="summarize">
 					Summarize!
-				</div>
+				</button>
 			</div>
 			<div id="boxArea">
 				<div id="box0" class="box">
