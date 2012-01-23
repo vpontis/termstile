@@ -25,8 +25,8 @@ function createGuide() {
 }
 
 function saveAsGuide(){
-	var titleBar = document.getElementById('titleMaker');
-	var title = titleBar.value;
+	//var titleBar = document.getElementById('titleMaker');
+	var title = date();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -132,4 +132,9 @@ function makeDoc(title,terms,summaries){
 	popupOpen = "#guidePopup";
 	centerPopup('#guidePopup');
 	loadPopup('#guidePopup');
+}
+
+function addSaveButton(){
+	var saveButton = document.getElementById('guidePopupTitleSave');
+	$(saveButton).fadeIn('slow');
 }

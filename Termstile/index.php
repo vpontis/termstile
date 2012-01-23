@@ -119,9 +119,6 @@ display: none;
 				</div>
 			</div>
 			<div id="createButtons">
-				<div id="guideTitle">
-					<input type="text" id="titleMaker" placeholder="Title">
-				</div>
 				<div id="createGuide">
 					<button id="createGuideButton" onClick="saveAsGuide()">
 						Create Study Guide
@@ -225,7 +222,11 @@ display: none;
 			<a class="popupClose">X</a>
 		</div>
 		<div id="guidePopup" class="popup">
-			<h1 id="guidePopupTitle">Your Study Guide</h1>
+			<!--<h1 id="guidePopupTitle">Your Study Guide</h1>-->
+			<div id="guidePopupTitleArea">
+				<input id="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Your Study Guide Title"/>
+				<img width="30px" height="30px" src="../media/save.png" id="guidePopupTitleSave" onClick="changeSaveTitle()"/>
+			</div>
 			<div id="guideMaterial">
 				Guide Information
 			</div>

@@ -131,16 +131,16 @@ strong {
 	border-style: solid;
 	border-radius: 5px;
 	border-color: blue;
-	margin: 8px 5px 8px;
+	margin: 8px auto 8px;
 	padding: 5px;
 	background-color: white;
 	position:relative;
 	padding: 10px;
-	width: 595px;
+	width: 600px;
 }
 
 #boxarea{
-	width: 650px;
+	width: 700px;
 	margin: 5px auto 0px;
 	max-height: 450px;
 	overflow: auto;
@@ -427,9 +427,7 @@ border:0;
 	z-index:1;  
 }  
 
-#guidePopup{
-	width: 800px;
-}
+
 #guideTitle::-webkit-input-placeholder { 
 	text-align: center;
 }
@@ -509,3 +507,24 @@ border:0;
 	width: 25px;
 }
 /*Autocomplete*/
+#guidePopupTitleArea	{
+	margin: 20px auto 20px;
+	width: 350px;
+}
+#guidePopupTitle{
+	width: 300px;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+	border: 0px;
+}
+#guidePopupTitle::-webkit-input-placeholder {
+	color: black;
+}
+#guidePopupTitleSave{
+	display:none;
+	vertical-align: middle;
+}
+#guidePopup{
+	width: 800px;
+}
