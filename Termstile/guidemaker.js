@@ -65,7 +65,58 @@ function saveAsCards(){
 	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
 		console.log(data);
 	})
-	makeDoc(title, cleanTerms, cleanSummaries);
+	makeCards(title, cleanTerms, cleanSummaries);
+}
+
+
+var currentCardTerms;
+var currentCardSummaries;
+
+function makeCards(title,terms,summaries){
+	var boxArea = document.getElementById('noteCardMaterial');
+	$(boxArea).html("");
+	currentCardTerms = terms;
+	currentCardSummaries = summaries;
+	for(var i=0; i<terms.length; i++){
+		createCard(terms[i],summaries[i],i);
+	}
+	var cardsTitleVal = title;
+	if(cardsTitleVal != null && cardsTitleVal != ""){
+		$('#noteCardPopupTitle').html(cardsTitleVal);
+	}
+	popupOpen = "#noteCardPopup";
+	centerPopup('#noteCardPopup');
+	loadPopup('#noteCardPopup');
+}
+
+
+function createCard(term, summary,index) {
+	var boxArea = document.getElementById('noteCardMaterial');
+	var newDiv = document.createElement('div');
+	var divIdName = 'card_' + term;
+	newDiv.setAttribute('id', divIdName);
+	newDiv.setAttribute('class', 'box');
+	if(boxArea.firstChild == null){
+		$(newDiv).css('display','none');
+		boxArea.appendChild(newDiv);
+	} else {
+		$(newDiv).insertBefore(boxArea.firstChild)
+			.css('display','none');
+	}
+	var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'>"+term+"</a></strong></div>";
+	$(newDiv).html(text);
+	$(newDiv).slideDown('slow');
+}
+
+function flipCard(cardId,index,state){
+	var card = document.getElementById(cardId);	
+	if(state==0){
+		var text = "<div style=\"text-align:center\"><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 1)\'>"+currentCardSummaries[index]+"</a></strong></div>";
+	}
+	else{
+		var text = "<div style=\"text-align:center\"><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'>"+currentCardTerms[index]+"</a></strong></div>";
+	}
+	$(card).html(text);
 }
 
 function makeDoc(title,terms,summaries){

@@ -135,16 +135,12 @@
     	</div>
     	<a class="popupClose">X</a>
     </div>
-    <div id="signupPopup" class="popup">
-    	<h1>donate</h1>
-    	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
-    	<a class="popupClose">X</a>
-    </div>
-    <div id="loginPopup" class="popup">
-    	<h1>donate</h1>
-    	<p>We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)</p>
-    	<a class="popupClose">X</a>
-    </div>
+    <div id="noteCardPopup" class="popup">
+			<h1 id="noteCardPopupTitle">Your NoteCards</h1>
+			<div id="noteCardMaterial">
+			</div>
+			<a class="popupClose">X</a>
+	</div>
 	<div id="backgroundPopup"></div>  
 	</body>
 </html>

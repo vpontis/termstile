@@ -4,7 +4,6 @@ function createBox(id, title) {
 	var divIdName = 'box' + id;
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'box');
-	//newDiv.setAttribute('name',title);
 	if(boxArea.firstChild == null){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
@@ -12,7 +11,8 @@ function createBox(id, title) {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\"><strong><a onClick=\'getGuide("+id+", \""+title+"\")\'>"+title+"</a></strong></div>";
+	var text = "<div style=\"text-align:center\"><strong>"+title+"<button id='getGuideButton' onClick='getGuide("+id+", \""+title+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+title+"\")\'>Note Cards</button></div>";
+	
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 }
@@ -33,9 +33,25 @@ function getGuide(id,title){
 			});
 		});
 	});
-	
 }
 
+function getCards(id,title){
+	$.post("getguideterms.php",{id:id},function(data){
+		var terms = data.split("|");
+		terms.pop();
+		var summaries = new Array(terms.length);
+		var left = terms.length;
+		$.each(terms, function(index, value){
+			getText(terms[index],function(summary){
+				summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
+				console.log(summaries[index]);
+				if(--left==0){
+					makeCards(title,terms,summaries);
+				}
+			});
+		});
+	});
+}
 function removeElement(divIdName, idNum)	{
 	sessionTerms.splice(idNum-1,1,"");
 	sessionSummaries.splice(idNum-1,1,"");
