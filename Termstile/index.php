@@ -53,11 +53,11 @@ display: none;
 					<img src="../media/samplelogo.png"style="display: inline; float: left;" height="80px" width="200px"/>
 				</div>
 				<!-- Login Start-->
-				<div id="container1" style="float: right;">
-					<div id="signedout" class="topnav" >
+				<div id="container1" style="float: right;" >
+					<div id="signedout" class="topnav">
 						<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 					</div>
-					<div id="signedin" class="topnav floats_r">
+					<div id="signedin" class="topnav">
 						<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a onclick="logOut()" id="logout" class="signin">Logout</a></span>
 					</div>
 					<!-- Login form -->
@@ -105,9 +105,9 @@ display: none;
 			</div>
 			<div class="singlesearch">
 				<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
-				<button class="submit" onClick="createBox()" id="summarize">
+				<div onClick="createBox()" id="summarize">
 					Summarize!
-				</button>
+				</div>
 			</div>
 			<div id="boxArea">
 				<div id="box0" class="box">

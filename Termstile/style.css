@@ -27,29 +27,6 @@ strong {
 	filter: progid :DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#BBBBBB',GradientType=0 ); /* IE6-9 */
 	height: 80px;
 }
-/*Autocomplete*/
-ul {
-	list-style: none;
-	padding: 5px 0px;
-	border: 2px solid gray;
-	width: 496px;
-}
-li {
-	background-color: white;
-	padding: 4px 6px;
-	width: 484px;
-	font-size: 10pt;
-}
-/*li:hover{
-	background-color: gray;
-}
-#ui-active-menuitem{
-	font-family: HelveticaBold;
-	background-color: red;
-}
-.ui-menu-item:focus{
-	background-color:gray;
-}*/
 .title{
 	display: inline;
 	float: left;
@@ -125,11 +102,7 @@ li {
 	float: left;
 	border-radius: 6px;
 }
-.submit {
-	float: right;
-	height: 35px;
-	border-radius: 6px;
-}
+
 .bottom {
 	text-align: right;
 	height: 25px;
@@ -204,6 +177,7 @@ a img {
     font-size:11px;
     line-height:23px;
     text-align:right;
+    float: right;
 }
 .topnav a.signin {
     background:#88bbd4;
@@ -213,9 +187,6 @@ a img {
     color:#fff;
     *background:transparent url("images/signin-nav-bg-ie.png") no-repeat 0 0;
     *padding:4px 12px 6px;
-}
-.floats_r{
-	float: right;
 }
 #login{
 	-webkit-border-radius:4px 0px 0px 4px;
@@ -470,6 +441,12 @@ border:0;
 }
 #summarize {
 	cursor: pointer;
+	float: right;
+	height: 35px;
+	border-radius: 6px;
+	background-color: #88bbd4;
+	text-align: center;
+	font-size: 10pt;
 }
 #createGuideButton{
 	border-radius: 5px;
