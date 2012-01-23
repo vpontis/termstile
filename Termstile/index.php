@@ -25,23 +25,21 @@
 				while ($info = mysql_fetch_array($getUsers)) {
 					if ($passhash == $info['PassHash']) {
 						echo "<style type='text/css'>
-#signedout{
-display: none;
-}
-#signedin {
-}</style>";
+							#signedout{
+								display: none;
+							}
+							#signedin {
+							}</style>";
 					}
 				}
-
+							
 			}
-
-		} else {
+							
+		} 
+		else {
 			echo "<style type='text/css'>
-#signedout{
-}
-#signedin {
-display: none;
-}</style>";
+			#signedout{}
+			#signedin {display: none;}</style>";
 		}
 		?>
 	</head>

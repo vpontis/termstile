@@ -26,7 +26,7 @@ function createGuide() {
 
 function saveAsGuide(){
 	//var titleBar = document.getElementById('titleMaker');
-	var title = date();
+	var title = new Date();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -47,8 +47,9 @@ function saveAsGuide(){
 }
 
 function saveAsCards(){
-	var titleBar = document.getElementById('titleMaker');
-	var title = titleBar.value;
+	//var titleBar = document.getElementById('titleMaker');
+	//var title = titleBar.value;
+	var title = new Date();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;

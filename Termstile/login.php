@@ -7,7 +7,7 @@
 		mysql_select_db('autostudy', $con);
 		$email =  $_POST['email'];
 		if(!$email | !$_POST['password']){
-			die('You did not complete all fo the required fields.');
+			die('You did not complete all of the required fields.');
 		}
 		$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");
 		if(mysql_num_rows($getUsers)==0){
