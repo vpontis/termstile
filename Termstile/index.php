@@ -44,7 +44,7 @@
 		<div class="header" id="headerContainer">
 			<div class="container">
 				<div id="title">
-					<img src="../media/TermStileLogoLong.png"style="display: inline; float: left;" height="80px" width="200px"/>
+					<!--<img src="../media/TermStileLogoLong.png"style="display: inline; float: left;" height="80px" width="200px"/>--><h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>
 				</div>
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
@@ -92,17 +92,18 @@
 		</div>
 		<!-- Main Section Begin -->
 		<div class="main container" id="mainContainer">
-			<div style="width:200px; margin:0px auto; text-align:center">
-				<button id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
+			<!--<div style="width:200px; margin:0px auto; text-align:center;">
+				<button style="display: none;"id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
 					MultiSearch
 				</button>
-			</div>
+			</div>-->
 			<div id="singleSearchArea">
 				<div id="singleSearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
-					<button onClick="createBox()" id="summarize">
+					<div style="display: inline; float: right;"><button onClick="dropdown()" id="dropdown">^</button><button onClick="createBox()" id="summarize">
 						Summarize!
 					</button>
+					</div>
 				</div>
 				<div id="boxArea">
 					<div id="box0" class="box">
