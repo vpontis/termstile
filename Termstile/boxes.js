@@ -130,16 +130,22 @@ instaSearchShown = true;
 function toggleInstaMulti(){
 	if(instaSearchShown == true){
 		$('#singleSearchArea').slideUp('slow',function()	{
-			$('#multipleSearch').slideDown('slow');
+			$('#multipleSearch').slideDown('slow',function()	{
+				$('#manyTerm').focus();
+			});
 		});
 		$('#toggleInstaMultiButton').html('InstaSearch');
 		instaSearchShown = false;
+		
 	}
 	else{
 		$('#multipleSearch').slideUp('slow',function()	{
-			$('#singleSearchArea').slideDown('slow');
+			$('#singleSearchArea').slideDown('slow',function(){
+				$('#oneTerm').focus();
+			});
 		});
 		$('#toggleInstaMultiButton').html('MultiSearch');
 		instaSearchShown = true;
+		
 	}
 }
