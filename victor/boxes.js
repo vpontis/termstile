@@ -32,3 +32,8 @@ function enterPressed(e)	{
 		 $("#searchBar").val(""); 	
 	}
 }
+
+function addSaveButton()	{
+	var saveButton = document.getElementById('saveButton');
+	$(saveButton).css('display','inline')
+}

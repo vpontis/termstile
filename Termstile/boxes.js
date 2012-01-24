@@ -125,3 +125,21 @@ function centerPopup(id){
 	$(id).css({"position": "absolute",  "top": windowHeight/2-popupHeight/2,  "left": windowWidth/2-popupWidth/2  });  
 	$("#backgroundPopup").css({"height": windowHeight}); 
 }   
+
+instaSearchShown = true;
+function toggleInstaMulti(){
+	if(instaSearchShown == true){
+		$('#singleSearchArea').slideUp('slow',function()	{
+			$('#multipleSearch').slideDown('slow');
+		});
+		$('#toggleInstaMultiButton').html('InstaSearch');
+		instaSearchShown = false;
+	}
+	else{
+		$('#multipleSearch').slideUp('slow',function()	{
+			$('#singleSearchArea').slideDown('slow');
+		});
+		$('#toggleInstaMultiButton').html('MultiSearch');
+		instaSearchShown = true;
+	}
+}

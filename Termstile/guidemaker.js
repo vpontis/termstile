@@ -10,8 +10,10 @@ function createGuide() {
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 			console.log(summaries[index]);
 			if(--left==0){
-				var guideTitle = document.getElementById('guideTitle');
-				var title = guideTitle.value;
+				//var guideTitle = document.getElementById('guideTitle');
+				//var title = guideTitle.value;
+				var date = new Date();
+				var title = date.toString();
 				var termsList = "";
 				for(var i=0; i<terms.length; i++){
 					termsList+=terms[i]+"|";
@@ -25,8 +27,9 @@ function createGuide() {
 }
 
 function saveAsGuide(){
-	var titleBar = document.getElementById('titleMaker');
-	var title = titleBar.value;
+	//var titleBar = document.getElementById('titleMaker');
+	var date = new Date();
+	var title = date.toDateString();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -47,8 +50,10 @@ function saveAsGuide(){
 }
 
 function saveAsCards(){
-	var titleBar = document.getElementById('titleMaker');
-	var title = titleBar.value;
+	//var titleBar = document.getElementById('titleMaker');
+	//var title = titleBar.value;
+	var date = new Date();
+	var title = date.toDateString();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -132,4 +137,9 @@ function makeDoc(title,terms,summaries){
 	popupOpen = "#guidePopup";
 	centerPopup('#guidePopup');
 	loadPopup('#guidePopup');
+}
+
+function addSaveButton(){
+	var saveButton = document.getElementById('guidePopupTitleSave');
+	$(saveButton).fadeIn('slow');
 }

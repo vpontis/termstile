@@ -3,11 +3,11 @@ body {
 	background-color: #000000;
 	padding: 0px;
 	margin: 0px;
-	font-family: Roboto;
+	font-family: HelveticaLight;
 }
 @font-face {
 	font-family: HelveticaLight;
-	src: url('http://web.mit.edu/rlau/www/Fonts/Helvetica_Light.ttf');
+	src: url('../design/Fonts/HelveticaNeueLTCom-Roman.ttf');
 }
 @font-face {
 	font-family: HelveticaLT25;
@@ -15,7 +15,7 @@ body {
 }
 @font-face{
 	font-family: HelveticaBold;
-	src: url('http://web.mit.edu/rlau/www/Fonts/HelveticaBlack.ttf')
+	src: url('../design/Fonts/HelveticaNeueLTCom-MdCn.ttf')
 }
 @font-face{
 	font-family: Roboto;
@@ -26,7 +26,7 @@ body {
 	src: url('http://web.mit.edu/rlau/www/Fonts/Roboto-Medium.ttf')
 }
 strong {
-	font-family: RobotoBold;
+	font-family: HelveticaBold;
 }
 .header {
 	background: #ffffff; /* Old browsers */
@@ -87,24 +87,22 @@ strong {
 	border: 1px solid #ccc;
 	font-family: HelveticaLight;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 20px;
 	width: 500px;
 	height: 35px;
 	padding: 0 10px;
 	float: left;
 	border-radius: 6px;
 }
-.singlesearch {
+#singlesearch {
 	height: 35px;
 	width: 600px;
-	margin: 0px auto 0px;
-	padding: 20px 0px 0px 0px;
+	margin: 20px auto 0px;
 }
-.multiplesearch {
+#multiplesearch {
 	height: 500px;
 	width: 750px;
-	margin: 0px auto 0px;
-	padding: 50px 0px 0px 0px;
+	margin: 20px auto 0px;
 	display: none;
 }
 #manyTerm {
@@ -130,8 +128,8 @@ strong {
 .box {
 	border-style: solid;
 	border-radius: 5px;
-	border-color: blue;
-	margin: 8px 5px 8px;
+	border-color: gray;
+	margin: 8px auto 8px;
 	padding: 5px;
 	background-color: white;
 	position:relative;
@@ -140,7 +138,7 @@ strong {
 }
 
 #boxarea{
-	width: 650px;
+	width: 700px;
 	margin: 5px auto 0px;
 	max-height: 450px;
 	overflow: auto;
@@ -427,9 +425,7 @@ border:0;
 	z-index:1;  
 }  
 
-#guidePopup{
-	width: 800px;
-}
+
 #guideTitle::-webkit-input-placeholder { 
 	text-align: center;
 }
@@ -447,11 +443,25 @@ border:0;
 	float: left;
 	width: 300px;
 	margin-left: 20px;
-	margin-top: 70px;
+	margin-top: 0px;
+	font-size: 120%;
+}
+#guideInstructions h2, h1{
+	margin-top: 0px;
+}
+#guideInstructions li{
+	padding-bottom: 10px;
+}
+#manyTerm::-webkit-input-placeholder{
+	font-size: 300%;
+}
+#manyTerm{
+	font-size: 150%;
 }
 #guideInput	{
 	width: 400px;
 	float: left;
+	margin: 0px auto;
 }
 #summarize {
 	cursor: pointer;
@@ -493,8 +503,12 @@ border:0;
 	height: 40px;
 	width: 300px;
 }
-#multipleTermSlider{
-		border-radius:10px;
+#createButtons button{
+	font-size: 20px;
+}
+#toggleInstaMultiButton{
+	border-radius:10px;
+	font-size: 20px;
 }
 #liveStudyGuide	{
 	width: 800px;
@@ -509,3 +523,33 @@ border:0;
 	width: 25px;
 }
 /*Autocomplete*/
+#guidePopupTitleArea	{
+	margin: 20px auto 20px;
+	width: 350px;
+}
+#guidePopupTitle{
+	width: 300px;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+	border: 0px;
+}
+#guidePopupTitle::-webkit-input-placeholder {
+	color: black;
+}
+#guidePopupTitleSave{
+	display:none;
+	vertical-align: middle;
+}
+#guidePopup{
+	width: 800px;
+}
+#multiSearchButtonArea{
+	width: 200px;
+	text-align: center;
+	margin: 0px auto;
+}
+#multiSearchButton{
+	margin-top: 20px;
+	font-size: 140%;
+}
