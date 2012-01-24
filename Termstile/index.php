@@ -13,11 +13,7 @@
 		<link rel="icon" type="image/png" href="../media/termstilelogo.png" />
 		<?php
 		if (isset($_COOKIE['email'])) {
-			$con = mysql_connect("127.0.0.1", "root", "");
-			if (!$con) {
-				die('Could not connect:' . mysql_error());
-			}
-			mysql_select_db('autostudy', $con);
+			include 'dbconnect.php';
 			$email = $_COOKIE['email'];
 			$passhash = $_COOKIE['passhash'];
 			$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");
@@ -222,7 +218,6 @@
 			<a class="popupClose">X</a>
 		</div>
 		<div id="guidePopup" class="popup">
-			<!--<h1 id="guidePopupTitle">Your Study Guide</h1>-->
 			<div id="guidePopupTitleArea" class="guidePopupTitleArea">
 				<input id="guidePopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Enter Study Guide Title Here"/>
 				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>

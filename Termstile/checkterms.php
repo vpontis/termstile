@@ -1,10 +1,5 @@
 <?php
-	$con=mysql_connect("127.0.0.1","root","");
-		if(!$con)
-		{
-			die('Could not connect:'.mysql_error());
-		}
-	mysql_select_db('autostudy', $con);
+	include 'dbconnect.php';
 	$term = $_POST['term'];
 	$check = mysql_query("SELECT * FROM terms WHERE Term = '$term'");
 	if(mysql_num_rows($check)!=0){

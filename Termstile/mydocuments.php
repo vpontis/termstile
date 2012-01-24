@@ -12,12 +12,7 @@
 		<link rel="icon" type="image/png" href="../media/termstilelogo.png" />
 		<?php
 			if(isset($_COOKIE['email'])){
-				$con=mysql_connect("127.0.0.1","root","");
-				if(!$con)
-				{
-					die('Could not connect:'.mysql_error());
-				}
-				mysql_select_db('autostudy', $con);
+				include 'dbconnect.php';
 				$email =  $_COOKIE['email'];
 				$passhash = $_COOKIE['passhash'];
 				$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");

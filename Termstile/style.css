@@ -127,7 +127,6 @@ strong {
 }
 .box {
 	border-style: solid;
-	border-radius: 5px;
 	border-color: gray;
 	margin: 8px auto 8px;
 	padding: 5px;

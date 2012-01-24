@@ -1,10 +1,5 @@
 <?php
-		$con = mysql_connect("127.0.0.1","root","");
-			if(!$con)
-			{
-				die('Could not connect:'.mysql_error());
-			}
-		mysql_select_db('autostudy', $con);
+		include 'dbconnect.php';
 		$email =  $_POST['email'];
 		if(!$email | !$_POST['password']){
 			die('You did not complete all of the required fields.');

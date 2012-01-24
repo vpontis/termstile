@@ -1,23 +1,8 @@
 <html>
 	<body>
 		<?php
-			$con=mysql_connect("sql.mit.edu","vpontis","termstile");
-			if(!$con)
-			{
-				die('Could not connect:'.mysql_error());
-			}
+			include 'dbconnect.php';
 			
-			if(mysql_query("CREATE DATABASE autostudy", $con))
-			{
-				echo "Database created <br />";
-			}
-			else {
-				echo "Error creating database".mysql_error();
-				echo "<br />";
-			}
-			
-			
-			mysql_select_db("autostudy",$con);
 			$sql = "CREATE TABLE Users
 			(
 				PRIMARY KEY(Email),
