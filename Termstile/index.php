@@ -219,9 +219,8 @@
 		</div>
 		<div id="guidePopup" class="popup">
 			<div id="guidePopupTitleArea" class="guidePopupTitleArea">
-				<input id="guidePopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Enter Study Guide Title Here"/>
+				<input id="guidePopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" onFocusOut="removeSaveButton()" type="text" placeholder="Enter Study Guide Title Here"/>
 				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
-				<div class="guideTitleAssigned"></div>
 			</div>
 			<div id="guideMaterial">
 				Guide Information
@@ -232,7 +231,7 @@
 			<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
 				<input id="cardsPopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Enter Flash Cards Title Here"/>
 				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
-				<div class="guideTitleAssigned"></div>
+
 			</div>
 			<div id="noteCardMaterial">
 			</div>

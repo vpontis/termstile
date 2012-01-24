@@ -10,8 +10,6 @@ function createGuide() {
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 			console.log(summaries[index]);
 			if(--left==0){
-				//var guideTitle = document.getElementById('guideTitle');
-				//var title = guideTitle.value;
 				var date = new Date();
 				var title = date.toString();
 				var termsList = "";
@@ -26,10 +24,11 @@ function createGuide() {
 	});
 }
 
+var currentGuide = 0;
+
 function saveAsGuide(){
-	//var titleBar = document.getElementById('titleMaker');
 	var date = new Date();
-	var title = date.toDateString();
+	var title = date.toString();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -44,16 +43,30 @@ function saveAsGuide(){
 		}
 	}
 	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
-		console.log(data);
+		makeDoc(title, cleanTerms, cleanSummaries, data);
 	})
-	makeDoc(title, cleanTerms, cleanSummaries);
+	
+}
+
+function makeDoc(title,terms,summaries,id){
+	var guideText = "";
+	for(var i=0; i<terms.length; i++){
+		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
+	}
+	var guideTitleVal = title;
+	if(guideTitleVal != null && guideTitleVal != ""){
+		$('#guidePopupTitle').html(guideTitleVal);
+	}
+	currentGuide = id;
+	$('#guideMaterial').html(guideText);
+	popupOpen = "#guidePopup";
+	centerPopup('#guidePopup');
+	loadPopup('#guidePopup');
 }
 
 function saveAsCards(){
-	//var titleBar = document.getElementById('titleMaker');
-	//var title = titleBar.value;
 	var date = new Date();
-	var title = date.toDateString();
+	var title = date.toString();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -68,16 +81,16 @@ function saveAsCards(){
 		}
 	}
 	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
-		console.log(data);
+		makeCards(title, cleanTerms, cleanSummaries,data);
 	})
-	makeCards(title, cleanTerms, cleanSummaries);
+	
 }
 
 
 var currentCardTerms;
 var currentCardSummaries;
 
-function makeCards(title,terms,summaries){
+function makeCards(title,terms,summaries,id){
 	var boxArea = document.getElementById('noteCardMaterial');
 	$(boxArea).html("");
 	currentCardTerms = terms;
@@ -85,6 +98,7 @@ function makeCards(title,terms,summaries){
 	for(var i=0; i<terms.length; i++){
 		createCard(terms[i],summaries[i],i);
 	}
+	currentGuide = id;
 	var cardsTitleVal = title;
 	if(cardsTitleVal != null && cardsTitleVal != ""){
 		$('#noteCardPopupTitle').html(cardsTitleVal);
@@ -124,45 +138,38 @@ function flipCard(cardId,index,state){
 	$(card).html(text);
 }
 
-function makeDoc(title,terms,summaries){
-	var guideText = "";
-	for(var i=0; i<terms.length; i++){
-		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
-	}
-	var guideTitleVal = title;
-	if(guideTitleVal != null && guideTitleVal != ""){
-		$('#guidePopupTitle').html(guideTitleVal);
-	}
-	$('#guideMaterial').html(guideText);
-	popupOpen = "#guidePopup";
-	centerPopup('#guidePopup');
-	loadPopup('#guidePopup');
-}
+
 
 function addSaveButton(){
 	$('.guidePopupTitleSave').fadeIn('slow');
 }
 
+function removeSaveButton(){
+	$('.guidePopupTitleSave').fadeOut('slow');
+}
+
 guideTitle = "";
-function saveGuideTitle(titleType){
+function saveGuideTitle(){
 	var titleName = "";
+	id = currentGuide;
 	titleName = document.getElementById('cardsPopupTitle');
 	if(titleName.value!= null && titleName.value != ""){
 		guideTitle = titleName.value;
-		$('.guidePopupTitle').hide();
-		$('.guidePopupTitleSave').hide();
-		$('.guideTitleAssigned').text(guideTitle);
-		$('.guideTitleAssigned').show();
+		$.post("changeguidetitle.php",{id:id,title:guideTitle},function(data){
+			console.log(data);
+		});
+		$('.guidePopupTitle').text(guideTitle);
+		removeSaveButton();
 	}
 	else{
 		titleName = document.getElementById('guidePopupTitle');
 		if(titleName.value != null && titleName.value !=""){
 			guideTitle = titleName.value;
-			$('.guidePopupTitle').hide();
-			$('.guidePopupTitleSave').hide();
-			$('.guideTitleAssigned').html("<h1>"+guideTitle+"</h1>");
-			$('.guideTitleAssigned').show();
+			$.post("changeguidetitle.php",{id:id,title:guideTitle},function(data){
+				console.log(data);
+			});	
+			$('.guidePopupTitle').text(guideTitle);
+			removeSaveButton();
 		}
 	}
-	
 }

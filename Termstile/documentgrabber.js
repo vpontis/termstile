@@ -28,7 +28,7 @@ function getGuide(id,title){
 				summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 				console.log(summaries[index]);
 				if(--left==0){
-					makeDoc(title,terms, summaries);
+					makeDoc(title,terms, summaries,id);
 				}
 			});
 		});
@@ -46,7 +46,7 @@ function getCards(id,title){
 				summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 				console.log(summaries[index]);
 				if(--left==0){
-					makeCards(title,terms,summaries);
+					makeCards(title,terms,summaries,id);
 				}
 			});
 		});
