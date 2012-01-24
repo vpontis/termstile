@@ -94,17 +94,15 @@ strong {
 	float: left;
 	border-radius: 6px;
 }
-.singlesearch {
+#singlesearch {
 	height: 35px;
 	width: 600px;
-	margin: 0px auto 0px;
-	padding: 20px 0px 0px 0px;
+	margin: 20px auto 0px;
 }
-.multiplesearch {
+#multiplesearch {
 	height: 500px;
 	width: 750px;
-	margin: 0px auto 0px;
-	padding: 20px 0px 0px 0px;
+	margin: 20px auto 0px;
 	display: none;
 }
 #manyTerm {
@@ -130,7 +128,7 @@ strong {
 .box {
 	border-style: solid;
 	border-radius: 5px;
-	border-color: blue;
+	border-color: gray;
 	margin: 8px auto 8px;
 	padding: 5px;
 	background-color: white;

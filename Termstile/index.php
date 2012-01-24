@@ -48,7 +48,7 @@
 		<div class="header" id="headerContainer">
 			<div class="container">
 				<div id="title">
-					<img src="../media/samplelogo.png"style="display: inline; float: left;" height="80px" width="200px"/>
+					<img src="../media/TermStileLogoLong.png"style="display: inline; float: left;" height="80px" width="200px"/>
 				</div>
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
@@ -102,7 +102,7 @@
 				</button>
 			</div>
 			<div id="singleSearchArea">
-				<div class="singlesearch">
+				<div id="singleSearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
 					<button onClick="createBox()" id="summarize">
 						Summarize!
@@ -118,19 +118,19 @@
 					</div>
 				</div>
 				<div id="createButtons">
-				<div id="createGuide">
-					<button id="createGuideButton" onClick="saveAsGuide()">
-						Study Guide
-					</button>
-				</div>
-				<div id="createCards">
-					<button id="createCardsButton" onClick="saveAsCards()">
-						Flash Cards
-					</button>
+					<div id="createGuide">
+						<button id="createGuideButton" onClick="saveAsGuide()">
+							Study Guide
+						</button>
+					</div>
+					<div id="createCards">
+						<button id="createCardsButton" onClick="saveAsCards()">
+							Flash Cards
+						</button>
+					</div>
 				</div>
 			</div>
-			</div>
-			<div class="multiplesearch" id="multipleSearch" style="display:none;">
+			<div id="multipleSearch" style="display:none;">
 				<div id="guideInput">
 					<!--<input id="guideTitle"  type="text" placeholder="enter study guide title"/>-->
 					<div>
