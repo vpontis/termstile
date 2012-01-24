@@ -97,53 +97,55 @@
 		<!-- Main Section Begin -->
 		<div class="main container" id="mainContainer">
 			<div style="width:200px; margin:0px auto; text-align:center">
-				<button id="multipleTermSlider" onClick="slideDownMultiSearch()">
-					multiple term search
+				<button id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
+					MultiSearch
 				</button>
 			</div>
-			<div class="singlesearch">
-				<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
-				<button onClick="createBox()" id="summarize">
-					Summarize!
-				</button>
-			</div>
-			<div id="boxArea">
-				<div id="box0" class="box">
-					<strong>AutoStudy Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
-					<br />
-					<br />
-					<strong>AutoStudy is still in alpha--we just started working on it this week. So expect some bugs.</strong>
-					Thank you and enjoy!
+			<div id="singleSearchArea">
+				<div class="singlesearch">
+					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
+					<button onClick="createBox()" id="summarize">
+						Summarize!
+					</button>
 				</div>
-			</div>
-			<div id="createButtons">
+				<div id="boxArea">
+					<div id="box0" class="box">
+						<strong>AutoStudy Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
+						<br />
+						<br />
+						<strong>AutoStudy is still in alpha--we just started working on it this week. So expect some bugs.</strong>
+						Thank you and enjoy!
+					</div>
+				</div>
+				<div id="createButtons">
 				<div id="createGuide">
 					<button id="createGuideButton" onClick="saveAsGuide()">
-						Create Study Guide
+						Study Guide
 					</button>
 				</div>
 				<div id="createCards">
 					<button id="createCardsButton" onClick="saveAsCards()">
-						Create Flash Cards
+						Flash Cards
 					</button>
 				</div>
 			</div>
-			<div class="multiplesearch" style="display:none;">
+			</div>
+			<div class="multiplesearch" id="multipleSearch" style="display:none;">
 				<div id="guideInput">
-					<center>
-						<input id="guideTitle"  type="text" placeholder="enter study guide title"/>
-						<textarea id="manyTerm" rows="43" cols="60" placeholder="Input list!" value=""> </textarea>
-						<button onClick="createGuide()" id="createGuide">
-							Create Study Guide!
+					<!--<input id="guideTitle"  type="text" placeholder="enter study guide title"/>-->
+					<div>
+						<textarea id="manyTerm" rows="43" cols="60" placeholder="Enter your list of terms here." ></textarea>
+					</div>
+					<div id="multiSearchButtonArea">
+						<button onClick="createGuide()" id="multiSearchButton">
+							Create Guide!
 						</button>
-					</center>
+					</div>
 				</div>
-				<div id="guideInstructions" style="float:left">
+				<div id="guideInstructions">
+					<h1>Easy as 1, 2, 3!</h1>
 					<h2>Instructions</h2>
 					<ol>
-						<li>
-							Enter a title.
-						</li>
 						<li>
 							Enter in your terms. Put each term on a new line or seperate with commas.
 						</li>
@@ -151,10 +153,10 @@
 							Click "Create Guide"
 						</li>
 						<li>
-							<strong>Enjoy!</strong>
+							Enjoy!
 						</li>
 					</ol>
-					<strong>Note: </strong> if your list does not appear it is because one of your terms is giving an error. You can check to see which term is giving an error under InstaSearch. We are working on getting this fixed.
+					<!--<strong>Note: </strong> if your list does not appear it is because one of your terms is giving an error. You can check to see which term is giving an error under InstaSearch. We are working on getting this fixed.-->
 				</div>
 			</div>
 			<div class="bottom container" id="bottomContainer">

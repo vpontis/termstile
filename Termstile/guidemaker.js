@@ -10,8 +10,10 @@ function createGuide() {
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 			console.log(summaries[index]);
 			if(--left==0){
-				var guideTitle = document.getElementById('guideTitle');
-				var title = guideTitle.value;
+				//var guideTitle = document.getElementById('guideTitle');
+				//var title = guideTitle.value;
+				var date = new Date();
+				var title = date.toString();
 				var termsList = "";
 				for(var i=0; i<terms.length; i++){
 					termsList+=terms[i]+"|";
