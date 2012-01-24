@@ -100,17 +100,23 @@
 			<div id="singleSearchArea">
 				<div id="singleSearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
-					<div style="display: inline; float: right;"><button onClick="dropdown()" id="dropdown">^</button><button onClick="createBox()" id="summarize">
+					<div style="display: inline; float: right;">
+						<button id="dropdown" onClick="toggleDropdownMenu()">&#9660;</button>
+						<button onClick="createBox()" id="summarize">
 						Summarize!
-					</button>
+						</button>
+					</div>
+					<div id="dropdownMenu">
+						<div id="instaSearchSelector" onClick="showInstaSearch()"><strong>InstaSearch</strong></div>
+						<div id="multiSearchSelector" onClick="showMultiSearch()">MultiSearch</div>
 					</div>
 				</div>
 				<div id="boxArea">
 					<div id="box0" class="box">
-						<strong>AutoStudy Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
+						<strong>TermStile Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
 						<br />
 						<br />
-						<strong>AutoStudy is still in alpha--we just started working on it this week. So expect some bugs.</strong>
+						<strong>TermStile is still in alpha--we just started working on it this week. So expect some bugs.</strong>
 						Thank you and enjoy!
 					</div>
 				</div>

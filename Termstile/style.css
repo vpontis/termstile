@@ -134,7 +134,7 @@ strong {
 #boxarea{
 	width: 700px;
 	margin: 5px auto 0px;
-	max-height: 400px;
+	/*max-height: 400px;*/
 	overflow: auto;
 }
 a{
@@ -480,6 +480,7 @@ border:0;
 	background-repeat-x: repeat;
 	background-color: #DDDDDD;
 	border-color: #BBBBBB;
+	border-style: solid;
 	border-width: 1px 1px 1px 0px;
 	padding: 0px;
 	text-align: center;
@@ -560,4 +561,19 @@ border:0;
 #multiSearchButton{
 	margin-top: 20px;
 	font-size: 140%;
+}
+#dropdownMenu{
+	display:none;
+	float:right;
+	width:100px;
+	background-color:orange;
+	z-index: 115;
+	position:relative;
+	text-align: center;
+}
+#multiSearchSelector{
+	cursor: pointer;
+}
+#instaSearchSelector{
+	cursor: pointer;
 }

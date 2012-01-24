@@ -57,6 +57,8 @@ function initializePage()	{
 	//var bottomHeight = $('#bottomConatiner').height();
 	var mainHeight = windowHeight - headerHeight;
 	$("#mainContainer").height(mainHeight);
+	var boxAreaHeight = mainHeight - 120;	
+	$('#boxArea').css('max-height',boxAreaHeight);
 }
 
 var popupOpen = "";
@@ -148,4 +150,31 @@ function toggleInstaMulti(){
 		instaSearchShown = true;
 		
 	}
+}
+
+dropdownMenuShown = false;
+function toggleDropdownMenu(){
+	if(!dropdownMenuShown){
+		$('#dropdownMenu').slideDown();
+		dropdownMenuShown = true;
+		$('#dropdown').html('&#9650;');
+	}
+	else{
+		$('#dropdownMenu').slideUp();
+		dropdownMenuShown = false;
+		$('#dropdown').html('&#9660;');
+	}
+}
+
+multiSearchShown = false;
+function showInstaSearch(){
+	if(multiSearchShown){
+		$('multipleTermSearch').slideUp();
+	}
+}
+function showMultiSearch(){
+	if(!multiSearchShown){
+		$('#multipleTermSearch').slideDown();
+	}
+	
 }
