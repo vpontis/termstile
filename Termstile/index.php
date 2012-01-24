@@ -203,13 +203,13 @@
 					The best way to contact us would be by email.
 				</p>
 				<p>
-					<strong><a href="mailto:vpontis@mit.edu">Victor Pontis</a></strong>
+					<strong>Victor Pontis</strong> <a href="mailto:vpontis@mit.edu">vpontis@mit.edu</a>
 				</p>
 				<p>
-					<strong><a href="mailto:akashbad@mit.edu">Akash Badshah</a></strong>
+					<strong>Akash Badshah</strong> <a href="mailto:akashbad@mit.edu">akashbad@mit.edu</a>
 				</p>
 				<p>
-					<strong><a href="mailto:rlau@mit.edu">Ryan Lau</a></strong>
+					<strong>Ryan Lau</strong> <a href="mailto:rlau@mit.edu">rlau@mit.edu</a>
 				</p>
 				<a class="popupClose">X</a>
 			</center>
@@ -223,9 +223,10 @@
 		</div>
 		<div id="guidePopup" class="popup">
 			<!--<h1 id="guidePopupTitle">Your Study Guide</h1>-->
-			<div id="guidePopupTitleArea">
-				<input id="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Your Study Guide Title"/>
-				<img width="30px" height="30px" src="../media/save.png" id="guidePopupTitleSave" onClick="changeSaveTitle()"/>
+			<div id="guidePopupTitleArea" class="guidePopupTitleArea">
+				<input id="guidePopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Enter Study Guide Title Here"/>
+				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
+				<div class="guideTitleAssigned"></div>
 			</div>
 			<div id="guideMaterial">
 				Guide Information
@@ -233,7 +234,11 @@
 			<a class="popupClose">X</a>
 		</div>
 		<div id="noteCardPopup" class="popup">
-			<h1 id="noteCardPopupTitle">Your NoteCards</h1>
+			<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
+				<input id="cardsPopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Enter Flash Cards Title Here"/>
+				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
+				<div class="guideTitleAssigned"></div>
+			</div>
 			<div id="noteCardMaterial">
 			</div>
 			<a class="popupClose">X</a>

@@ -140,6 +140,29 @@ function makeDoc(title,terms,summaries){
 }
 
 function addSaveButton(){
-	var saveButton = document.getElementById('guidePopupTitleSave');
-	$(saveButton).fadeIn('slow');
+	$('.guidePopupTitleSave').fadeIn('slow');
+}
+
+guideTitle = "";
+function saveGuideTitle(titleType){
+	var titleName = "";
+	titleName = document.getElementById('cardsPopupTitle');
+	if(titleName.value!= null && titleName.value != ""){
+		guideTitle = titleName.value;
+		$('.guidePopupTitle').hide();
+		$('.guidePopupTitleSave').hide();
+		$('.guideTitleAssigned').text(guideTitle);
+		$('.guideTitleAssigned').show();
+	}
+	else{
+		titleName = document.getElementById('guidePopupTitle');
+		if(titleName.value != null && titleName.value !=""){
+			guideTitle = titleName.value;
+			$('.guidePopupTitle').hide();
+			$('.guidePopupTitleSave').hide();
+			$('.guideTitleAssigned').html("<h1>"+guideTitle+"</h1>");
+			$('.guideTitleAssigned').show();
+		}
+	}
+	
 }
