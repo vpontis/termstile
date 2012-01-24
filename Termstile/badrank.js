@@ -103,7 +103,10 @@ function rankSentences(sentence, text){
 		for(var i=0; i<linkWords.length; i++){
 			linkWords[i] = linkWords[i].replace(/\[\[[^\[]*?\||\[\[|\]\]/gim,"");
 			var patt = new RegExp(linkWords[i],"gi");
-			rank+= text.match(patt).length;
+			if(text.match(patt)!=null)
+			{
+				rank+= text.match(patt).length;
+			}
 		}
 	}
 	return rank;
