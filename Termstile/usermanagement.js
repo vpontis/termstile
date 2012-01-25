@@ -3,11 +3,11 @@ function signUp(){
 		var password = document.getElementById("suPassword");
 		var altpassword = document.getElementById("suAltPassword");
 		$.post("register.php",{email: email.value, password: password.value, altpassword: altpassword.value},	function(data){
-			$("#signupPopup").html(data);
+			$("#signupPopup").html(data+"<button onClick='location.reload()'>Ok!</button>");
 		});		
-		popupOpen = "#signupPopup";
-		centerPopup('#signupPopup');
-		loadPopup('#signupPopup');
+		//popupOpen = "#signupPopup";
+		//centerPopup('#signupPopup');
+		//loadPopup('#signupPopup');
 }	
 
 function logIn(){

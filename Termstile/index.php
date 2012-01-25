@@ -69,23 +69,7 @@
 					</div>
 					<!-- Login form end-->
 					<!-- Sign Up form -->
-					<div class="signup_menu">
-						<label for="suEmail">Email</label>
-						<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
-						</br>
-						<p>
-							<label for="suPassword">Password</label>
-							<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
-						</p>
-						<p>
-							<label for="suAltPassword">Repeat Password</label>
-							<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
-						</p>
-						<button id="signupButton" onClick="signUp()">
-							Sign up!
-						</button>
-					</div>
-					<!-- Sign Up form End -->
+					
 				</div>
 				<!-- Login End -->
 			</div>
@@ -239,10 +223,21 @@
 			<a class="popupClose">X</a>
 		</div>
 		<div id="signupPopup" class="popup">
-			<h1>donate</h1>
-			<p>
-				We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)
-			</p>
+				<label for="suEmail">Email</label>
+				<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
+				</br>
+				<p>
+					<label for="suPassword">Password</label>
+					<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
+				</p>
+				<p>
+					<label for="suAltPassword">Repeat Password</label>
+					<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
+				</p>
+				<button id="signupButton" onClick="signUp()">
+					Sign up!
+				</button>
+					<!-- Sign Up form End -->
 			<a class="popupClose">X</a>
 		</div>
 		<div id="loginPopup" class="popup">

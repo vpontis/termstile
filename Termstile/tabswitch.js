@@ -26,9 +26,6 @@ $(document).ready(function() {
 	$("div.signin_menu").mouseup(function() {
 		return false
 	});
-	$("div.signup_menu").mouseup(function() {
-		return false
-	});
 	$(document).mouseup(function(e) {
 		if($(e.target).parent("a.signin").length == 0) {
 			$(".signin").removeClass("menu-open");
@@ -43,6 +40,9 @@ $(document).ready(function() {
 	});
 	$("#signup").click(function(e) {
 		e.preventDefault();
+		popupOpen = "#signupPopup";
+		centerPopup('#signupPopup');
+		loadPopup('#signupPopup');
 		$("div.signin_menu").toggle();
 		$("#signup").toggleClass("menu-open");
 	});
