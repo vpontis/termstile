@@ -97,8 +97,14 @@ strong {
 #multiplesearch {
 	height: 500px;
 	width: 750px;
-	margin: 20px auto 0px;
+	margin: 0px auto 0px;
 	display: none;
+	position: relative;
+	z-index: 5;
+}
+#singleSearchArea{
+	position: relative;
+	z-index: 1;
 }
 #manyTerm {
 	width: 400px;
@@ -439,6 +445,7 @@ border:0;
 	margin-left: 20px;
 	margin-top: 0px;
 	font-size: 120%;
+	margin-top: 20px
 }
 #guideInstructions h2, h1{
 	margin-top: 0px;
@@ -451,11 +458,13 @@ border:0;
 }
 #manyTerm{
 	font-size: 150%;
+	margin-top: 20px;
 }
 #guideInput	{
 	width: 400px;
 	float: left;
 	margin: 0px auto;
+	magin-top:20px
 }
 #summarize {
 	cursor: pointer;
@@ -510,10 +519,6 @@ border:0;
 	width: 300px;
 }
 #createButtons button{
-	font-size: 20px;
-}
-#toggleInstaMultiButton{
-	border-radius:10px;
 	font-size: 20px;
 }
 #liveStudyGuide	{
@@ -577,3 +582,19 @@ border:0;
 #instaSearchSelector{
 	cursor: pointer;
 }
+#toggleInstaMultiButton{
+	background-color: #F08C60;
+	font-size: 20px;
+	color: white;
+	border-radius: 0px 0px 5px 5px;
+	cursor: pointer;
+	border-top-style: solid;
+	border-top-color: black;
+	border-top-width: 1px;
+	position: relative;
+	top: -1px;
+}
+#toggleInstaMultiButton:hover{
+	background-color: orange;
+}
+

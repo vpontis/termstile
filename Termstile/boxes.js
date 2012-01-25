@@ -55,9 +55,9 @@ function initializePage()	{
 	var windowHeight = document.documentElement.clientHeight;  
 	var headerHeight = $('#headerContainer').height();
 	//var bottomHeight = $('#bottomConatiner').height();
-	var mainHeight = windowHeight - headerHeight;
+	var mainHeight = windowHeight - headerHeight - 2;
 	$("#mainContainer").height(mainHeight);
-	var boxAreaHeight = mainHeight - 120;	
+	var boxAreaHeight = mainHeight - 150;	
 	$('#boxArea').css('max-height',boxAreaHeight);
 }
 
@@ -132,21 +132,21 @@ instaSearchShown = true;
 function toggleInstaMulti(){
 	if(instaSearchShown == true){
 		$('#singleSearchArea').slideUp('slow',function()	{
+			$('#toggleInstaMultiButton').html('InstaSearch');
 			$('#multipleSearch').slideDown('slow',function()	{
 				$('#manyTerm').focus();
 			});
 		});
-		$('#toggleInstaMultiButton').html('InstaSearch');
 		instaSearchShown = false;
 		
 	}
 	else{
 		$('#multipleSearch').slideUp('slow',function()	{
+			$('#toggleInstaMultiButton').html('MultiSearch');
 			$('#singleSearchArea').slideDown('slow',function(){
 				$('#oneTerm').focus();
 			});
 		});
-		$('#toggleInstaMultiButton').html('MultiSearch');
 		instaSearchShown = true;
 		
 	}
