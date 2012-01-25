@@ -172,3 +172,10 @@ function saveGuideTitle(){
 		}
 	}
 }
+
+function showInstructions(){
+	$('#guideInstructions').show();
+}
+function hideInstructions(){
+	$('#guideInstructions').hide();
+}

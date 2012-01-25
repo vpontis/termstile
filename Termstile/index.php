@@ -130,35 +130,37 @@
 			<div id="multipleSearch" style="display:none;">
 				<div id="guideInput">
 					<!--<input id="guideTitle"  type="text" placeholder="enter study guide title"/>-->
-					<div>
+					<div style="position:relative; height:365px;">
+						<div style="display:none" id="guideInstructions">
+							<h1>Easy as 1, 2, 3!</h1>
+							<h2>Instructions</h2>
+							<ol>
+								<li>
+									Enter in your terms. Put each term on a new line or seperate with commas.
+								</li>
+								<li>
+									Click "Create Guide"
+								</li>
+								<li>
+									Enjoy!
+								</li>
+							</ol>
+						</div>
 						<textarea id="manyTerm" rows="43" cols="60" placeholder="Enter your list of terms here." ></textarea>
 					</div>
 					<div id="multiSearchButtonArea">
 						<button onClick="createGuide()" id="multiSearchButton">
 							Create Guide!
 						</button>
+						<span id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">?</span>
 					</div>
 				</div>
-				<div id="guideInstructions">
-					<h1>Easy as 1, 2, 3!</h1>
-					<h2>Instructions</h2>
-					<ol>
-						<li>
-							Enter in your terms. Put each term on a new line or seperate with commas.
-						</li>
-						<li>
-							Click "Create Guide"
-						</li>
-						<li>
-							Enjoy!
-						</li>
-					</ol>
-					<!--<strong>Note: </strong> if your list does not appear it is because one of your terms is giving an error. You can check to see which term is giving an error under InstaSearch. We are working on getting this fixed.-->
-				</div>
-			</div>
+				
 			<div class="bottom container" id="bottomContainer">
 				<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
 			</div>
+			</div>
+			<div class="bottom container" id="bottomContainer">
 		</div>
 		<!--</div>-->
 		<div id="reportPopup" class="popup">
