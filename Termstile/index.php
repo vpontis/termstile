@@ -156,13 +156,11 @@
 					</div>
 				</div>
 				
+			</div>
 			<div class="bottom container" id="bottomContainer">
 				<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
 			</div>
-			</div>
-			<div class="bottom container" id="bottomContainer">
 		</div>
-		<!--</div>-->
 		<div id="reportPopup" class="popup">
 			<center>
 				<h1>what's wrong!?</h1>
