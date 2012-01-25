@@ -114,7 +114,6 @@ function createCard(term, summary,index) {
 	var newDiv = document.createElement('div');
 	var divIdName = 'card_' + term;
 	newDiv.setAttribute('id', divIdName);
-	newDiv.setAttribute('class', 'box');
 	if(boxArea.firstChild == null){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);

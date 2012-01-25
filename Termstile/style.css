@@ -41,7 +41,7 @@ strong {
 	height: 20px;
 }
 .container {
-	width: 1000px;
+	width: 850px;
 	/*height: inherit;*/
 	margin: 0px auto 0px;
 }
@@ -152,7 +152,7 @@ a:hover{
 
 /* Login CSS */
 #container1 {
-    width:780px;
+    width:630px;
     margin:0 auto;
     position: relative;
 }
@@ -470,7 +470,7 @@ border:0;
 	cursor: pointer;
 	float: right;
 	height: 35px;
-	border-radius: 4px 0px 0px 4px;
+	border-radius: 4px 4px 4px 4px;
 	background-image: url(button.gif);
 	background-repeat-x: repeat;
 	background-color: #DDDDDD;
@@ -593,6 +593,9 @@ border:0;
 	border-top-width: 1px;
 	position: relative;
 	top: -1px;
+	width: 120px;
+	margin: 0px auto;
+	text-align: center;
 }
 #toggleInstaMultiButton:hover{
 	background-color: orange;

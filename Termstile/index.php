@@ -92,24 +92,17 @@
 		</div>
 		<!-- Main Section Begin -->
 		<div class="main container" id="mainContainer">
-			<div style="width:120px; margin:0px auto; text-align:center;">
 				<div id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
 					MultiSearch
 				</div>
-			</div>
 			<div id="singleSearchArea">
 				<div id="singleSearch">
 					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
 					<div style="display:none;width:200px;height:200px;background-color:white;" id="multipleTermSearch"></div>
 					<div style="display: inline; float: right;">
-						<button id="dropdown" onClick="toggleDropdownMenu()">&#9660;</button>
 						<button onClick="createBox()" id="summarize">
 						Summarize!
 						</button>
-					</div>
-					<div id="dropdownMenu">
-						<div id="instaSearchSelector" onClick="showInstaSearch()"><strong>InstaSearch</strong></div>
-						<div id="multiSearchSelector" onClick="showMultiSearch()">MultiSearch</div>
 					</div>
 				</div>
 				<div id="boxArea">

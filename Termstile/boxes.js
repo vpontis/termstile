@@ -54,10 +54,11 @@ function initializePage()	{
 	document.getElementById('oneTerm').focus();
 	var windowHeight = document.documentElement.clientHeight;  
 	var headerHeight = $('#headerContainer').height();
-	//var bottomHeight = $('#bottomConatiner').height();
+	var bottomHeight = $('#bottomConatiner').height();
 	var mainHeight = windowHeight - headerHeight - 2;
+	var toggleButtonHeight = $('#toggleInstaMultiButton').height();
+	var boxAreaHeight = mainHeight - toggleButtonHeight - bottomHeight - 140;	
 	$("#mainContainer").height(mainHeight);
-	var boxAreaHeight = mainHeight - 150;	
 	$('#boxArea').css('max-height',boxAreaHeight);
 }
 
