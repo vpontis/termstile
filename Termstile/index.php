@@ -76,13 +76,18 @@
 		</div>
 		<!-- Main Section Begin -->
 		<div class="main container" id="mainContainer">
-				<div id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
+				<!--<div id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
 					MultiSearch
-				</div>
+				</div>-->
 			<div id="singleSearchArea">
 				<div id="singleSearch">
-					<input type="text" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
-					<div style="display:none;width:200px;height:200px;background-color:white;" id="multipleTermSearch"></div>
+					<div id="searchBarArea">
+						<div>
+							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
+							<textarea id="multiSearchBox"></textarea>
+							<div id="dropDownBar" onClick="showMultiSearch()">Multiple Term Search</div>
+						</div>
+					</div>
 					<div style="display: inline; float: right;">
 						<button onClick="createBox()" id="summarize">
 						Summarize!

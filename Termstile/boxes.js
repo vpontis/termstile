@@ -152,7 +152,7 @@ function toggleInstaMulti(){
 		
 	}
 }
-
+/*
 dropdownMenuShown = false;
 function toggleDropdownMenu(){
 	if(!dropdownMenuShown){
@@ -165,9 +165,9 @@ function toggleDropdownMenu(){
 		dropdownMenuShown = false;
 		$('#dropdown').html('&#9660;');
 	}
-}
+}*/
 
-multiSearchShown = false;
+/*multiSearchShown = false;
 function showInstaSearch(){
 	if(multiSearchShown){
 		$('multipleTermSearch').slideUp();
@@ -178,4 +178,13 @@ function showMultiSearch(){
 		$('#multipleTermSearch').slideDown();
 	}
 	
+}*/
+
+function showMultiSearch(){
+	$('#oneTerm').hide();
+	
+	$('#multiSearchBox')
+		.show()
+		.animate({height:'500px',width:'600px'},1000);
 }
+

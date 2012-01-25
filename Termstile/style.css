@@ -85,9 +85,29 @@ strong {
 	width: 500px;
 	height: 35px;
 	padding: 0 10px;
-	float: left;
 	display: inline;
 	border-radius: 6px;
+}
+#multiSearchBox{
+	width: 500px;
+	height: 35px;
+	padding: 0px 10px;
+	display: inline;
+	position: relative;
+	z-index: 2;
+	display: none;
+}
+#searchBarArea{
+	height: 60px;
+	float: left;
+}
+#dropDownBar{
+	margin:0px auto;
+	width: 180px;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	cursor: pointer;
 }
 #singlesearch {
 	height: 35px;
@@ -140,7 +160,7 @@ strong {
 
 #boxarea{
 	width: 700px;
-	margin: 5px auto 0px;
+	margin: 15px auto 0px;
 	/*max-height: 400px;*/
 	overflow: auto;
 }
@@ -477,7 +497,7 @@ border:0;
 	border: 1px solid #BBBBBB;
 	text-align: center;
 	font-size: 10pt;
-	margin: 0px;
+	margin: 0px;	
 }
 #dropdown {
 	cursor: pointer;
