@@ -17,8 +17,9 @@ function createGuide() {
 					termsList+=terms[i]+"|";
 				}
 				$.post("saveguide.php", {title:title, terms:termsList}, function(data){
+					makeDoc(title,terms, summaries,data);	
 				})
-				makeDoc(title,terms, summaries);
+				
 			}
 		});
 	});

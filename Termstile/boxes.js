@@ -39,14 +39,10 @@ function createBox() {
 	
 }
 function showDeleteButton(closeid){
-	//document.getElementById(closeid).style.display = "inline";
-	var id = '#' + closeid;
-	$(id).fadeIn('fast');
+	document.getElementById(closeid).style.display = "inline";
 }
 function hideDeleteButton(closeid){
-	//document.getElementById(closeid).style.display = "none";
-	var id = '#' + closeid;
-	$(id).fadeOut('fast');
+	document.getElementById(closeid).style.display = "none";
 }
 function removeElement(divIdName, idNum)	{
 	sessionTerms.splice(idNum-1,1,"");
