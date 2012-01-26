@@ -21,7 +21,7 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\"><img src='../media/loading.gif'><a id=\'loadingclose\' onclick=\'removeElement("+divIdName+")\'><img id=\'"+closeId+"\' style=\'display:none\' src=\'closebutton.png\' /></a></div>"
+	var text = "<div style=\"text-align:center\"><a id=\'loadingclose\' onclick=\'removeElement("+divIdName+")\'><img id=\'"+closeId+"\' style=\'display:none\' src=\'closebutton.png\' /></a></div>"
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 	var summary = new Array(3);
@@ -175,7 +175,7 @@ function toggleShowMultiSearch(){
 		$('#multiSearchBox')
 			.show()
 			.animate({height: boxAreaHeight},1000,function(){
-				$('#multiSearchGuideButton').fadeIn();
+				$('#multiSearchButtons').fadeIn();
 				$('#questionMark').fadeIn();
 				document.getElementById('multiSearchBox').focus();
 			});
@@ -193,7 +193,7 @@ function toggleShowMultiSearch(){
 			});
 		$('#boxArea').fadeIn('slow');
 		multiSearchShown = false;
-		$('#multiSearchGuideButton').fadeOut();
+		$('#multiSearchButtons').fadeOut();
 		$('#summarize').fadeIn();
 		$('#questionMark').fadeOut();
 	}

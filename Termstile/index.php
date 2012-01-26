@@ -92,7 +92,7 @@
 										Enter in your terms. Put each term on a new line or seperate with commas.
 									</li>
 									<li>
-										Click "Create Guide"
+										Click "Study Guide" or "Note Cards"
 									</li>
 									<li>
 										Enjoy!
@@ -100,10 +100,11 @@
 								</ol>
 							</div>
 							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>	
-							<div id="arrow">&#60;---</div>
 							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Need help?<br />Hover over me.</div>
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
-							<div style="width:180px;margin: 0px auto;"><button  id="multiSearchGuideButton" onClick="createGuide()">Create Guide!</button>
+							<div id = "multiSearchButtons" >
+								<button  id="multiSearchGuideButton" onClick="createGuide()">Study Guide!</button>
+								<button  id="multiSearchCardsButton" onClick="createCards()">Note Cards!</button>
 							</div>
 						</div>
 					</div>

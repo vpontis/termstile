@@ -25,6 +25,33 @@ function createGuide() {
 	});
 }
 
+function createCards() {
+	var guideArea = document.getElementById('guideArea');
+	var manyTerm = document.getElementById('multiSearchBox');
+	var input = manyTerm.value;
+	var terms = input.split(/\n|,\s/gm);
+	var summaries = new Array(terms.length);
+	var left = terms.length;
+	$.each(terms, function(index, value){
+		getText(terms[index],function(summary){
+			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
+			console.log(summaries[index]);
+			if(--left==0){
+				var date = new Date();
+				var title = date.toString();
+				var termsList = "";
+				for(var i=0; i<terms.length; i++){
+					termsList+=terms[i]+"|";
+				}
+				$.post("saveguide.php", {title:title, terms:termsList}, function(data){
+					makeCards(title,terms, summaries,data);	
+				})
+				
+			}
+		});
+	});
+}
+
 var currentGuide = 0;
 
 function saveAsGuide(){
@@ -115,6 +142,7 @@ function createCard(term, summary,index) {
 	var newDiv = document.createElement('div');
 	var divIdName = 'card_' + term;
 	newDiv.setAttribute('id', divIdName);
+	newDiv.setAttribute('class', 'card');
 	if(boxArea.firstChild == null){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
@@ -176,11 +204,9 @@ function saveGuideTitle(){
 
 function showInstructions(){
 	$('#guideInstructions').fadeIn('fast');
-	$('#arrow').fadeIn(1000);
 }
 function hideInstructions(){
 	$('#guideInstructions').fadeOut('fast');
-	$('#arrow').fadeOut(1000);
 }
 
 function showArrow(){

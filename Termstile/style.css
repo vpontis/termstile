@@ -150,7 +150,7 @@ strong {
 }
 .box {
 	border-style: solid;
-	border-color: gray;
+	border-color: #4C4C4C;
 	margin: 8px auto 8px;
 	padding: 5px;
 	background-color: white;
@@ -159,10 +159,24 @@ strong {
 	width: 600px;
 }
 
+.card {
+	border-style: solid;
+	border-color: #4C4C4C;
+	margin: 8px auto 8px;
+	padding: 5px;
+	background-color: white;
+	position:relative;
+}
+
 #boxarea{
 	width: 700px;
 	margin: 15px auto 0px;
 	/*max-height: 400px;*/
+	overflow: auto;
+}
+
+#noteCardMaterial{
+	width: 30em;
 	overflow: auto;
 }
 a{
@@ -690,11 +704,21 @@ border:0;
 	text-align: center;
 }
 #multiSearchGuideButton{
-	display: none;
 	border-radius: 5px;
 	margin: 20px auto 0px;
 	font-size: 20px;
 	width: 150px;
+}
+#multiSearchCardsButton{
+	border-radius: 5px;
+	margin: 20px auto 0px;
+	font-size: 20px;
+	width: 150px;
+}
+#multiSearchButtons{
+	width:180px;
+	margin: 0px auto;
+	display: none;
 }
 #logo{
 	display: inline;
