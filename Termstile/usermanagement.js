@@ -5,9 +5,9 @@ function signUp(){
 		$.post("register.php",{email: email.value, password: password.value, altpassword: altpassword.value},	function(data){
 			$("#signupPopup").html(data+"<button onClick='location.reload()'>Ok!</button>");
 		});		
-		//popupOpen = "#signupPopup";
-		//centerPopup('#signupPopup');
-		//loadPopup('#signupPopup');
+		popupOpen = "#signupPopup";
+		centerPopup('#signupPopup');
+		loadPopup('#signupPopup');
 }	
 
 function logIn(){

@@ -119,7 +119,11 @@ function loadPopup(id)	{
 	if(popupStatus==0){
 		$('#backgroundPopup').css({'opacity':'.7'});
 		$(id).fadeIn('slow');
-		$('#backgroundPopup').fadeIn('slow');
+		$('#backgroundPopup').fadeIn('slow',function(){
+			if(id=="#signupPopup"){
+				document.getElementById('suEmail').focus();
+			}
+		});
 		popupStatus=1;
 	}
 }
