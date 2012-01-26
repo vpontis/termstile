@@ -39,10 +39,14 @@ function createBox() {
 	
 }
 function showDeleteButton(closeid){
-	document.getElementById(closeid).style.display = "inline";
+	//document.getElementById(closeid).style.display = "inline";
+	var id = '#' + closeid;
+	$(id).fadeIn('fast');
 }
 function hideDeleteButton(closeid){
-	document.getElementById(closeid).style.display = "none";
+	//document.getElementById(closeid).style.display = "none";
+	var id = '#' + closeid;
+	$(id).fadeOut('fast');
 }
 function removeElement(divIdName, idNum)	{
 	sessionTerms.splice(idNum-1,1,"");
@@ -160,33 +164,7 @@ function toggleInstaMulti(){
 		
 	}
 }
-/*
-dropdownMenuShown = false;
-function toggleDropdownMenu(){
-	if(!dropdownMenuShown){
-		$('#dropdownMenu').slideDown();
-		dropdownMenuShown = true;
-		$('#dropdown').html('&#9650;');
-	}
-	else{
-		$('#dropdownMenu').slideUp();
-		dropdownMenuShown = false;
-		$('#dropdown').html('&#9660;');
-	}
-}*/
 
-/*multiSearchShown = false;
-function showInstaSearch(){
-	if(multiSearchShown){
-		$('multipleTermSearch').slideUp();
-	}
-}
-function showMultiSearch(){
-	if(!multiSearchShown){
-		$('#multipleTermSearch').slideDown();
-	}
-	
-}*/
 
 multiSearchShown = false;
 function toggleShowMultiSearch(){

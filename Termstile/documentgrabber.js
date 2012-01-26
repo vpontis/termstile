@@ -14,17 +14,21 @@ function createBox(id, title) {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\"><strong>"+title+"<button id='getGuideButton' onClick='getGuide("+id+", \""+title+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+title+"\")\'>Note Cards</button></div>";
+	var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\" onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" style=\"text-align:center\"><strong>"+title+"<button id='getGuideButton' onClick='getGuide("+id+", \""+title+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+title+"\")\'>Note Cards</button></div>";
 	text += " <a class=\'close\' onClick=\'deleteGuide("+divIdName+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 }
 
 function showDeleteButton(closeid){
-	document.getElementById(closeid).style.display = "inline";
+	//document.getElementById(closeid).style.display = "inline";
+	var id = '#' + closeid;
+	$(id).fadeIn('fast');
 }
 function hideDeleteButton(closeid){
-	document.getElementById(closeid).style.display = "none";
+	//document.getElementById(closeid).style.display = "none";
+	var id = '#' + closeid;
+	$(id).fadeOut('fast');
 }
 function getGuide(id,title){
 	$.post("getguideterms.php",{id:id},function(data){
