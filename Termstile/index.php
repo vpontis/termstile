@@ -44,11 +44,7 @@
 		<div class="header" id="headerContainer">
 			<div class="container">
 				<div id="title">
-<<<<<<< HEAD
-					<a href="index.php"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
-=======
 					<img src="../media/termstile.png" id="logo"/><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
->>>>>>> efe823c2b7e1147e76da43c202fdcb6a1cb465c2
 				</div>
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
