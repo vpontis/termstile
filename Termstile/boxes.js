@@ -8,9 +8,12 @@ function createBox() {
 	var thisDivNum = divNum;
 	var searchBar = document.getElementById('oneTerm');
 	var searchTerm = searchBar.value;
+	var closeId = "close"+divNum;
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'box');
 	newDiv.setAttribute('name',searchTerm);
+	newDiv.setAttribute('onmouseover','showDeleteButton(\''+closeId+'\')');
+	newDiv.setAttribute('onmouseout','hideDeleteButton(\''+closeId+'\')');
 	if(boxArea.firstChild == null){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
@@ -18,7 +21,7 @@ function createBox() {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div style=\"text-align:center\"><img src='../media/loading.gif'><a id=\'loadingclose\' onclick=\'removeElement("+divIdName+")\'><img src=\'closebutton.png\' /></a></div>"
+	var text = "<div style=\"text-align:center\"><img src='../media/loading.gif'><a id=\'loadingclose\' onclick=\'removeElement("+divIdName+")\'><img id=\'"+closeId+"\' style=\'display:none\' src=\'closebutton.png\' /></a></div>"
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 	var summary = new Array(3);
@@ -28,14 +31,19 @@ function createBox() {
 		sessionSummaries[thisDivNum-1] = summary[0]+" "+summary[1]+" "+summary[2];
 		var answer = "<strong>"+summary[0]+"</strong> "+summary[1]+" "+summary[2];
 		var shortAnswer = answer;
-		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+thisDivNum+")\'><img src=\'closebutton.png\' /></a>";
+		answer += " <a class=\'close\' onclick=\'removeElement("+divIdName+", "+thisDivNum+")\'><img id=\'"+closeId+"\' style=\'display:none\' src=\'closebutton.png\' /></a>";
 		answer += "<a class=\'wikifavicon\'  target=\'_blank\' href=\'http:\\\\en.wikipedia.org/wiki/" + searchTerm + "\'><img src=\'../media/wikifavicon.png\' alt=\'W\' \\></a>"
 		$(newDiv).html(answer);
 	});
 	$("#oneTerm").val("");
 	
 }
-
+function showDeleteButton(closeid){
+	document.getElementById(closeid).style.display = "inline";
+}
+function hideDeleteButton(closeid){
+	document.getElementById(closeid).style.display = "none";
+}
 function removeElement(divIdName, idNum)	{
 	sessionTerms.splice(idNum-1,1,"");
 	sessionSummaries.splice(idNum-1,1,"");
