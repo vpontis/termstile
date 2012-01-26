@@ -129,12 +129,12 @@
 				<div id="createButtons">
 					<div id="createGuide">
 						<div class="button" id="createGuideButton" onClick="saveAsGuide()">
-							<image src="../media/guide"></image>Study Guide
+							<image src="../media/guide"></image> Study Guide
 						</div>
 					</div>
 					<div id="createCards">
 						<div class="button" id="createCardsButton" onClick="saveAsCards()">
-							<image src="../media/card"></image>Flash Cards
+							<image src="../media/card"></image> Flash Cards
 						</div>
 					</div>
 				</div>
