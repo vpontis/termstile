@@ -169,6 +169,7 @@ function toggleInstaMulti(){
 multiSearchShown = false;
 function toggleShowMultiSearch(){
 	var boxAreaHeight = $('#boxArea').css('max-height');
+	//show multi search
 	if(!multiSearchShown){	
 		$('#oneTerm').hide();
 		$('#dropDownBar').text('InstaSearch');
@@ -179,11 +180,13 @@ function toggleShowMultiSearch(){
 				$('#questionMark').fadeIn();
 				document.getElementById('multiSearchBox').focus();
 			});
-		$('#boxArea').fadeOut();
+		/*$('#boxArea').fadeOut();
 		$('#summarize').fadeOut();
-		$('#createButtons').fadeOut();
+		$('#createButtons').fadeOut();*/
+		$('.hideForMulti').fadeOut();
 		multiSearchShown = true;
 	}
+	//show insta search
 	else{
 		$('#multiSearchBox')
 			.animate({height:'35px'},1000, function(){
@@ -192,12 +195,13 @@ function toggleShowMultiSearch(){
 				$('#oneTerm').show();
 				document.getElementById('oneTerm').focus();
 			});
-		$('#boxArea').fadeIn('slow');
-		multiSearchShown = false;
-		$('#multiSearchButtons').fadeOut();
+		/*$('#boxArea').fadeIn('slow');
 		$('#summarize').fadeIn();
-		$('#createButtons').fadeIn();
+		$('#createButtons').fadeIn();*/
+		$('.hideForMulti').fadeIn('slow');
 		$('#questionMark').fadeOut();
+		$('#multiSearchButtons').fadeOut();
+		multiSearchShown = false;
 	}
 
 

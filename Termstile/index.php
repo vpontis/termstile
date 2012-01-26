@@ -79,7 +79,7 @@
 				<!--<div id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
 					MultiSearch
 				</div>-->
-			<div class="hidething" id="singleSearchArea">
+			<div id="singleSearchArea">
 				<div id="singleSearch">
 					<div id="searchBarArea">
 						<div style="position:relative">
@@ -109,12 +109,12 @@
 						</div>
 					</div>
 					<div style="display: inline; float: right;">
-						<div class="button" onClick="createBox()" id="summarize">
+						<div class="button hideForMulti" onClick="createBox()" id="summarize">
 						<img src="../media/search.png">
 						</div>
 					</div>
 				</div>
-				<div id="boxArea">
+				<div class="hideForMulti" id="boxArea">
 					<div id="box0" class="box">
 						<strong>TermStile Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. Or click the down arrow to enter in multiple terms at once (read: copy paste).
 						<br />
@@ -126,15 +126,15 @@
 						Disclaimer: any bugs or errors on this website are for the <strong>greater good</strong>.
 					</div>
 				</div>
-				<div class="hidething" id="createButtons">
+				<div class="hideForMulti" id="createButtons">
 					<div id="createGuide">
 						<div class="button createGuideButton" id="createGuideButton" style="float:left;" onClick="saveAsGuide()">
-							<img src="../media/guide.png"/>Study Guide
+							<img src="../media/guide.png"/ width="20px" height="20px"> Study Guide
 						</div>
 					</div>
 					<div id="createCards">
 						<div class="button createCardsButton" id="createCardsButton" onClick="saveAsCards()">
-							<img src="../media/card.png"/>Flash Cards
+							<img src="../media/card.png"/ width="20px" height="20px"> Flash Cards
 						</div>
 					</div>
 				</div>

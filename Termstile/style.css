@@ -537,6 +537,9 @@ border:0;
 	display: inline;
 	float:right;
 }
+.button img {
+	vertical-align: text-top;
+}
 #summarize img{
 	height: 24px;
 	width: 24px;
