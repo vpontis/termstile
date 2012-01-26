@@ -531,29 +531,32 @@ border:0;
 }
 .button {
 	cursor: pointer;
-	height: 26px;
 	background-color: #F05A18;
 	color: #fff;
-	width: 96px;
 	font-size: 17px;
 	display: inline;
 	float:right;
 }
-#createCardsButton{
+#summarize img{
+	height: 24px;
+	width: 24px;
+}
+.createCardsButton{
 	padding: 9px 10px 0px 12px;
 	height: 26px;
+	width: 130px;
 }
-#createGuideButton{
+.createGuideButton{
 	padding: 9px 12px 0px;
 	height: 26px;
+	width: 130px;
 }
 #summarize {
 	padding: 5px 0px 5px;
 	height: 24px;
+	width: 96px;
 }
 #summarize img{
-	width: 24px;
-	height: 24px;
 	padding: 0px 36px 0px;
 }
 #createGuide{
@@ -566,7 +569,7 @@ border:0;
 	margin-left: auto;
 	margin-right: auto;
 	height: 40px;
-	width: 300px;
+	width: 400px;
 }
 #createButtons button{
 	font-size: 20px;
@@ -704,8 +707,9 @@ border:0;
 	width: 150px;
 }
 #multiSearchButtons{
-	width:180px;
-	margin: 0px auto;
+	width:400px;
+	height: 35px;
+	margin: 15px auto;
 	display: none;
 }
 #logo{

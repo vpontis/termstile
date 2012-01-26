@@ -44,7 +44,7 @@
 		<div class="header" id="headerContainer">
 			<div class="container">
 				<div id="title">
-					<a href="index.php"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
+					<a href="index.html"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
 				</div>
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
@@ -79,7 +79,7 @@
 				<!--<div id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
 					MultiSearch
 				</div>-->
-			<div id="singleSearchArea">
+			<div class="hidething" id="singleSearchArea">
 				<div id="singleSearch">
 					<div id="searchBarArea">
 						<div style="position:relative">
@@ -103,8 +103,8 @@
 							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Need help?<br />Hover over me.</div>
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
 							<div id = "multiSearchButtons" >
-								<div  id="multiSearchGuideButton" class="button" onClick="createGuide()">Study Guide</div>
-								<div  id="multiSearchCardsButton" class="button" onClick="createCards()">Note Cards</div>
+								<div class="button createGuideButton" style="float:left;" onClick="createGuide()">Study Guide!</div>
+								<div class="button createCardsButton" onClick="createCards()">Note Cards!</div>
 							</div>
 						</div>
 					</div>
@@ -126,15 +126,15 @@
 						Disclaimer: any bugs or errors on this website are for the <strong>greater good</strong>.
 					</div>
 				</div>
-				<div id="createButtons">
+				<div class="hidething" id="createButtons">
 					<div id="createGuide">
-						<div class="button" id="createGuideButton" onClick="saveAsGuide()">
-							<image src="../media/guide.png"></image> Study Guide
+						<div class="button createGuideButton" id="createGuideButton" style="float:left;" onClick="saveAsGuide()">
+							<img src="../media/guide.png"/>Study Guide
 						</div>
 					</div>
 					<div id="createCards">
-						<div class="button" id="createCardsButton" onClick="saveAsCards()">
-							<image src="../media/card.png"></image> Flash Cards
+						<div class="button createCardsButton" id="createCardsButton" onClick="saveAsCards()">
+							<img src="../media/card.png"/>Flash Cards
 						</div>
 					</div>
 				</div>

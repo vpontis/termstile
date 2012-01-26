@@ -181,6 +181,7 @@ function toggleShowMultiSearch(){
 			});
 		$('#boxArea').fadeOut();
 		$('#summarize').fadeOut();
+		$('#createButtons').fadeOut();
 		multiSearchShown = true;
 	}
 	else{
@@ -195,6 +196,7 @@ function toggleShowMultiSearch(){
 		multiSearchShown = false;
 		$('#multiSearchButtons').fadeOut();
 		$('#summarize').fadeIn();
+		$('#createButtons').fadeIn();
 		$('#questionMark').fadeOut();
 	}
 
