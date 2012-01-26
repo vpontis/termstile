@@ -44,7 +44,7 @@
 		<div class="header" id="headerContainer">
 			<div class="container">
 				<div id="title">
-					<a href="index.html"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
+					<a href="index.php"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
 				</div>
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
@@ -103,8 +103,8 @@
 							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Need help?<br />Hover over me.</div>
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
 							<div id = "multiSearchButtons" >
-								<button  id="multiSearchGuideButton" onClick="createGuide()">Study Guide!</button>
-								<button  id="multiSearchCardsButton" onClick="createCards()">Note Cards!</button>
+								<div  id="multiSearchGuideButton" class="button" onClick="createGuide()">Study Guide</div>
+								<div  id="multiSearchCardsButton" class="button" onClick="createCards()">Note Cards</div>
 							</div>
 						</div>
 					</div>
@@ -129,12 +129,12 @@
 				<div id="createButtons">
 					<div id="createGuide">
 						<div class="button" id="createGuideButton" onClick="saveAsGuide()">
-							Study Guide
+							<image src="../media/guide"></image>Study Guide
 						</div>
 					</div>
 					<div id="createCards">
 						<div class="button" id="createCardsButton" onClick="saveAsCards()">
-							Flash Cards
+							<image src="../media/card"></image>Flash Cards
 						</div>
 					</div>
 				</div>
