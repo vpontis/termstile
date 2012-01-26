@@ -230,20 +230,15 @@
 		</div>
 		<div id="signupPopup" class="popup">
 			<h1>Sign Up!</h1>
-			<div style="width:300px;">
+			<div style="width:400px; text-align:center; margin: 0px auto;">
 				<label for="suEmail">Email</label>
 				<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
-				</br>
-				<p>
-					<label for="suPassword">Password</label>
-					<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
-				</p>
-				<p>
-					<label for="suAltPassword">Repeat Password</label>
-					<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
-				</p>
+				<label for="suPassword">Password</label>
+				<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
+				<label for="suAltPassword">Repeat Password</label>
+				<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
 			</div>
-			<div style="width:300px;margin:0px auto;"><button style="width:100px;margin:0px auto;"id="signupButton" onClick="signUp()">
+			<div style="width:80px;margin:0px auto;"><button style="text-align:center;width:80px;margin:0px auto;"id="signupButton" onClick="signUp()">
 				Sign up!
 			</button></div>
 				<!-- Sign Up form End -->
