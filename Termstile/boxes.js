@@ -180,11 +180,26 @@ function showMultiSearch(){
 	
 }*/
 
-function showMultiSearch(){
-	$('#oneTerm').hide();
-	
-	$('#multiSearchBox')
-		.show()
-		.animate({height:'500px',width:'600px'},1000);
+multiSearchShown = false;
+function toggleShowMultiSearch(){
+	if(!multiSearchShown){	
+		$('#oneTerm').hide();
+		$('#multiSearchBox')
+			.show()
+			.animate({height:'500px'},1000);
+		$('#boxArea').fadeOut();
+		multiSearchShown = true;
+	}
+	else{
+		$('#multiSearchBox')
+			.animate({height:'35px'},1000, function(){
+				$('#multiSearchBox').hide();
+				$('#oneTerm').show();
+			});
+		$('#boxArea').fadeIn('slow');
+		multiSearchShown = false;
+	}
+
+
 }
 

@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Termstile: get Wikipedia summaries for terms</title>
+		<title>Termstile: terms in, definitions out</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -85,7 +85,9 @@
 						<div>
 							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
 							<textarea id="multiSearchBox"></textarea>
-							<div id="dropDownBar" onClick="showMultiSearch()">Multiple Term Search</div>
+							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
+							<button style="display:none;" onClick="saveAsGuide()">
+							Create Guide!</button>
 						</div>
 					</div>
 					<div style="display: inline; float: right;">
@@ -96,11 +98,14 @@
 				</div>
 				<div id="boxArea">
 					<div id="box0" class="box">
-						<strong>TermStile Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. If "Generating text..." appears for too long, try a new search. Also, checkout the Generate Guide tab to create some cool study guides.
+						<strong>TermStile Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. Or click the down arrow to enter in multiple terms at once (read: copy, paste).
 						<br />
 						<br />
 						<strong>TermStile is still in alpha--we just started working on it this week. So expect some bugs.</strong>
 						Thank you and enjoy!
+						<br />
+						<br />
+						Disclaimer: any bugs or errors on this website are for the <strong>greater good</strong>.
 					</div>
 				</div>
 				<div id="createButtons">
@@ -156,8 +161,7 @@
 				<p>
 					Do you have a problem? Please tell us about it and we will work on fixing it!
 				</p>
-				<textarea rows="15" cols="30" placeholder="Enter problem here."/>
-				</textarea>
+				<textarea rows="15" cols="30" placeholder="Enter problem here."/></textarea>
 				<br />
 				<button>
 					Submit
