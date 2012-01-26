@@ -87,6 +87,9 @@ function makeDoc(title,terms,summaries,id){
 	}
 	currentGuide = id;
 	$('#guideMaterial').html(guideText);
+	if(guideTitle != null && guideTitle != ""){
+		$('#guidePopupTitleArea').html("<h1>" + guideTitle + "</h1>");
+	}
 	popupOpen = "#guidePopup";
 	centerPopup('#guidePopup');
 	loadPopup('#guidePopup');
@@ -127,9 +130,8 @@ function makeCards(title,terms,summaries,id){
 		createCard(terms[i],summaries[i],i);
 	}
 	currentGuide = id;
-	var cardsTitleVal = title;
-	if(cardsTitleVal != null && cardsTitleVal != ""){
-		$('#noteCardPopupTitle').html(cardsTitleVal);
+	if(guideTitle != null && guideTitle != ""){
+		$('#cardsPopupTitleArea').html("<h1>" + guideTitle + "</h1>");
 	}
 	popupOpen = "#noteCardPopup";
 	centerPopup('#noteCardPopup');
@@ -137,7 +139,7 @@ function makeCards(title,terms,summaries,id){
 }
 
 
-function createCard(term, summary,index) {
+function createCard(term, summary,index) {	
 	var boxArea = document.getElementById('noteCardMaterial');
 	var newDiv = document.createElement('div');
 	var divIdName = 'card_' + term;

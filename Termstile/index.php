@@ -44,7 +44,7 @@
 		<div class="header" id="headerContainer">
 			<div class="container">
 				<div id="title">
-					<a href="index.html"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
+					<a href="index.php"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
 				</div>
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
@@ -217,7 +217,7 @@
 			<div id="guideMaterial">
 				Guide Information
 			</div>
-			<a class="popupClose">X</a>
+			<a class="popupClose"><img style="display:none" src="closebutton.png" /></a>
 		</div>
 		<div id="noteCardPopup" class="popup">
 			<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
@@ -227,7 +227,7 @@
 			</div>
 			<div id="noteCardMaterial">
 			</div>
-			<a class="popupClose">X</a>
+			<a class="popupClose"><img style="display:none" src="closebutton.png" /></a>
 		</div>
 		<div id="signupPopup" class="popup">
 			<h1>Sign Up!</h1>

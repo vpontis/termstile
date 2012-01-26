@@ -83,8 +83,10 @@ function enterPressed(e)	{
 function initializePage(email)	{
 	var windowHeight = document.documentElement.clientHeight;  
 	var headerHeight = $('#headerContainer').height();
-	//var bottomHeight = $('#bottomConatiner').height();
-	var mainHeight = windowHeight - headerHeight;
+	var mainHeight = windowHeight - headerHeight - 3;
+	var bottomHeight = $('#bottomContainer').height();
+	var boxAreaHeight = mainHeight- bottomHeight - 20;
+	$('#boxArea').css('max-height',boxAreaHeight);
 	$("#mainContainer").height(mainHeight);
 	$.post("getguideids.php",function(data){
 		var guideIds = data.split("|");

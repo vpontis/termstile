@@ -1,8 +1,15 @@
+loginShown = false;
+ 
 $(document).ready(function() {
 	// Login JS
 	$("#login").click(function(e) {
 		e.preventDefault();
-		$("div.signin_menu").toggle();
+		if(!loginShown){
+			$("div.signin_menu").slideDown(function(){
+				document.getElementById('liEmail').focus();
+			});
+			loginShown = true;
+		}
 		$("#login").toggleClass("menu-open");
 	});
 
@@ -12,7 +19,8 @@ $(document).ready(function() {
 	$(document).mouseup(function(e) {
 		if($(e.target).parent("a.signin").length == 0) {
 			$(".signin").removeClass("menu-open");
-			$("div.signin_menu").hide();
+			$("div.signin_menu").slideUp();
+			loginShown = false;
 		}
 	});
 	$("#signup").click(function(e) {
