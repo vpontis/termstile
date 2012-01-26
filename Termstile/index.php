@@ -109,9 +109,9 @@
 						</div>
 					</div>
 					<div style="display: inline; float: right;">
-						<button onClick="createBox()" id="summarize">
+						<div class="button" onClick="createBox()" id="summarize">
 						<img src="../media/search.png">
-						</button>
+						</div>
 					</div>
 				</div>
 				<div id="boxArea">
@@ -128,14 +128,14 @@
 				</div>
 				<div id="createButtons">
 					<div id="createGuide">
-						<button id="createGuideButton" onClick="saveAsGuide()">
+						<div class="button" id="createGuideButton" onClick="saveAsGuide()">
 							Study Guide
-						</button>
+						</div>
 					</div>
 					<div id="createCards">
-						<button id="createCardsButton" onClick="saveAsCards()">
+						<div class="button" id="createCardsButton" onClick="saveAsCards()">
 							Flash Cards
-						</button>
+						</div>
 					</div>
 				</div>
 			</div>
