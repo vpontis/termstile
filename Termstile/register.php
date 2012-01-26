@@ -16,7 +16,7 @@
 		}
 		
 		$passhash = sha1($email . $_POST['password']);
-		$insert = "INSERT INTO users (Email, PassHash) VALUES('$email', '$passhash')";
+		$insert = "INSERT INTO users (Email, PassHash, MyGuides) VALUES('$email', '$passhash','|')";
 		if(mysql_query($insert)){
 			echo "Thanks for signing up!";
 		}

@@ -2,8 +2,11 @@ function createBox(id, title) {
 	var boxArea = document.getElementById('boxArea');
 	var newDiv = document.createElement('div');
 	var divIdName = id;
+	var closeId = "close"+id;
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'box');
+	newDiv.setAttribute('onmouseover','showDeleteButton(\''+closeId+'\')');
+	newDiv.setAttribute('onmouseout','hideDeleteButton(\''+closeId+'\')');
 	if(boxArea.firstChild == null){
 		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
@@ -12,11 +15,17 @@ function createBox(id, title) {
 			.css('display','none');
 	}
 	var text = "<div style=\"text-align:center\"><strong>"+title+"<button id='getGuideButton' onClick='getGuide("+id+", \""+title+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+title+"\")\'>Note Cards</button></div>";
-	
+	text += " <a class=\'close\' onClick=\'deleteGuide("+divIdName+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
 }
 
+function showDeleteButton(closeid){
+	document.getElementById(closeid).style.display = "inline";
+}
+function hideDeleteButton(closeid){
+	document.getElementById(closeid).style.display = "none";
+}
 function getGuide(id,title){
 	$.post("getguideterms.php",{id:id},function(data){
 		var terms = data.split("|");
@@ -52,11 +61,12 @@ function getCards(id,title){
 		});
 	});
 }
-function removeElement(divIdName, idNum)	{
-	sessionTerms.splice(idNum-1,1,"");
-	sessionSummaries.splice(idNum-1,1,"");
-	$(divIdName).animate({opacity:0.0});
-	$(divIdName).slideUp('slow');	
+function deleteGuide(divIdName)	{
+	$.post("deleteguide.php",{id:divIdName},function(data){
+		
+	})
+	$('#'+divIdName).animate({opacity:0.0});
+	$('#'+divIdName).slideUp('slow');	
 }	
 
 function enterPressed(e)	{
@@ -75,6 +85,7 @@ function initializePage(email)	{
 	$.post("getguideids.php",function(data){
 		var guideIds = data.split("|");
 		guideIds.pop();
+		guideIds = guideIds.slice(1);
 		var left = guideIds.length;
 		$.each(guideIds, function(index, value){
 			$.post("getguidetitles.php",{id:value},function(data){
@@ -123,11 +134,6 @@ $(document).ready(function(){
 		popupOpen = "#donatePopup";
 		centerPopup('#donatePopup');
 		loadPopup('#donatePopup');
-	});
-	$('#createGuideButton').click(function(){
-		popupOpen = "#guideTitlePopup";
-		centerPopup('#guideTitlePopup');
-		loadPopup('#guideTitlePopup');
 	});
 	$('.popupClose').click(function(){
 		disablePopup();

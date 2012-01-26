@@ -19,10 +19,7 @@
 				if(mysql_num_rows($getUsers)!=0){
 					while($info = mysql_fetch_array($getUsers)){
 						if($passhash == $info['PassHash']){
-							echo "<style type='text/css'>
-							#signedout{
-								display: none;
-							}		
+							echo "<style type='text/css'>	
 						#signedin {
 						}</style>";
 						}
@@ -45,28 +42,9 @@
 					</div>
 					<!-- Login Start-->
 					<div id="container1" style="float: right;">
-						<div id="signedout" class="topnav" >
-							<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
-						</div>
 						<div id="signedin" class="topnav floats_r">
 							<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a onclick="logOut()" id="logout" class="signin">Logout</a></span>
 						</div>
-						<!-- Sign Up form -->
-						<div class="signup_menu">
-								<label for="suEmail">Email</label>
-								<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
-								</br>
-								<p>
-									<label for="suPassword">Password</label>
-									<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
-								</p>
-								<p>
-									<label for="suAltPassword">Repeat Password</label>
-									<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
-								</p>
-								<button id="signupButton" onClick="signUp()">Sign up!</button>
-						</div>
-						<!-- Sign Up form End -->
 					</div>
 					<!-- Login End -->
 				</div>
@@ -77,14 +55,6 @@
 				</div>
 				<div id="boxArea">
 				</div>
-				<!--<div id="createButtons">
-						<div id="createGuide">
-							<button id="createGuideButton">Create Study Guide</button>
-						</div>
-						<div id="createCards">
-							<button id="createCardsButton">Create Flash Cards</button>
-						</div>
-				</div>-->
 				<div class="bottom container" id="bottomContainer">
 					<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
 				</div>
