@@ -516,6 +516,7 @@ border:0;
 	cursor: pointer;
 	float: right;
 	height: 35px;
+	width: 100px;
 	border-radius: 4px 4px 4px 4px;
 	background-image: url(button.gif);
 	background-repeat-x: repeat;

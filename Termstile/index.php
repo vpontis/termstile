@@ -110,7 +110,7 @@
 					</div>
 					<div style="display: inline; float: right;">
 						<button onClick="createBox()" id="summarize">
-						Summarize!
+						<img src="../media/search.png">
 						</button>
 					</div>
 				</div>
