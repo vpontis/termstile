@@ -91,11 +91,12 @@ strong {
 #multiSearchBox{
 	width: 500px;
 	height: 35px;
-	padding: 0px 10px;
+	padding: 0px 0px;
 	display: inline;
 	position: relative;
 	z-index: 2;
 	display: none;
+	border-radius: 5px;
 }
 #searchBarArea{
 	height: 60px;
@@ -622,21 +623,48 @@ border:0;
 #questionMark{
 	font-size: 25px;
 	cursor: help;
+	display:none;
+	margin-left: 20px;
+	position: absolute;
+	top: 60px;
+	left: 500px;
+	width: 150px;
+	border-radius: 5px;
+	border-style: solid;
+	padding: 10px;
+}
+#arrow{
+	font-size: 30px;
+	position: absolute;
+	top: 10px;
+	left: 500px;
+	margin-left: 30px;
+	display:none;
+	width: 150px;
+	
 }
 #guideInstructions{
 	position: absolute;
 	top: 0px;
+	left: 0px;
 	background-color: white;
-	margin: 20px auto;
-	z-index: 1;
-	width: 378px;
-	height: 328px;
-	border-radius: 6px;
+	z-index: 3;
+	width: 478px;
+	height: 300px;
+	border-radius: 6px 6px 0px 0px;
 	border-style: solid;
 	border-width: 1px;
+	border-bottom-width: 0px;
 	padding: 10px;
 	font-size: 120%;
 }
 #guideInstructions h1{
 	text-align: center;
+}
+#multiSearchGuideButton{
+	display: none;
+	border-radius: 5px;
+	margin: 20px auto 0px;
+	font-size: 20px;
+	width: 150px;
 }

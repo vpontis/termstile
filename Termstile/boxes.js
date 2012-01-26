@@ -182,22 +182,33 @@ function showMultiSearch(){
 
 multiSearchShown = false;
 function toggleShowMultiSearch(){
+	var boxAreaHeight = $('#boxArea').css('max-height');
 	if(!multiSearchShown){	
 		$('#oneTerm').hide();
+		$('#dropDownBar').text('InstaSearch');
 		$('#multiSearchBox')
 			.show()
-			.animate({height:'500px'},1000);
+			.animate({height: boxAreaHeight},1000,function(){
+				$('#multiSearchGuideButton').fadeIn();
+				$('#questionMark').fadeIn();
+
+			});
 		$('#boxArea').fadeOut();
+		$('#summarize').fadeOut();
 		multiSearchShown = true;
 	}
 	else{
 		$('#multiSearchBox')
 			.animate({height:'35px'},1000, function(){
+				$('#dropDownBar').text('MultiSearch');
 				$('#multiSearchBox').hide();
 				$('#oneTerm').show();
 			});
 		$('#boxArea').fadeIn('slow');
 		multiSearchShown = false;
+		$('#multiSearchGuideButton').fadeOut();
+		$('#summarize').fadeIn();
+		$('#questionMark').fadeOut();
 	}
 
 

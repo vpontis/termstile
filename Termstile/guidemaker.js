@@ -1,6 +1,6 @@
 function createGuide() {
 	var guideArea = document.getElementById('guideArea');
-	var manyTerm = document.getElementById('manyTerm');
+	var manyTerm = document.getElementById('multiSearchBox');
 	var input = manyTerm.value;
 	var terms = input.split(/\n|,\s/gm);
 	var summaries = new Array(terms.length);
@@ -174,8 +174,17 @@ function saveGuideTitle(){
 }
 
 function showInstructions(){
-	$('#guideInstructions').show();
+	$('#guideInstructions').fadeIn('fast');
+	$('#arrow').fadeIn(1000);
 }
 function hideInstructions(){
-	$('#guideInstructions').hide();
+	$('#guideInstructions').fadeOut('fast');
+	$('#arrow').fadeOut(1000);
+}
+
+function showArrow(){
+	$('#arrow').fadeIn(1000);
+}
+function hideArrow(){
+	$('#arrow').fadeOut(1000);
 }

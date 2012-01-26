@@ -82,12 +82,29 @@
 			<div id="singleSearchArea">
 				<div id="singleSearch">
 					<div id="searchBarArea">
-						<div>
-							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>
+						<div style="position:relative">
 							<textarea id="multiSearchBox"></textarea>
+							<div style="display:none" id="guideInstructions">
+								<h1>Easy as 1, 2, 3!</h1>
+								<h2>Instructions</h2>
+								<ol>
+									<li>
+										Enter in your terms. Put each term on a new line or seperate with commas.
+									</li>
+									<li>
+										Click "Create Guide"
+									</li>
+									<li>
+										Enjoy!
+									</li>
+								</ol>
+							</div>
+							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>	
+							<div id="arrow">&#60;---</div>
+							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Do you need help there?</div>
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
-							<button style="display:none;" onClick="saveAsGuide()">
-							Create Guide!</button>
+							<div style="width:180px;margin: 0px auto;"><button  id="multiSearchGuideButton" onClick="createGuide()">Create Guide!</button>
+							</div>
 						</div>
 					</div>
 					<div style="display: inline; float: right;">
@@ -125,28 +142,8 @@
 				<div id="guideInput">
 					<!--<input id="guideTitle"  type="text" placeholder="enter study guide title"/>-->
 					<div style="position:relative; height:365px;">
-						<div style="display:none" id="guideInstructions">
-							<h1>Easy as 1, 2, 3!</h1>
-							<h2>Instructions</h2>
-							<ol>
-								<li>
-									Enter in your terms. Put each term on a new line or seperate with commas.
-								</li>
-								<li>
-									Click "Create Guide"
-								</li>
-								<li>
-									Enjoy!
-								</li>
-							</ol>
-						</div>
+						
 						<textarea id="manyTerm" rows="43" cols="60" placeholder="Enter your list of terms here." ></textarea>
-					</div>
-					<div id="multiSearchButtonArea">
-						<button onClick="createGuide()" id="multiSearchButton">
-							Create Guide!
-						</button>
-						<span id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">?</span>
 					</div>
 				</div>
 				
