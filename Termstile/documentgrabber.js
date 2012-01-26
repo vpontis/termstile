@@ -4,7 +4,7 @@ function createBox(id, title) {
 	var divIdName = id;
 	var closeId = "close"+id;
 	newDiv.setAttribute('id', divIdName);
-	newDiv.setAttribute('class', 'box');
+	newDiv.setAttribute('class','guideBox');
 	newDiv.setAttribute('onmouseover','showDeleteButton(\''+closeId+'\')');
 	newDiv.setAttribute('onmouseout','hideDeleteButton(\''+closeId+'\')');
 	if(boxArea.firstChild == null){
@@ -14,7 +14,7 @@ function createBox(id, title) {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\" onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" style=\"text-align:center\"><strong>"+title+"<button id='getGuideButton' onClick='getGuide("+id+", \""+title+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+title+"\")\'>Note Cards</button></div>";
+	var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\" onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+title+"<button id='getGuideButton' onClick='getGuide("+id+", \""+title+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+title+"\")\'>Note Cards</button></div>";
 	text += " <a class=\'close\' onClick=\'deleteGuide("+divIdName+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');

@@ -97,6 +97,7 @@ strong {
 	z-index: 2;
 	display: none;
 	border-radius: 5px;
+	font-size: 17px;
 }
 #searchBarArea{
 	height: 60px;
@@ -686,7 +687,7 @@ border:0;
 	background-color: white;
 	z-index: 3;
 	width: 478px;
-	height: 300px;
+	height: 240px;
 	border-radius: 6px 6px 0px 0px;
 	border-style: solid;
 	border-width: 1px;
@@ -720,4 +721,20 @@ border:0;
 	float: left;
 	height: 80px; 
 	width: 240px;
+}
+.guideBox{
+	border-style: solid;
+	border-color: #4C4C4C;
+	margin: 8px auto 8px;
+	padding: 5px;
+	background-color: white;
+	position:relative;
+	padding: 10px;
+	width: 600px;
+}
+.guideBox div{
+	text-align: left;
+}
+.guideBox button{
+	float:right;
 }

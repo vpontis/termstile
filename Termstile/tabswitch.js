@@ -28,7 +28,6 @@ $(document).ready(function() {
 		popupOpen = "#signupPopup";
 		centerPopup('#signupPopup');
 		loadPopup('#signupPopup');
-		$("div.signin_menu").toggle();
 		$("#signup").toggleClass("menu-open");
 	});
 	//Autocomplete

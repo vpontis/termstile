@@ -103,8 +103,8 @@
 							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Need help?<br />Hover over me.</div>
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
 							<div id = "multiSearchButtons" >
-								<div class="button createGuideButton" style="float:left;" onClick="createGuide()">Study Guide!</div>
-								<div class="button createCardsButton" onClick="createCards()">Note Cards!</div>
+								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="../media/guide.png"/ width="20px" height="20px"> Study Guide!</div>
+								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="20px" height="20px"> Note Cards!</div>
 							</div>
 						</div>
 					</div>
