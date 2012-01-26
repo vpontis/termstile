@@ -177,7 +177,7 @@ function toggleShowMultiSearch(){
 			.animate({height: boxAreaHeight},1000,function(){
 				$('#multiSearchGuideButton').fadeIn();
 				$('#questionMark').fadeIn();
-
+				document.getElementById('multiSearchBox').focus();
 			});
 		$('#boxArea').fadeOut();
 		$('#summarize').fadeOut();
@@ -189,6 +189,7 @@ function toggleShowMultiSearch(){
 				$('#dropDownBar').text('MultiSearch');
 				$('#multiSearchBox').hide();
 				$('#oneTerm').show();
+				document.getElementById('oneTerm').focus();
 			});
 		$('#boxArea').fadeIn('slow');
 		multiSearchShown = false;

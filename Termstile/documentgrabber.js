@@ -21,14 +21,14 @@ function createBox(id, title) {
 }
 
 function showDeleteButton(closeid){
-	//document.getElementById(closeid).style.display = "inline";
-	var id = '#' + closeid;
-	$(id).fadeIn('fast');
+	document.getElementById(closeid).style.display = "inline";
+	//var id = '#' + closeid;
+	//$(id).fadeIn('fast');
 }
 function hideDeleteButton(closeid){
-	//document.getElementById(closeid).style.display = "none";
-	var id = '#' + closeid;
-	$(id).fadeOut('fast');
+	document.getElementById(closeid).style.display = "none";
+	//var id = '#' + closeid;
+	//$(id).fadeOut('fast');
 }
 function getGuide(id,title){
 	$.post("getguideterms.php",{id:id},function(data){

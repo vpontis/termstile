@@ -101,7 +101,7 @@
 							</div>
 							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>	
 							<div id="arrow">&#60;---</div>
-							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Do you need help there?</div>
+							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Need help?<br />Hover over me.</div>
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
 							<div style="width:180px;margin: 0px auto;"><button  id="multiSearchGuideButton" onClick="createGuide()">Create Guide!</button>
 							</div>
@@ -115,7 +115,7 @@
 				</div>
 				<div id="boxArea">
 					<div id="box0" class="box">
-						<strong>TermStile Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. Or click the down arrow to enter in multiple terms at once (read: copy, paste).
+						<strong>TermStile Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. Or click the down arrow to enter in multiple terms at once (read: copy paste).
 						<br />
 						<br />
 						<strong>TermStile is still in alpha--we just started working on it this week. So expect some bugs.</strong>
@@ -229,6 +229,8 @@
 			<a class="popupClose">X</a>
 		</div>
 		<div id="signupPopup" class="popup">
+			<h1>Sign Up!</h1>
+			<div style="width:300px;">
 				<label for="suEmail">Email</label>
 				<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
 				</br>
@@ -240,10 +242,11 @@
 					<label for="suAltPassword">Repeat Password</label>
 					<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
 				</p>
-				<button id="signupButton" onClick="signUp()">
-					Sign up!
-				</button>
-					<!-- Sign Up form End -->
+			</div>
+			<div style="width:300px;margin:0px auto;"><button style="width:100px;margin:0px auto;"id="signupButton" onClick="signUp()">
+				Sign up!
+			</button></div>
+				<!-- Sign Up form End -->
 			<a class="popupClose">X</a>
 		</div>
 		<div id="loginPopup" class="popup">

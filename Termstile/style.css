@@ -446,7 +446,9 @@ border:0;
 	border:1px solid #cecece;  
 	z-index:1;  
 }  
-
+#signupPopup{
+	
+}
 
 #guideTitle::-webkit-input-placeholder { 
 	text-align: center;
@@ -628,10 +630,11 @@ border:0;
 	position: absolute;
 	top: 60px;
 	left: 500px;
-	width: 150px;
+	width: 180px;
 	border-radius: 5px;
 	border-style: solid;
 	padding: 10px;
+	text-align: center;
 }
 #arrow{
 	font-size: 30px;
