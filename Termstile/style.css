@@ -174,7 +174,7 @@ a:hover{
 
 /* Login CSS */
 #container1 {
-    width:630px;
+    width:590px;
     margin:0 auto;
     position: relative;
 }
@@ -213,8 +213,6 @@ a img {
     text-decoration:none;
     font-weight:bold;
     color:#fff;
-    *background:transparent url("images/signin-nav-bg-ie.png") no-repeat 0 0;
-    *padding:4px 12px 6px;
 }
 #login{
 	-webkit-border-radius:4px 0px 0px 4px;
@@ -227,9 +225,7 @@ a img {
     border-radius:0px 4px 4px 0px;
 }
 .topnav a.signin:hover {
-    background:#59B;
-    *background:transparent url("images/signin-nav-bg-hover-ie.png") no-repeat 0 0;
-    *padding:4px 12px 6px;
+    background:#F0AD90;
 }
 .topnav a.signin, .topnav a.signin:hover {
     *background-position:0 3px!important;
@@ -246,8 +242,8 @@ a.signin span {
     padding:4px 16px 6px 0;
 }
 .topnav a.menu-open {
-    background:#ddeef6!important;
-    color:#666!important;
+    background:#F04900;
+    color:#fff;
     outline:none;
 }
 #small_signup {
@@ -269,7 +265,7 @@ a#login.menu-open span {
     -webkit-border-bottom-left-radius:5px;
     -webkit-border-bottom-right-radius:5px;
     display:none;
-    background-color:#ddeef6;
+    background-color:#F04900;
     position:absolute;
     width:210px;
     z-index:100;
@@ -281,7 +277,7 @@ a#login.menu-open span {
     margin-top:5px;
     margin-right: 0px;
     *margin-right: -1px;
-    color:#789;
+    color:#fff;
     font-size:11px;
 }
 
@@ -533,14 +529,30 @@ border:0;
 	margin: 0px;
 }
 #createGuideButton{
-	border-radius: 5px;
-	margin-top: 10px;
 	cursor: pointer;
-} 
+	float: right;
+	height: 35px;
+	border-radius: 4px;
+	background-image: url(button.gif);
+	background-repeat-x: repeat;
+	background-color: #DDDDDD;
+	border: 1px solid #BBBBBB;
+	text-align: center;
+	font-size: 10pt;
+	margin: 0px;
+}  
 #createCardsButton{
-	border-radius: 5px;
-	margin-top: 10px;
 	cursor: pointer;
+	float: right;
+	height: 35px;
+	border-radius: 4px;
+	background-image: url(button.gif);
+	background-repeat-x: repeat;
+	background-color: #DDDDDD;
+	border: 1px solid #BBBBBB;
+	text-align: center;
+	font-size: 10pt;
+	margin: 0px;
 }
 #createGuide{
 	float: left;
@@ -683,4 +695,10 @@ border:0;
 	margin: 20px auto 0px;
 	font-size: 20px;
 	width: 150px;
+}
+#logo{
+	display: inline;
+	float: left;
+	height: 80px; 
+	width: 240px;
 }
