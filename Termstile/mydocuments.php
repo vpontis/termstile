@@ -38,7 +38,7 @@
 			<div class="header" id="headerContainer">
 				<div class="container">
 					<div id="title">
-						<img src="../media/samplelogo.png"style="display: inline; float: left;" height="80px" width="200px"/>
+						<a href="index.php"><img src="../media/termstile.png" id="logo"/></a></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
 					</div>
 					<!-- Login Start-->
 					<div id="container1" style="float: right;">
