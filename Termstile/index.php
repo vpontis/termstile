@@ -123,7 +123,7 @@
 						Thank you and enjoy!
 						<br />
 						<br />
-						Disclaimer: any bugs or errors on this website are for the <strong>greater good</strong>.
+						Disclaimer: any bugs or errors found on this website are for the <strong>greater good</strong>.
 					</div>
 				</div>
 				<div class="hideForMulti" id="createButtons">
@@ -217,7 +217,7 @@
 			<div id="guideMaterial">
 				Guide Information
 			</div>
-			<a class="popupClose"><img style="display:none" src="closebutton.png" /></a>
+			<a class="popupClose"><img src="closebutton.png" /></a>
 		</div>
 		<div id="noteCardPopup" class="popup">
 			<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
@@ -227,7 +227,7 @@
 			</div>
 			<div id="noteCardMaterial">
 			</div>
-			<a class="popupClose"><img style="display:none" src="closebutton.png" /></a>
+			<a class="popupClose"><img src="closebutton.png" /></a>
 		</div>
 		<div id="signupPopup" class="popup">
 			<h1>Sign Up!</h1>
