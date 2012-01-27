@@ -440,6 +440,7 @@ border:0;
 	z-index:2;  
 	padding:12px;  
 	font-size:13px; 
+	overflow:auto;
 }
 .popup h1{
 	text-align:center;
