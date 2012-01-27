@@ -100,8 +100,8 @@
 								</ol>
 							</div>
 							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>	
-							<div id="questionMark" onMouseOver="showInstructions()" onMouseOut="hideInstructions()">Need help?<br />Hover over me.</div>
-							<div id="dropDownBar" onClick="toggleShowMultiSearch()">Multiple Term Search</div>
+							<div id="questionMark" ><img src="../media/info.png" width="30px" height="30px" onMouseOver="showInstructions()" onMouseOut="hideInstructions()"/></div>
+							<div id="dropDownBar" onClick="toggleShowMultiSearch()"><img src="../media/down.png"/ width="20px" height="20px"></div>
 							<div id = "multiSearchButtons" >
 								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="../media/guide.png"/ width="20px" height="20px"> Study Guide!</div>
 								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="20px" height="20px"> Note Cards!</div>

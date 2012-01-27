@@ -110,8 +110,8 @@ strong {
 	margin:0px auto;
 	width: 180px;
 	text-align: center;
-	border-style: solid;
-	border-width: 1px;
+	/*border-style: solid;
+	border-width: 1px;*/
 	cursor: pointer;
 }
 #singlesearch {
@@ -672,12 +672,8 @@ border:0;
 	top: 60px;
 	left: 500px;
 	width: 180px;
-	border-radius: 5px;
-	border-style: solid;
-	boder-color: white;
 	padding: 10px;
 	text-align: center;
-	background-color: #F05A18;
 	color: white;
 }
 #arrow{
