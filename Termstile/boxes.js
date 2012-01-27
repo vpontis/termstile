@@ -115,7 +115,7 @@ function loadPopup(id)	{
 	if(popupStatus==0){
 		$('#backgroundPopup').css({'opacity':'.7'});
 		$(id).fadeIn('slow');
-		$('#backgroundPopup').fadeIn('slow',function(){
+		$('#backgroundPopup').show().fadeIn('slow',function(){
 			if(id=="#signupPopup"){
 				document.getElementById('suEmail').focus();
 			}

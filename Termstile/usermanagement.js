@@ -1,3 +1,10 @@
+function enterSignUp(e){
+	var code = (e.keyCode ? e.keyCode : e.which);
+	if(code == 13) {
+		signUp();
+	}
+}
+
 function signUp(){
 		var email = document.getElementById("suEmail");
 		var password = document.getElementById("suPassword");
@@ -10,18 +17,25 @@ function signUp(){
 		loadPopup('#signupPopup');
 }	
 
+function enterLogIn(e){
+	var code = (e.keyCode ? e.keyCode : e.which);
+	if(code == 13) {
+		logIn();
+	}
+}
+
 function logIn(){
-		var email = document.getElementById("liEmail");
-		var password = document.getElementById("liPassword");
-		$.post("login.php",{email: email.value, password: password.value},	function(data){
-			if(data=="Login Successful!"){
-				location.reload();
-			}
-			else $("#loginPopup").html(data);
-		});		
-		popupOpen = "#loginPopup";
-		centerPopup('#loginPopup');
-		loadPopup('#loginPopup');
+	var email = document.getElementById("liEmail");
+	var password = document.getElementById("liPassword");
+	$.post("login.php",{email: email.value, password: password.value},	function(data){
+		if(data=="Login Successful!"){
+			location.reload();
+		}
+		else $("#loginPopup").html(data);
+	});		
+	popupOpen = "#loginPopup";
+	centerPopup('#loginPopup');
+	loadPopup('#loginPopup');
 }	
 
 function logOut(){

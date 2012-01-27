@@ -236,6 +236,7 @@ a img {
 	-webkit-border-radius:4px 0px 0px 4px;
     -moz-border-radius:4px 0px 0px 4px;
     border-radius:4px 4px 4px 4px;
+    cursor: pointer;
 }
 #signup{
 	-webkit-border-radius:0px 4px 4px 0px;
@@ -551,13 +552,13 @@ border:0;
 .createCardsButton{
 	padding: 7px 12px 7px 12px;
 	height: 26px;
-	width: 155px;
+
 	margin-top: 3px;
 }
 .createGuideButton{
 	padding: 7px 12px 7px 12px;
 	height: 26px;
-	width: 155px;
+	width: 160px;
 	margin-top: 3px;
 }
 #summarize {

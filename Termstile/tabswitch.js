@@ -1,13 +1,35 @@
 loginShown = false;
  
+function toggleLogIn(){
+	$('.signin_menu').slideToggle();
+	if(!loginShown){
+		$('#login').css('background-color','orange');
+		loginShown = true;
+	}
+	else{
+		$('#login').css('background-color','#F05A18')
+		loginShown = false;
+	}
+}
+
+function hideLogIn(){
+	if(loginShown){
+		$('.signin_menu').slideUp();
+		$('#login').css('background-color','#F05A18')
+		loginShown = false;
+		$('#backgroundPopup').fadeOut().hide();
+	}
+}
+
 $(document).ready(function() {
 	// Login JS
-	$("#login").click(function(e) {
+	/*$("#login").click(function(e) {
 		e.preventDefault();
 		if(!loginShown){
 			$("div.signin_menu").slideDown(function(){
 				document.getElementById('liEmail').focus();
 			});
+			$('#backgroundPopup').fadeTo('fast',.1);
 			loginShown = true;
 		}
 		$("#login").toggleClass("menu-open");
@@ -20,9 +42,10 @@ $(document).ready(function() {
 		if($(e.target).parent("a.signin").length == 0) {
 			$(".signin").removeClass("menu-open");
 			$("div.signin_menu").slideUp();
+			$('#backgroundPopup').fadeOut('fast');
 			loginShown = false;
 		}
-	});
+	});*/
 	$("#signup").click(function(e) {
 		e.preventDefault();
 		popupOpen = "#signupPopup";

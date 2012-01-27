@@ -49,7 +49,7 @@
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
 					<div id="signedout" class="topnav">
-						<span><a href="login" id="login" class="signin">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
+						<span><a id="login" class="signin" onClick="toggleLogIn()">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 					</div>
 					<div id="signedin" class="topnav">
 						<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a onclick="logOut()" id="logout" class="signin">Logout</a></span>
@@ -61,7 +61,7 @@
 						</br>
 						<p>
 							<label for="liPassword">Password</label>
-							<input id="liPassword" name="password" placeholder="Password" title="password" tabindex="5" type="password">
+							<input id="liPassword" name="password" placeholder="Password" title="password" tabindex="5" type="password" onKeyPress="enterLogIn(event)">
 						</p>
 						<button id="loginButton" onClick="logIn()">
 							Log in!
@@ -116,11 +116,10 @@
 				</div>
 				<div class="hideForMulti" id="boxArea">
 					<div id="box0" class="box">
-						<strong>TermStile Instructions:</strong> insert a term in the box above then either click go or hit enter to get a short summary. Or click the down arrow to enter in multiple terms at once (read: copy paste).
+						<strong>TermStile Instructions:</strong> type a term in the box above then hit enter to get a short summary. Also, you can click the down arrow to get a large textbox where you can enter multiple terms at once (read: copy paste).
 						<br />
 						<br />
-						<strong>TermStile is still in alpha--we just started working on it this week. So expect some bugs.</strong>
-						Thank you and enjoy!
+						<strong>TermStile is still in alpha, tread carefully.</strong> Thank you and enjoy!
 						<br />
 						<br />
 						Disclaimer: any bugs or errors found on this website are for the <strong>greater good</strong>.
@@ -237,7 +236,7 @@
 				<label for="suPassword">Password</label>
 				<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
 				<label for="suAltPassword">Repeat Password</label>
-				<input id="suAltPassword" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
+				<input id="suAltPassword" onKeyPress="enterSignUp(event)" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
 			</div>
 			<div style="width:80px;margin:0px auto;"><button style="text-align:center;width:80px;margin:0px auto;"id="signupButton" onClick="signUp()">
 				Sign up!
@@ -252,6 +251,6 @@
 			</p>
 			<a class="popupClose">X</a>
 		</div>
-		<div id="backgroundPopup"></div>
+		<div id="backgroundPopup" onClick="hideLogIn()"></div>
 	</body>
 </html>
