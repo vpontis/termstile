@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Termstile: get Wikipedia summaries for terms</title>
+		<title>Termstile: My documents</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"></script>
@@ -94,18 +94,25 @@
     	<a class="popupClose">X</a>
     </div>
     <div id="guidePopup" class="popup">
-    	<h1 id="guidePopupTitle">Your Study Guide</h1>
-    	<div id="guideMaterial">
-    		Guide Information
-    	</div>
-    	<a class="popupClose">X</a>
-    </div>
-    <div id="noteCardPopup" class="popup">
-			<h1 id="noteCardPopupTitle">Your NoteCards</h1>
+			<div id="guidePopupTitleArea" class="guidePopupTitleArea">
+				<input id="guidePopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" onFocusOut="removeSaveButton()" type="text" placeholder="Enter Title Here To Save"/>
+				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
+			</div>
+			<div id="guideMaterial">
+				Guide Information
+			</div>
+			<a class="popupClose"><img src="closebutton.png" /></a>
+		</div>
+		<div id="noteCardPopup" class="popup">
+			<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
+				<input id="cardsPopupTitle" class="guidePopupTitle" onFocus="addSaveButton()" type="text" placeholder="Enter Title Here To Save"/>
+				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
+
+			</div>
 			<div id="noteCardMaterial">
 			</div>
-			<a class="popupClose">X</a>
-	</div>
+			<a class="popupClose"><img src="closebutton.png" /></a>
+		</div>
 	<div id="backgroundPopup"></div>  
 	</body>
 </html>
