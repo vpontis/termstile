@@ -180,7 +180,6 @@ function removeSaveButton(){
 
 guideTitle = "";
 function saveGuideTitle(){
-	var titleName = "";
 	id = currentGuide;
 	titleName = document.getElementById('cardsPopupTitle');
 	if(titleName.value!= null && titleName.value != ""){
@@ -189,6 +188,8 @@ function saveGuideTitle(){
 			console.log(data);
 		});
 		$('.guidePopupTitle').text(guideTitle);
+		$('#guidePopupTitleArea').html("<h1>" + guideTitle + "</h1>");
+		$('#cardsPopupTitleArea').html("<h1>" + guideTitle + "</h1>");
 		removeSaveButton();
 	}
 	else{
@@ -199,6 +200,8 @@ function saveGuideTitle(){
 				console.log(data);
 			});	
 			$('.guidePopupTitle').text(guideTitle);
+			$('#guidePopupTitleArea').html("<h1>" + guideTitle + "</h1>");
+			$('#cardsPopupTitleArea').html("<h1>" + guideTitle + "</h1>");
 			removeSaveButton();
 		}
 	}
