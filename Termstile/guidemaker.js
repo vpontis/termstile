@@ -55,7 +55,7 @@ function saveAsGuide(){
 	var cleanTerms = new Array(0);
 	var cleanSummaries = new Array(0);
 	for(var i=0; i<terms.length; i++){
-		if(terms[i]!="")
+		if(terms[i]!=""&&summaries[i]!="We're sorry but we can't find "+terms[i]+". Wikipedia may not have an article for that term. Wikipedia is often very fickle about <strong>capitalizations</strong>. If you are unsure you can use our autocomplete for accuracy. Please check the spelling and try again.")
 		{
 			termsList+=terms[i]+"|";
 			cleanTerms.push(terms[i]);
@@ -90,7 +90,7 @@ function saveAsCards(){
 	var cleanTerms = new Array(0);
 	var cleanSummaries = new Array(0);
 	for(var i=0; i<terms.length; i++){
-		if(terms[i]!="")
+		if(terms[i]!=""&&summaries[i]!="We're sorry but we can't find "+terms[i]+". Wikipedia may not have an article for that term. Wikipedia is often very fickle about <strong>capitalizations</strong>. If you are unsure you can use our autocomplete for accuracy. Please check the spelling and try again.")
 		{
 			termsList+=terms[i]+"|";
 			cleanTerms.push(terms[i]);
