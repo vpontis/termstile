@@ -133,7 +133,7 @@ function rankSentences(sentence, text){
 function handleError(title,callback){
 	var error = new Array(3);
 	error[0] = "We're sorry but we can't find "+title+".";
-	error[1] = "Wikipedia may not have an article for that term."
+	error[1] = "Wikipedia may not have an article for that term. Wikipedia is often very fickle about capitalizations. If you are unsure you can use our autocomplete for accuracy."
 	error[2] = "Please check the spelling and try again.";
 	callback(error);
 }
