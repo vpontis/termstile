@@ -9,7 +9,7 @@
 		<script type="text/javascript" src="documentgrabber.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
 		<script type="text/javascript" src="usermanagement.js"></script>
-		<link rel="icon" type="image/png" href="../media/termstilelogo.png" />
+		<link rel="icon" type="image/png" href="../media/favicon.ico" />
 		<?php
 			if(isset($_COOKIE['email'])){
 				include 'dbconnect.php';
