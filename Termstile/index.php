@@ -83,7 +83,7 @@
 				<div id="singleSearch">
 					<div id="searchBarArea">
 						<div style="position:relative">
-							<textarea id="multiSearchBox" placeholder="Enter a list of terms."></textarea>
+							<textarea id="multiSearchBox"></textarea>
 							<div style="display:none" id="guideInstructions">
 								<h1>Easy as 1, 2, 3!</h1>
 								<h2>Instructions</h2>
