@@ -42,6 +42,8 @@ function getGuide(id,title){
 				console.log(summaries[index]);
 				if(--left==0){
 					makeDoc(title,terms, summaries);
+					var saveButton = document.getElementById("guideSaveButton");
+					saveButton.setAttribute('onclick',"updateGuideTitle("+id+")");
 				}
 			});
 		});
@@ -60,6 +62,8 @@ function getCards(id,title){
 				console.log(summaries[index]);
 				if(--left==0){
 					makeCards(title,terms,summaries);
+					var saveButton = document.getElementById("cardSaveButton");
+					saveButton.setAttribute('onclick',"updateGuideTitle("+id+")");
 				}
 			});
 		});
