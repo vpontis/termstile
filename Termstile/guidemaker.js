@@ -165,6 +165,17 @@ function removeSaveButton(){
 	$('.guidePopupTitleSave').fadeOut('slow');
 }
 
+//does saveguidetitle() if enter is clicked
+function enterSaveGuideTitle(e){
+	var code = (e.keyCode ? e.keyCode : e.which);
+	if(code == 13) {
+		saveGuideTitle();
+		document.getElementById('cardsPopupTitle').blur();
+		document.getElementById('guidePopupTitle').blur();
+
+	}
+}
+
 function saveGuideTitle(){
 	titleName = document.getElementById('cardsPopupTitle');
 	if(titleName.value!= null && titleName.value != ""){
