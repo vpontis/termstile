@@ -169,9 +169,10 @@ function saveGuideTitle(){
 	titleName = document.getElementById('cardsPopupTitle');
 	if(titleName.value!= null && titleName.value != ""){
 		saveTitle = titleName.value;
-		$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){
-					
+		$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){	
 		});
+		document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
+		document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
 		removeSaveButton();
 	}
 	else{
@@ -179,8 +180,9 @@ function saveGuideTitle(){
 		if(titleName.value != null && titleName.value !=""){
 			saveTitle = titleName.value;
 			$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){
-					
 			});	
+			document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
+			document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
 			removeSaveButton();
 		}
 	}

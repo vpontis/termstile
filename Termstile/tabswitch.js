@@ -55,7 +55,7 @@ $(document).ready(function() {
 	});
 	//Autocomplete
 	$("#oneTerm").autocomplete({
-		source : function(request, response) {
+		source : function(request, response) {		
 			$.ajax({
 				url : "http://en.wikipedia.org/w/api.php",
 				dataType : "jsonp",
