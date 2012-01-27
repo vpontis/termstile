@@ -65,7 +65,7 @@ function initializePage()	{
 	var bottomHeight = $('#bottomConatiner').height();
 	var mainHeight = windowHeight - headerHeight - 2;
 	var toggleButtonHeight = $('#toggleInstaMultiButton').height();
-	var boxAreaHeight = mainHeight - toggleButtonHeight - bottomHeight - 140;	
+	var boxAreaHeight = mainHeight - toggleButtonHeight - bottomHeight - 160;	
 	$("#mainContainer").height(mainHeight);
 	$('#boxArea').css('max-height',boxAreaHeight);
 }

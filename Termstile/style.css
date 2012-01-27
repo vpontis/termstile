@@ -99,6 +99,9 @@ strong {
 	border-radius: 5px;
 	font-size: 17px;
 }
+#multiSearchBox::-webkit-input-placeholder{
+	font-size: 200%;
+}
 #searchBarArea{
 	height: 60px;
 	float: left;
@@ -534,7 +537,7 @@ border:0;
 	cursor: pointer;
 	background-color: #F05A18;
 	color: #fff;
-	font-size: 17px;
+	font-size: 23px;
 	display: inline;
 	float:right;
 }
@@ -546,14 +549,16 @@ border:0;
 	width: 24px;
 }
 .createCardsButton{
-	padding: 9px 10px 0px 12px;
+	padding: 7px 12px 7px 12px;
 	height: 26px;
-	width: 130px;
+	width: 155px;
+	margin-top: 3px;
 }
 .createGuideButton{
-	padding: 9px 12px 0px;
+	padding: 7px 12px 7px 12px;
 	height: 26px;
-	width: 130px;
+	width: 155px;
+	margin-top: 3px;
 }
 #summarize {
 	padding: 5px 0px 5px;
@@ -667,8 +672,11 @@ border:0;
 	width: 180px;
 	border-radius: 5px;
 	border-style: solid;
+	boder-color: white;
 	padding: 10px;
 	text-align: center;
+	background-color: #F05A18;
+	color: white;
 }
 #arrow{
 	font-size: 30px;
