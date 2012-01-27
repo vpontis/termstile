@@ -66,9 +66,12 @@ function initializePage()	{
 	var mainHeight = windowHeight - headerHeight - 2;
 	var toggleButtonHeight = $('#toggleInstaMultiButton').height();
 	var boxAreaHeight = mainHeight - toggleButtonHeight - bottomHeight - 160;	
+	var noteCardTitleHeight = $('#cardsPopupTitleArea').height();
+	var noteCardMaterialHeight = mainHeight - noteCardTitleHeight - 110;
 	$("#mainContainer").height(mainHeight);
 	$('#boxArea').css('max-height',boxAreaHeight);
-	$('.popup').css('max-height',mainHeight);
+	$('.popup').css('max-height',mainHeight - 20);
+	$('#noteCardMaterial').css('height', noteCardMaterialHeight);
 }
 
 var popupOpen = "";

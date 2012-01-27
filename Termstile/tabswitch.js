@@ -4,6 +4,7 @@ function toggleLogIn(){
 	$('.signin_menu').slideToggle();
 	if(!loginShown){
 		$('#login').css('background-color','#F04900');
+		document.getElementById('liEmail').focus();
 		loginShown = true;
 	}
 	else{

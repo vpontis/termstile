@@ -133,15 +133,13 @@ function createCard(term, summary,index) {
 	newDiv.setAttribute('id', divIdName);
 	newDiv.setAttribute('class', 'card');
 	if(boxArea.firstChild == null){
-		$(newDiv).css('display','none');
 		boxArea.appendChild(newDiv);
 	} else {
-		$(newDiv).insertBefore(boxArea.firstChild)
-			.css('display','none');
+		$(newDiv).insertBefore(boxArea.firstChild);
 	}
 	var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'>"+term+"</a></strong></div>";
 	$(newDiv).html(text);
-	$(newDiv).slideDown('slow');
+	//$(newDiv).slideDown('slow');
 }
 
 function flipCard(cardId,index,state){

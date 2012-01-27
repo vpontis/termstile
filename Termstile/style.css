@@ -166,10 +166,21 @@ strong {
 .card {
 	border-style: solid;
 	border-color: #4C4C4C;
-	margin: 8px auto 8px;
+	margin: 8px 4px;
 	padding: 5px;
 	background-color: white;
 	position:relative;
+	cursor: pointer;
+	width: 350px;
+	float: left;
+}
+#noteCardPopup{
+	overflow: visible;
+	width: 800px;
+}
+#noteCardMaterial{
+	width: 750px;
+	overflow: auto;
 }
 
 #boxarea{
@@ -179,12 +190,8 @@ strong {
 	overflow: auto;
 }
 
-#noteCardMaterial{
-	width: 30em;
-	overflow: auto;
-}
 a{
-	text-decoration:none;
+	text-decoration	:none;
 }
 a:hover{
 	color:gray;
