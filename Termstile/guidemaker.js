@@ -74,7 +74,7 @@ function makeDoc(title,terms,summaries){
 	}
 	var guideTitleVal = title;
 	if(guideTitleVal != null && guideTitleVal != ""){
-		var guideTitle = document.getElementById('cardsPopupTitle');
+		var guideTitle = document.getElementById('guidePopupTitle');
 		guideTitle.setAttribute("placeholder",guideTitleVal);
 	}
 	$('#guideMaterial').html(guideText);
@@ -116,7 +116,7 @@ function makeCards(title,terms,summaries){
 	}
 	var guideTitleVal = title;
 	if(guideTitleVal != null && guideTitleVal != ""){
-		var cardsTitle = document.getElementById('guidePopupTitle');
+		var cardsTitle = document.getElementById('cardsPopupTitle');
 		cardsTitle.setAttribute("placeholder",guideTitleVal);
 		$('.guidePopupTitle').text(guideTitleVal);
 	}
@@ -189,6 +189,29 @@ function saveGuideTitle(){
 		if(titleName.value != null && titleName.value !=""){
 			saveTitle = titleName.value;
 			$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){
+			});	
+			document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
+			document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
+			removeSaveButton();
+		}
+	}
+}
+
+function updateGuideTitle(id){
+	titleName = document.getElementById('cardsPopupTitle');
+	if(titleName.value!= null && titleName.value != ""){
+		thisTitle = titleName.value;
+		$.post("changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
+		});
+		document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
+		document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
+		removeSaveButton();
+	}
+	else{
+		titleName = document.getElementById('guidePopupTitle');
+		if(titleName.value != null && titleName.value !=""){
+			thisTitle = titleName.value;
+			$.post("changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
 			});	
 			document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
 			document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
