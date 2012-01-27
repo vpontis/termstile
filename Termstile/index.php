@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="boxes.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
 		<script type="text/javascript" src="usermanagement.js"></script>
-		<link rel="icon" type="image/png" href="../media/termstilelogo.png" />
+		<link rel="icon" type="image/png" href="../media/favicon.ico" />
 		<?php
 		if (isset($_COOKIE['email'])) {
 			include 'dbconnect.php';
@@ -104,7 +104,7 @@
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()"><img src="../media/down.png"/ width="20px" height="20px"></div>
 							<div id = "multiSearchButtons" >
 								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="../media/guide.png"/ width="20px" height="20px"> Study Guide!</div>
-								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="20px" height="20px"> Note Cards!</div>
+								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="20px" height="15px"> Note Cards!</div>
 							</div>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 					</div>
 					<div id="createCards">
 						<div class="button createCardsButton" id="createCardsButton" onClick="saveAsCards()">
-							<img src="../media/card.png"/ width="20px" height="20px"> Flash Cards
+							<img src="../media/card.png"/ width="20px" height="15px"> Flash Cards
 						</div>
 					</div>
 				</div>

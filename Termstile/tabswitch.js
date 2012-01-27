@@ -3,7 +3,7 @@ loginShown = false;
 function toggleLogIn(){
 	$('.signin_menu').slideToggle();
 	if(!loginShown){
-		$('#login').css('background-color','orange');
+		$('#login').css('background-color','#F04900');
 		loginShown = true;
 	}
 	else{
