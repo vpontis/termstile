@@ -171,8 +171,16 @@ strong {
 	background-color: white;
 	position:relative;
 	cursor: pointer;
-	width: 350px;
+	width: 340px;
+}
+#cardsLeft{
 	float: left;
+}
+#cardsRight{
+	float: right;
+}
+.cardsSection{
+	width: 360px;
 }
 #noteCardPopup{
 	overflow: visible;
@@ -181,6 +189,7 @@ strong {
 #noteCardMaterial{
 	width: 750px;
 	overflow: auto;
+	margin: 0px auto;
 }
 
 #boxarea{

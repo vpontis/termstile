@@ -225,6 +225,8 @@
 
 			</div>
 			<div id="noteCardMaterial">
+				<div id="cardsLeft" class="cardsSection"></div>
+				<div id="cardsRight" class="cardsSection"></div>
 			</div>
 			<a class="popupClose"><img src="closebutton.png" /></a>
 		</div>

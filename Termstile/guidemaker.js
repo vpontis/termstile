@@ -107,8 +107,10 @@ var currentCardTerms;
 var currentCardSummaries;
 
 function makeCards(title,terms,summaries){
-	var boxArea = document.getElementById('noteCardMaterial');
-	$(boxArea).html("");
+	var cardsLeft = document.getElementById('cardsLeft');
+	$(cardsLeft).html("");
+	var cardsRight = document.getElementById('cardsRight');
+	$(cardsRight).html("");
 	currentCardTerms = terms;
 	currentCardSummaries = summaries;
 	for(var i=0; i<terms.length; i++){
@@ -125,17 +127,30 @@ function makeCards(title,terms,summaries){
 	loadPopup('#noteCardPopup');
 }
 
-
+cardCounter = 1;
 function createCard(term, summary,index) {	
 	var boxArea = document.getElementById('noteCardMaterial');
+	var cardsLeft = document.getElementById('cardsLeft');
+	var cardsRight = document.getElementById('cardsRight');
 	var newDiv = document.createElement('div');
 	var divIdName = 'card_' + term;
 	newDiv.setAttribute('id', divIdName);
-	newDiv.setAttribute('class', 'card');
-	if(boxArea.firstChild == null){
-		boxArea.appendChild(newDiv);
-	} else {
-		$(newDiv).insertBefore(boxArea.firstChild);
+	newDiv.setAttribute('class','card');
+	if(cardCounter%2==1){
+		if(cardsLeft.firstChild == null){
+			cardsLeft.appendChild(newDiv);
+		} else {
+			$(newDiv).insertBefore(cardsLeft.firstChild);
+		}
+		cardCounter +=1;
+	}
+	else{
+		if(cardsRight.firstChild == null){
+			cardsRight.appendChild(newDiv);
+		} else {
+			$(newDiv).insertBefore(cardsRight.firstChild);
+		}
+		cardCounter +=1;
 	}
 	var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'>"+term+"</a></strong></div>";
 	$(newDiv).html(text);
@@ -148,7 +163,7 @@ function flipCard(cardId,index,state){
 		var text = "<div style=\"text-align:center\"><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 1)\'>"+currentCardSummaries[index]+"</a></strong></div>";
 	}
 	else{
-		var text = "<div style=\"text-align:center\"><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'>"+currentCardTerms[index]+"</a></strong></div>";
+		var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'>"+currentCardTerms[index]+"</a></strong></div>";
 	}
 	$(card).html(text);
 }
