@@ -1,3 +1,6 @@
+var saveTitle = "";
+var saveTermsList = "";
+
 function createGuide() {
 	var guideArea = document.getElementById('guideArea');
 	var manyTerm = document.getElementById('multiSearchBox');
@@ -10,16 +13,12 @@ function createGuide() {
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 			console.log(summaries[index]);
 			if(--left==0){
-				var date = new Date();
-				var title = date.toString();
 				var termsList = "";
 				for(var i=0; i<terms.length; i++){
 					termsList+=terms[i]+"|";
 				}
-				$.post("saveguide.php", {title:title, terms:termsList}, function(data){
-					makeDoc(title,terms, summaries,data);	
-				})
-				
+				saveTermsList = termsList;
+				makeDoc(saveTitle,terms, summaries);	
 			}
 		});
 	});
@@ -37,26 +36,19 @@ function createCards() {
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
 			console.log(summaries[index]);
 			if(--left==0){
-				var date = new Date();
-				var title = date.toString();
 				var termsList = "";
 				for(var i=0; i<terms.length; i++){
 					termsList+=terms[i]+"|";
 				}
-				$.post("saveguide.php", {title:title, terms:termsList}, function(data){
-					makeCards(title,terms, summaries,data);	
-				})
-				
+				saveTermsList = termsList;
+				makeCards(saveTitle,terms, summaries);		
 			}
 		});
 	});
 }
 
-var currentGuide = 0;
 
 function saveAsGuide(){
-	var date = new Date();
-	var title = date.toString();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -70,34 +62,28 @@ function saveAsGuide(){
 			cleanSummaries.push(summaries[i]);
 		}
 	}
-	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
-		makeDoc(title, cleanTerms, cleanSummaries, data);
-	})
+	saveTermsList = termsList;
+	makeDoc(saveTitle, cleanTerms, cleanSummaries);
 	
 }
 
-function makeDoc(title,terms,summaries,id){
+function makeDoc(title,terms,summaries){
 	var guideText = "";
 	for(var i=0; i<terms.length; i++){
 		guideText += "<strong>"+terms[i]+"</strong>:"+summaries[i]+"<br /> <br />";
 	}
 	var guideTitleVal = title;
 	if(guideTitleVal != null && guideTitleVal != ""){
-		$('#guidePopupTitle').html(guideTitleVal);
+		var guideTitle = document.getElementById('cardsPopupTitle');
+		guideTitle.setAttribute("placeholder",guideTitleVal);
 	}
-	currentGuide = id;
 	$('#guideMaterial').html(guideText);
-	if(guideTitle != null && guideTitle != ""){
-		$('#guidePopupTitleArea').html("<h1>" + guideTitle + "</h1>");
-	}
 	popupOpen = "#guidePopup";
 	centerPopup('#guidePopup');
 	loadPopup('#guidePopup');
 }
 
 function saveAsCards(){
-	var date = new Date();
-	var title = date.toString();
 	var terms = sessionTerms;
 	var termsList = "";
 	var summaries = sessionSummaries;
@@ -111,9 +97,8 @@ function saveAsCards(){
 			cleanSummaries.push(summaries[i]);
 		}
 	}
-	$.post("saveguide.php", {title:title, terms:termsList}, function(data){
-		makeCards(title, cleanTerms, cleanSummaries,data);
-	})
+	saveTermsList = termsList;
+	makeCards(saveTitle, cleanTerms, cleanSummaries);
 	
 }
 
@@ -121,7 +106,7 @@ function saveAsCards(){
 var currentCardTerms;
 var currentCardSummaries;
 
-function makeCards(title,terms,summaries,id){
+function makeCards(title,terms,summaries){
 	var boxArea = document.getElementById('noteCardMaterial');
 	$(boxArea).html("");
 	currentCardTerms = terms;
@@ -129,9 +114,11 @@ function makeCards(title,terms,summaries,id){
 	for(var i=0; i<terms.length; i++){
 		createCard(terms[i],summaries[i],i);
 	}
-	currentGuide = id;
-	if(guideTitle != null && guideTitle != ""){
-		$('#cardsPopupTitleArea').html("<h1>" + guideTitle + "</h1>");
+	var guideTitleVal = title;
+	if(guideTitleVal != null && guideTitleVal != ""){
+		var cardsTitle = document.getElementById('guidePopupTitle');
+		cardsTitle.setAttribute("placeholder",guideTitleVal);
+		$('.guidePopupTitle').text(guideTitleVal);
 	}
 	popupOpen = "#noteCardPopup";
 	centerPopup('#noteCardPopup');
@@ -178,30 +165,22 @@ function removeSaveButton(){
 	$('.guidePopupTitleSave').fadeOut('slow');
 }
 
-guideTitle = "";
 function saveGuideTitle(){
-	id = currentGuide;
 	titleName = document.getElementById('cardsPopupTitle');
 	if(titleName.value!= null && titleName.value != ""){
-		guideTitle = titleName.value;
-		$.post("changeguidetitle.php",{id:id,title:guideTitle},function(data){
-			console.log(data);
+		saveTitle = titleName.value;
+		$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){
+					
 		});
-		$('.guidePopupTitle').text(guideTitle);
-		$('#guidePopupTitleArea').html("<h1>" + guideTitle + "</h1>");
-		$('#cardsPopupTitleArea').html("<h1>" + guideTitle + "</h1>");
 		removeSaveButton();
 	}
 	else{
 		titleName = document.getElementById('guidePopupTitle');
 		if(titleName.value != null && titleName.value !=""){
-			guideTitle = titleName.value;
-			$.post("changeguidetitle.php",{id:id,title:guideTitle},function(data){
-				console.log(data);
+			saveTitle = titleName.value;
+			$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){
+					
 			});	
-			$('.guidePopupTitle').text(guideTitle);
-			$('#guidePopupTitleArea').html("<h1>" + guideTitle + "</h1>");
-			$('#cardsPopupTitleArea').html("<h1>" + guideTitle + "</h1>");
 			removeSaveButton();
 		}
 	}
@@ -212,11 +191,4 @@ function showInstructions(){
 }
 function hideInstructions(){
 	$('#guideInstructions').fadeOut('fast');
-}
-
-function showArrow(){
-	$('#arrow').fadeIn(1000);
-}
-function hideArrow(){
-	$('#arrow').fadeOut(1000);
 }
