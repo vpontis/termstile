@@ -11,6 +11,7 @@ function getText(title, callback){
 				var patt3 = /<[\s\S]*?>/im;
 				var patt4 = /^\[\[.*?$/gim;
 				var patt5 = /\'\'\'/gm;
+				var patt6 = /\(\)/gm;
 				while(patt1.test(text))
 				{
 					text = text.replace(patt1,"");
@@ -25,8 +26,9 @@ function getText(title, callback){
 				}
 				text = text.replace(patt4,"");
 				text = text.replace(patt5,"");
-				var patt6 = /may refer to:\s*\*/gim;
-				if(!patt6.test(text)){
+				text = text.replace(patt6,"");
+				var patt7 = /may refer to:\s*\*/gim;
+				if(!patt7.test(text)){
 					var beginning = text.substring(0,text.indexOf("=="));
 					var sentenceSplitter = /\s+(?=[\.\!\?]|[\'\"][\.\!\?])(?!\.rM|\.srM|\.sM|\.rJ|\.rD|\.forP|\.rS|\.[A-Z]\s)/gm;
 					var sentences = beginning.split("").reverse().join("").split(sentenceSplitter);
