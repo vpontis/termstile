@@ -483,6 +483,7 @@ border:0;
 	background:#000000;  
 	border:1px solid #cecece;  
 	z-index:1; 
+	opacity: .7;
 }  
 #signupPopup{
 	width: 750px;
@@ -641,6 +642,7 @@ border:0;
 	text-align: center;
 	font-size: 20px;
 	border: 0px;
+	background-color: #FAF6EC;
 }
 .guidePopupTitle::-webkit-input-placeholder {
 	color: black;

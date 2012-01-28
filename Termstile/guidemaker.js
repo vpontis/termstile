@@ -218,7 +218,6 @@ function saveGuideTitle(){
 
 function updateGuideTitle(id){
 	titleName = document.getElementById('cardsPopupTitle');
-	
 	if(titleName.value!= null && titleName.value != ""){
 		thisTitle = titleName.value;
 		$.post("changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
