@@ -55,7 +55,6 @@ strong {
 	float: right;
 	border-radius: 3px;
 	cursor: pointer;
-	line-height: 30px;
 }
 .main {
 	background-color: #FAF6EC;
@@ -778,6 +777,7 @@ border:0;
 	padding: 10px;
 	width: 300px;
 	float: left;
+	line-height: 30px;
 }
 .guideBox div{
 	text-align: left;
