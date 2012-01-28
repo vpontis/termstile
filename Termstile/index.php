@@ -205,6 +205,7 @@
 			<h1>donate</h1>
 			<p>
 				We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)
+			
 			</p>
 			<a class="popupClose">X</a>
 		</div>

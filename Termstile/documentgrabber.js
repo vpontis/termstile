@@ -14,7 +14,7 @@ function createBox(id, title) {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\" onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+title+"<button id='getGuideButton' onClick='getGuide("+id+", \""+title+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+title+"\")\'>Note Cards</button></div>";
+	var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\"onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+title+"<div id='getGuideButton' class=\"smallButton\" onClick='getGuide("+id+", \""+title+"\")\'><img src=\"../media/guide.png\" class=\"smallicon\"/></div><div id='getCardsButton' class=\"smallcards\" onClick='getCards("+id+", \""+title+"\")\'><img src=\"../media/card.png\" class=\"smallbutton\"/></div></div>";
 	text += " <a class=\'close\' onClick=\'deleteGuide("+divIdName+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');

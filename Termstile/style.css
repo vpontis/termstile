@@ -45,7 +45,11 @@ strong {
 	/*height: inherit;*/
 	margin: 0px auto 0px;
 }
-
+.smallbutton{
+	background-color:blue;
+	width:40px;
+	height: 40px;
+}
 .main {
 	background-color: #FAF6EC;
 	/*height: 80%;*/
