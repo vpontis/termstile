@@ -55,7 +55,9 @@ function saveAsGuide(){
 	var cleanTerms = new Array(0);
 	var cleanSummaries = new Array(0);
 	for(var i=0; i<terms.length; i++){
-		if(terms[i]!=""&&summaries[i]!="We're sorry but we can't find "+terms[i]+". Wikipedia may not have an article for that term. Wikipedia is often very fickle about <strong>capitalizations</strong>. If you are unsure you can use our autocomplete for accuracy. Please check the spelling and try again.")
+		if(terms[i]!=""
+		&&summaries[i]!="We're sorry but we can't find "+terms[i]+". Wikipedia may not have an article for that term. Wikipedia is often very fickle about <strong>capitalizations</strong>. If you are unsure you can use our autocomplete for accuracy. Please check the spelling and try again."
+		&&summaries[i]!="We found multiple possible terms for "+terms[i]+". You can try using our autocomplete to find what you're looking for. ")
 		{
 			termsList+=terms[i]+"|";
 			cleanTerms.push(terms[i]);
@@ -90,7 +92,9 @@ function saveAsCards(){
 	var cleanTerms = new Array(0);
 	var cleanSummaries = new Array(0);
 	for(var i=0; i<terms.length; i++){
-		if(terms[i]!=""&&summaries[i]!="We're sorry but we can't find "+terms[i]+". Wikipedia may not have an article for that term. Wikipedia is often very fickle about <strong>capitalizations</strong>. If you are unsure you can use our autocomplete for accuracy. Please check the spelling and try again.")
+		if(terms[i]!=""
+		&&summaries[i]!="We're sorry but we can't find "+terms[i]+". Wikipedia may not have an article for that term. Wikipedia is often very fickle about <strong>capitalizations</strong>. If you are unsure you can use our autocomplete for accuracy. Please check the spelling and try again."
+		&&summaries[i]!="We found multiple possible terms for "+terms[i]+". You can try using our autocomplete to find what you're looking for. ")
 		{
 			termsList+=terms[i]+"|";
 			cleanTerms.push(terms[i]);
@@ -152,7 +156,7 @@ function createCard(term, summary,index) {
 		}
 		cardCounter +=1;
 	}
-	var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'>"+term+"</a></strong></div>";
+	var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'><h2>"+term+"</h2></a></strong></div>";
 	$(newDiv).html(text);
 	//$(newDiv).slideDown('slow');
 }
@@ -160,10 +164,10 @@ function createCard(term, summary,index) {
 function flipCard(cardId,index,state){
 	var card = document.getElementById(cardId);	
 	if(state==0){
-		var text = "<div style=\"text-align:center\"><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 1)\'>"+currentCardSummaries[index]+"</a></strong></div>";
+		var text = "<div style=\"text-align:center\"><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 1)\'>"+currentCardSummaries[index]+"</a></div>";
 	}
 	else{
-		var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'>"+currentCardTerms[index]+"</a></strong></div>";
+		var text = "<div style=\"text-align:center\"><strong><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'><h2>"+currentCardTerms[index]+"</h2></a></strong></div>";
 	}
 	$(card).html(text);
 }
