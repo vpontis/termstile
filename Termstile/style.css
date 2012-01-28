@@ -457,7 +457,7 @@ border:0;
 	position:fixed;  
 	/*height:500px; */ 
 	width:450px;  
-	background:#FFFFFF;  
+	background-color: #FAF6EC;
 	border:2px solid #cecece;  
 	z-index:2;  
 	padding:12px;  
