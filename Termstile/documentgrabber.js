@@ -90,8 +90,12 @@ function initializePage(email)	{
 	var mainHeight = windowHeight - headerHeight - 3;
 	var bottomHeight = $('#bottomContainer').height();
 	var boxAreaHeight = mainHeight- bottomHeight - 20;
+	var noteCardTitleHeight = $('#cardsPopupTitleArea').height();
+	var noteCardMaterialHeight = mainHeight - noteCardTitleHeight - 110;
 	$('#boxArea').css('max-height',boxAreaHeight);
 	$("#mainContainer").height(mainHeight);
+	$('.popup').css('max-height',mainHeight - 20);
+	$('#noteCardMaterial').css('height', noteCardMaterialHeight);
 	$.post("getguideids.php",function(data){
 		var guideIds = data.split("|");
 		guideIds.pop();

@@ -174,8 +174,6 @@ function flipCard(cardId,index,state){
 	$(card).html(text);
 }
 
-
-
 function addSaveButton(){
 	$('.guidePopupTitleSave').fadeIn('slow');
 }
