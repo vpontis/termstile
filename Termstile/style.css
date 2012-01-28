@@ -180,9 +180,13 @@ strong {
 	margin: 8px 4px;
 	padding: 5px;
 	background-color: white;
-	positionf:relative;
+	position:relative;
 	cursor: pointer;
 	width: 340px;
+	text-align: justify;
+}
+.card h2{
+	text-align: center;
 }
 #cardsLeft{
 	float: left;
@@ -638,7 +642,7 @@ border:0;
 }
 /*Autocomplete*/
 .guidePopupTitleArea	{
-	margin: 20px auto 20px;
+	margin: 20px auto 4px;
 	width: 350px;
 }
 .guidePopupTitle{
@@ -781,6 +785,7 @@ border:0;
 }
 .guideBox div{
 	text-align: left;
+	line-height: 30px;
 }
 .guideBox button{
 	float:right;
