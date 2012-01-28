@@ -14,7 +14,7 @@ function createBox(id, title) {
 		$(newDiv).insertBefore(boxArea.firstChild)
 			.css('display','none');
 	}
-	var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\"onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+title+"<div id='getGuideButton' class=\"smallButton\" onClick='getGuide("+id+", \""+title+"\")\'><img src=\"../media/guide.png\" class=\"smallicon\"/></div><div id='getCardsButton' class=\"smallcards\" onClick='getCards("+id+", \""+title+"\")\'><img src=\"../media/card.png\" class=\"smallbutton\"/></div></div>";
+	var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\"onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+title+"<div id='getGuideButton' class=\"smallButton\" onClick='getGuide("+id+", \""+title+"\")\'><img src=\"../media/guide.png\" width=\"20px\" height=\"20px\"/></div><div id='getCardsButton' class=\"smallButton\" onClick='getCards("+id+", \""+title+"\")\'><img src=\"../media/card.png\" width=\"20px\" height=\"20px\"/></div></div>";
 	text += " <a class=\'close\' onClick=\'deleteGuide("+divIdName+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
 	$(newDiv).html(text);
 	$(newDiv).slideDown('slow');
