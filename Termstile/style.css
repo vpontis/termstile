@@ -47,8 +47,14 @@ strong {
 }
 .smallbutton{
 	background-color:#F05A18;
-	width:30px;
-	height: 30px;
+	display: inline;
+	height: 20px;
+	width: 20px;
+	padding: 5px;
+	margin: 0px 10px 0px;
+	float: right;
+	border-radius: 3px;
+	cursor: pointer;
 }
 .main {
 	background-color: #FAF6EC;
@@ -173,9 +179,13 @@ strong {
 	margin: 8px 4px;
 	padding: 5px;
 	background-color: white;
-	positionf:relative;
+	position:relative;
 	cursor: pointer;
 	width: 340px;
+	text-align: justify;
+}
+.card h2{
+	text-align: center;
 }
 #cardsLeft{
 	float: left;
@@ -455,7 +465,7 @@ border:0;
 	position:fixed;  
 	/*height:500px; */ 
 	width:450px;  
-	background:#FFFFFF;  
+	background-color: #FAF6EC;
 	border:2px solid #cecece;  
 	z-index:2;  
 	padding:12px;  
@@ -481,6 +491,7 @@ border:0;
 	background:#000000;  
 	border:1px solid #cecece;  
 	z-index:1; 
+	opacity: .7;
 }  
 #signupPopup{
 	width: 750px;
@@ -630,7 +641,7 @@ border:0;
 }
 /*Autocomplete*/
 .guidePopupTitleArea	{
-	margin: 20px auto 20px;
+	margin: 20px auto 4px;
 	width: 350px;
 }
 .guidePopupTitle{
@@ -639,6 +650,7 @@ border:0;
 	text-align: center;
 	font-size: 20px;
 	border: 0px;
+	background-color: #FAF6EC;
 }
 .guidePopupTitle::-webkit-input-placeholder {
 	color: black;
@@ -769,9 +781,11 @@ border:0;
 	padding: 10px;
 	width: 300px;
 	float: left;
+	line-height: 30px;
 }
 .guideBox div{
 	text-align: left;
+	line-height: 30px;
 }
 .guideBox button{
 	float:right;
