@@ -232,17 +232,28 @@
 		</div>
 		<div id="signupPopup" class="popup">
 			<h1>Sign Up!</h1>
-			<div style="width:400px; text-align:center; margin: 0px auto;">
-				<label for="suEmail">Email</label>
-				<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
-				<label for="suPassword">Password</label>
-				<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
-				<label for="suAltPassword">Repeat Password</label>
-				<input id="suAltPassword" onKeyPress="enterSignUp(event)" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
+			<div style="float:left">
+				<div style="width:400px; text-align:center; margin: 0px auto;">
+					<label for="suEmail">Email</label>
+					<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
+					<label for="suPassword">Password</label>
+					<input id="suPassword" name="password" placeholder="Password" title="password" tabindex="10" type="password">
+					<label for="suAltPassword">Repeat Password</label>
+					<input id="suAltPassword" onKeyPress="enterSignUp(event)" name="password" placeholder="Repeat Password" title="password" tabindex="10" type="password">
+				</div>
+				<div style="width:80px;margin:0px auto;"><button style="text-align:center;width:80px;margin:0px auto;"id="signupButton" onClick="signUp()">
+					Sign up!</button>
+				</div>
 			</div>
-			<div style="width:80px;margin:0px auto;"><button style="text-align:center;width:80px;margin:0px auto;"id="signupButton" onClick="signUp()">
-				Sign up!
-			</button></div>
+			<div style="float:left;">
+				<h2>Benefits of Signing Up</h2>
+				<ul>
+					<li>Save study guides and notecards</li>
+					<li>Untold levels of popularity</li>
+					<li>Access to secret parts of the website</li>
+					<li>Costs less than your ugly haircut</li>
+				</ul>
+			</div>
 				<!-- Sign Up form End -->
 			<a class="popupClose">X</a>
 		</div>
