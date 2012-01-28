@@ -758,12 +758,13 @@ border:0;
 .guideBox{
 	border-style: solid;
 	border-color: #4C4C4C;
-	margin: 8px auto 8px;
+	margin: 8px;
 	padding: 5px;
 	background-color: white;
 	position:relative;
 	padding: 10px;
-	width: 600px;
+	width: 300px;
+	float: left;
 }
 .guideBox div{
 	text-align: left;
