@@ -55,6 +55,7 @@ strong {
 	float: right;
 	border-radius: 3px;
 	cursor: pointer;
+	line-height: 30px;
 }
 .main {
 	background-color: #FAF6EC;
