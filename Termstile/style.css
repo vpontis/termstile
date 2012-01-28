@@ -635,6 +635,7 @@ border:0;
 	text-align: center;
 	font-size: 20px;
 	border: 0px;
+	background-color: #FAF6EC;
 }
 .guidePopupTitle::-webkit-input-placeholder {
 	color: black;

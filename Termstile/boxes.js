@@ -130,7 +130,9 @@ function loadPopup(id)	{
 
 function disablePopup()	{
 	if(popupStatus==1){
-		$('#backgroundPopup').fadeOut('slow');
+		$('#backgroundPopup').fadeOut('slow', function(){
+			$('.guidePopupTitleSave').hide();
+		});
 		$(popupOpen).fadeOut('slow');
 		popupStatus=0;
 	}
