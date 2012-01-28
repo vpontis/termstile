@@ -169,7 +169,7 @@ strong {
 	margin: 8px 4px;
 	padding: 5px;
 	background-color: white;
-	position:relative;
+	positionf:relative;
 	cursor: pointer;
 	width: 340px;
 }
@@ -478,6 +478,17 @@ border:0;
 	border:1px solid #cecece;  
 	z-index:1; 
 }  
+#signupPopup{
+	width: 750px;
+}
+#signupPopup h2{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+#signupPopup li{
+	margin-bottom: 4px;
+	font-size: 140%;
+}
 #signupPopup label{
 	float:left;
 	width: 10em;
