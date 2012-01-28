@@ -55,15 +55,15 @@
 						<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a onclick="logOut()" id="logout" class="signin">Logout</a></span>
 					</div>
 					<!-- Login form -->
-					<div class="signin_menu">
-						<label for="liEmail">Email</label>
-						<input id="liEmail" name="email" placeholder="Email" title="Email" tabindex="4" type="text">
+					<div class="signin_menu loginmenu" id="loginmenu">
+						<label for="liEmail" class="loginmenu">Email</label>
+						<input id="liEmail" class="loginmenu" name="email" placeholder="Email" title="Email" tabindex="4" type="text">
 						</br>
-						<p>
-							<label for="liPassword">Password</label>
-							<input id="liPassword" name="password" placeholder="Password" title="password" tabindex="5" type="password" onKeyPress="enterLogIn(event)">
+						<p class="loginmenu">
+							<label class="loginmenu" for="liPassword">Password</label>
+							<input class="loginmenu" id="liPassword" name="password" placeholder="Password" title="password" tabindex="5" type="password" onKeyPress="enterLogIn(event)">
 						</p>
-						<button id="loginButton" onClick="logIn()">
+						<button class="loginmenu" id="loginButton" onClick="logIn()">
 							Log in!
 						</button>
 					</div>
