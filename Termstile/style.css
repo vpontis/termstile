@@ -598,6 +598,9 @@ border:0;
 
 	margin-top: 3px;
 }
+.createCardsButton img {
+	margin: -5px 0px 0px;
+}
 .createGuideButton{
 	padding: 7px 12px 7px 12px;
 	height: 26px;
