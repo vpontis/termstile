@@ -117,9 +117,8 @@ $(document).keypress(function(e){
 
 function loadPopup(id)	{
 	if(popupStatus==0){
-		$('#backgroundPopup').css({'opacity':'.7'});
 		$(id).fadeIn('slow');
-		$('#backgroundPopup').show().fadeIn('slow',function(){
+		$('#backgroundPopup').fadeIn('fast',function(){
 			if(id=="#signupPopup"){
 				document.getElementById('suEmail').focus();
 			}

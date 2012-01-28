@@ -481,6 +481,7 @@ border:0;
 	background:#000000;  
 	border:1px solid #cecece;  
 	z-index:1; 
+	opacity: .7;
 }  
 #signupPopup{
 	width: 750px;
