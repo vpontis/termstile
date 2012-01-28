@@ -8,7 +8,7 @@ function toggleLogIn(){
 		loginShown = true;
 	}
 	else{
-		$('#login').css('background-color','#F05A18')
+		$('#login').css('background-color','#F05A18');
 		loginShown = false;
 	}
 }
@@ -16,7 +16,7 @@ function toggleLogIn(){
 function hideLogIn(){
 	if(loginShown){
 		$('.signin_menu').slideUp();
-		$('#login').css('background-color','#F05A18')
+		$('#login').css('background-color','#F05A18');
 		loginShown = false;
 	}
 }
@@ -25,9 +25,10 @@ $(document).ready(function() {
 	// Login JS
 	$(document).mouseup(function(e) {
 		if(loginShown){
-			if(e.target != document.getElementById('login') && e.target != document.getElementsByClass('signin')) {
+			if(document.getElementById('loginmenu') != $(e.target).parent().parent()[0] && document.getElementById('loginmenu') != $(e.target).parent()[0] && e.target != document.getElementById('loginmenu') && e.target != document.getElementById('login')) {
 				$(".signin").removeClass("menu-open");
-				$("div.signin_menu").slideUp();
+				$(".signin_menu").slideUp();
+				$('#login').css('background-color','#F05A18');
 				loginShown = false;
 			}
 		}
