@@ -218,7 +218,7 @@
 			</div>
 			<a class="popupClose"><img src="closebutton.png" /></a>
 		</div>
-		<div id="noteCardPopup" class="popup">
+		<div id="noteCardPopup" class="popup" style="background-color: #FAF6EC">
 			<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
 				<input id="cardsPopupTitle" class="guidePopupTitle" onKeyPress="enterSaveGuideTitle(event	)" onFocus="addSaveButton()" type="text" placeholder="Enter Title Here To Save"/>
 				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
