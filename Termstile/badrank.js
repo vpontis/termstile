@@ -7,11 +7,11 @@ function getText(title, callback){
 				
 				var text = data.query.pages[id].revisions[0]['*'];
 				var patt1 = /{{[^{]*?}}/im;
-				var patt2 = /<ref[\s\S]*?<\/ref>/im;
+				var patt2 = /<ref[^\/]*?>[\s\S]*?<\/ref>/im;
 				var patt3 = /<[\s\S]*?>/im;
 				var patt4 = /^\[\[.*?$/gim;
 				var patt5 = /\'\'\'/gm;
-				var patt6 = /\(\)/gm;
+				var patt6 = /\(\s*?\)/gm;
 				while(patt1.test(text))
 				{
 					text = text.replace(patt1,"");
@@ -27,10 +27,13 @@ function getText(title, callback){
 				text = text.replace(patt4,"");
 				text = text.replace(patt5,"");
 				text = text.replace(patt6,"");
-				var patt7 = /may refer to:\s*\*/gim;
+				var patt7 = /may refer to:[\s\S]*?\*/gim;
 				if(!patt7.test(text)){
-					var beginning = text.substring(0,text.indexOf("=="));
-					var sentenceSplitter = /\s+(?=[\.\!\?]|[\'\"][\.\!\?])(?!\.rM|\.srM|\.sM|\.rJ|\.rD|\.forP|\.rS|\.[A-Z])/gm;
+					if(text.indexOf("==")!=-1){
+						var beginning = text.substring(0,text.indexOf("=="));
+					}
+					else var beginning = text;
+					var sentenceSplitter = /\s+(?=[\.\!\?]|[\'\"][\.\!\?])(?!\.rM|\.srM|\.sM|\.rJ|\.rD|\.forP|\.rS|\.[A-Z]|\.g\.e)/gm;
 					var sentences = beginning.split("").reverse().join("").split(sentenceSplitter);
 					var map = new Array(sentences.length);
 					sentences = sentences.reverse();
@@ -47,9 +50,9 @@ function getText(title, callback){
 						bestRanked[i]= new Array(0,0,0);
 					}
 					for(var i=0; i<map.length; i++){
-						if(map[i][1]>bestRanked[2][1]){
-							if(map[i][1]>bestRanked[1][1]){
-								if(map[i][1]>bestRanked[0][1]){
+						if(map[i][1]>=bestRanked[2][1]){
+							if(map[i][1]>=bestRanked[1][1]){
+								if(map[i][1]>=bestRanked[0][1]){
 									for(var j=0; j<3; j++){bestRanked[2][j] = bestRanked[1][j];}
 									for(var j=0; j<3; j++){bestRanked[1][j] = bestRanked[0][j];}
 									bestRanked[0][0] = map[i][0];
