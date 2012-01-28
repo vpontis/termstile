@@ -158,7 +158,7 @@ function createCard(term, summary,index) {
 		cardCounter +=1;
 	}
 
-	var text = "<div style=\"text-align:center\" onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'><strong><a onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'>"+term+"</a></strong></div>";
+	var text = "<div style=\"text-align:center\" onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'><strong><a onClick=\'flipCard(\""+divIdName+"\", "+index+",0)\'><h2>"+term+"</h2></a></strong></div>";
 	$(newDiv).html(text);
 	//$(newDiv).slideDown('slow');
 }
@@ -169,7 +169,7 @@ function flipCard(cardId,index,state){
 		var text = "<div style=\"text-align:center\" onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 1)\'><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 1)\'>"+currentCardSummaries[index]+"</a></strong></div>";
 	}
 	else{
-		var text = "<div style=\"text-align:center\" onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'><strong><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'>"+currentCardTerms[index]+"</a></strong></div>";
+		var text = "<div style=\"text-align:center\" onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'><strong><a onClick=\'flipCard(\""+cardId+"\", \""+index+"\", 0)\'><h2>"+currentCardTerms[index]+"</h2></a></strong></div>";
 	}
 	$(card).html(text);
 }
