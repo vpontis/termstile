@@ -447,6 +447,9 @@ border:0;
 	height:15px;
 	width:15px;
 	vertical-align:-2px; 
+	position: absolute;
+	bottom: 4px; 
+	right: 4px;	
 }
 .close	{
 	position: absolute;
