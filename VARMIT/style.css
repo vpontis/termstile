@@ -17,6 +17,14 @@ body {
 	src: url('fonts/HelveticaNeueLTCom-MdCn.ttf')
 }
 @font-face{
+	font-family: Cardif;
+	src: url('fonts/Cardif.TTF')
+}
+@font-face{
+	font-family: CardifBold;
+	src: url('fonts/CardifB.TTF')
+}
+@font-face{
 	font-family: Roboto;
 	src: url('http://web.mit.edu/rlau/www/Fonts/Roboto-Thin.ttf')
 }
@@ -188,7 +196,10 @@ li {
 	text-align: justify;
 	padding: 10px 15px;
 	font-size: 15px;
-	font-family: serif;
+	font-family: Cardif;
+}
+.card strong {
+	font-family: CardifB;
 }
 .card h2{
 	text-align: center;
@@ -220,10 +231,10 @@ li {
 	margin: 15px auto 0px;
 	/*max-height: 400px;*/
 	overflow: auto;
-	font-family: serif;
+	font-family: Cardif;
 }
 #boxarea strong{
-	font-family: serif;
+	font-family: CardifB;
 }
 
 a{
@@ -689,10 +700,10 @@ border:0;
 }
 #guideMaterial{
 	overflow: auto;
-	font-family: serif;
+	font-family: Cardif;
 }
 #guideMaterial strong{
-	font-family: serif;
+	font-family: CardifB;
 }
 #multiSearchButtonArea{
 	width: 200px;
