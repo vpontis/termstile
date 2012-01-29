@@ -5,17 +5,17 @@
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="scripts/tabswitch.js"></script>
-		<script type="text/javascript" src="scripts/badrank.js"></script>
-		<script type="text/javascript" src="scripts/boxes.js"></script>
-		<script type="text/javascript" src="scripts/guidemaker.js"></script>
-		<script type="text/javascript" src="scripts/usermanagement.js"></script>
+		<script type="text/javascript" src="tabswitch.js"></script>
+		<script type="text/javascript" src="badrank.js"></script>
+		<script type="text/javascript" src="boxes.js"></script>
+		<script type="text/javascript" src="guidemaker.js"></script>
+		<script type="text/javascript" src="usermanagement.js"></script>
 		<link rel="icon" type="image/png" href="media/favicon.ico" />
 		<?php
+		
 		if (isset($_COOKIE['email'])) {
-			include 'scripts/dbconnect.php';
+			include 'dbconnect.php';
 			$email = $_COOKIE['email'];
-			echo $email;
 			$passhash = $_COOKIE['passhash'];
 			$getUsers = mysql_query("SELECT * FROM `Users` WHERE Email = '$email'");
 			if (mysql_num_rows($getUsers) != 0) {

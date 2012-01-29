@@ -16,8 +16,8 @@
 			}  
 		}		
 		$hour = time() + 3600;
-		setcookie('email',$email,$hour);
-		setcookie('passhash',$passhash,$hour);
+		setcookie('email',$email,$hour,'/');
+		setcookie('passhash',$passhash,$hour,'/');
 		echo "Login Successful!";
 		
 		mysql_close($con);

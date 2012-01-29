@@ -32,7 +32,7 @@ function hideDeleteButton(closeid){
 }
 function getGuide(id,title){
 	$("body").css('cursor','wait');
-	$.post("scripts/getguideterms.php",{id:id},function(data){
+	$.post("getguideterms.php",{id:id},function(data){
 		var terms = data.split("|");
 		terms.pop();
 		var summaries = new Array(terms.length);
@@ -53,7 +53,7 @@ function getGuide(id,title){
 
 function getCards(id,title){
 	$("body").css('cursor','wait');
-	$.post("scripts/getguideterms.php",{id:id},function(data){
+	$.post("getguideterms.php",{id:id},function(data){
 		var terms = data.split("|");
 		terms.pop();
 		var summaries = new Array(terms.length);
@@ -72,7 +72,7 @@ function getCards(id,title){
 	});
 }
 function deleteGuide(divIdName)	{
-	$.post("scripts/deleteguide.php",{id:divIdName},function(data){
+	$.post("deleteguide.php",{id:divIdName},function(data){
 		
 	})
 	$('#'+divIdName).animate({opacity:0.0});
@@ -99,13 +99,13 @@ function initializePage(email)	{
 	$('.popup').css('max-height',mainHeight - 20);
 	$('#noteCardMaterial').css('height', noteCardMaterialHeight);
 	$('#guideMaterial').css('max-height',noteCardMaterialHeight);
-	$.post("scripts/getguideids.php",function(data){
+	$.post("getguideids.php",function(data){
 		var guideIds = data.split("|");
 		guideIds.pop();
 		guideIds = guideIds.slice(1);
 		var left = guideIds.length;
 		$.each(guideIds, function(index, value){
-			$.post("scripts/getguidetitles.php",{id:value},function(data){
+			$.post("getguidetitles.php",{id:value},function(data){
 				createBox(value, data);
 				if(--left==0){
 					var boxArea = document.getElementById('boxArea');

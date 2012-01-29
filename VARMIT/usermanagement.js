@@ -9,7 +9,7 @@ function signUp(){
 		var email = document.getElementById("suEmail");
 		var password = document.getElementById("suPassword");
 		var altpassword = document.getElementById("suAltPassword");
-		$.post("scripts/register.php",{email: email.value, password: password.value, altpassword: altpassword.value},	function(data){
+		$.post("register.php",{email: email.value, password: password.value, altpassword: altpassword.value},	function(data){
 			$("#signupPopup").html(data+"<button onClick='location.reload()'>Ok!</button>");
 		});		
 		popupOpen = "#signupPopup";
@@ -27,7 +27,7 @@ function enterLogIn(e){
 function logIn(){
 	var email = document.getElementById("liEmail");
 	var password = document.getElementById("liPassword");
-	$.post("scripts/login.php",{email: email.value, password: password.value},	function(data){
+	$.post("login.php",{email: email.value, password: password.value},	function(data){
 		if(data=="Login Successful!"){
 			location.reload();
 		}
@@ -39,7 +39,7 @@ function logIn(){
 }	
 
 function logOut(){
-		$.post("scripts/logout.php", function(data){
+		$.post("logout.php", function(data){
 			location.reload();	
 		});	
 		
@@ -47,5 +47,5 @@ function logOut(){
 
 function reportIssue(){
 	
-	$.post("scripts/report.php",{message: issue}, function(data){});
+	$.post("report.php",{message: issue}, function(data){});
 }

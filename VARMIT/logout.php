@@ -1,5 +1,5 @@
 <?php
 		$past = time() - 3600;
-		setcookie('email','',$past);
+		echo setcookie('email','',$past);
 		setcookie('passhash','',$past);
 ?>
