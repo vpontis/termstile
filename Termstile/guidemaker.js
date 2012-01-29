@@ -223,8 +223,8 @@ function updateGuideTitle(id){
 		$.post("changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
 		});
 		var closeId = "close"+id;
-		var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\" onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+thisTitle+"<button id='getGuideButton' onClick='getGuide("+id+", \""+thisTitle+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+thisTitle+"\")\'>Note Cards</button></div>";
-		text += " <a class=\'close\' onClick=\'deleteGuide("+id+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
+		var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\"onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+saveTitle+"<img src=\"../media/card.png\" id='getCardsButton' class=\"smallButton\" onClick='getCards("+id+", \""+saveTitle+"\")\' alt=\"Create Flash Cards\"/><img src=\"../media/guide.png\" alt=\"Create Study Guide\" id='getGuideButton' class=\"smallButton\" onClick='getGuide("+id+", \""+saveTitle+"\")\'/></div>";
+		text += " <a class=\'close\' onClick=\'deleteGuide("+divIdName+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
 		$('#'+id).html(text);
 		document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
 		document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
@@ -237,8 +237,8 @@ function updateGuideTitle(id){
 			$.post("changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
 			});	
 			var closeId = "close"+id;
-			var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\" onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+thisTitle+"<button id='getGuideButton' onClick='getGuide("+id+", \""+thisTitle+"\")\'>Study Guide</button><button id='getCardsButton' onClick='getCards("+id+", \""+thisTitle+"\")\'>Note Cards</button></div>";
-			text += " <a class=\'close\' onClick=\'deleteGuide("+id+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
+			var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\"onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+saveTitle+"<img src=\"../media/card.png\" id='getCardsButton' class=\"smallButton\" onClick='getCards("+id+", \""+saveTitle+"\")\' alt=\"Create Flash Cards\"/><img src=\"../media/guide.png\" alt=\"Create Study Guide\" id='getGuideButton' class=\"smallButton\" onClick='getGuide("+id+", \""+saveTitle+"\")\'/></div>";
+			text += " <a class=\'close\' onClick=\'deleteGuide("+divIdName+")\'><img src=\'closebutton.png\' id=\'"+closeId+"\' style=\'display:none\'/></a>";
 			$('#'+id).html(text);
 			document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
 			document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
