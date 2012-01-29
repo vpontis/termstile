@@ -55,6 +55,7 @@ function enterPressed(e)	{
 	var code = (e.keyCode ? e.keyCode : e.which);
 	if(code == 13) {
 		createBox();
+		$('ul').hide();
 	}
 }
 
