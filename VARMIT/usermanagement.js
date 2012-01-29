@@ -46,6 +46,8 @@ function logOut(){
 }
 
 function reportIssue(){
-	
-	$.post("report.php",{message: issue}, function(data){});
+	$.post("report.php",{message: issue}, function(data){
+		$('#reportTextArea').val("");
+		$('#thanks').text('Report Submitted. Thanks.');
+	});
 }

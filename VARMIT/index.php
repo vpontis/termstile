@@ -149,7 +149,7 @@
 				<button onclick="reportIssue()">
 					Submit
 				</button>
-				<h2>Thanks!</h2>
+				<h2 id="thanks">Thanks!</h2>
 			</center>
 			<a class="popupClose">X</a>
 		</div>
