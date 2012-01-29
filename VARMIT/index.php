@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Termstile: terms in, definitions out</title>
+		<title>Termstile: terms in, summaries out</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -10,6 +10,7 @@
 		<script type="text/javascript" src="boxes.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
 		<script type="text/javascript" src="usermanagement.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="media/favicon.ico" />
 		<?php
 		
@@ -50,7 +51,7 @@
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
 					<div id="signedout" class="topnav">
-						<span><a id="login" class="signin" onClick="toggleLogIn()">Login</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
+						<span><a id="login" class="signin" onClick="toggleLogIn()">Log In</a><a href="signup" id="signup" class="signin">Sign Up</a></span>
 					</div>
 					<div id="signedin" class="topnav">
 						<span><a href="index.php" id="home" class="signin">Home</a><a href="mydocuments.php" id="mydocs" class="signin">My Documents</a><a onclick="logOut()" id="logout" class="signin">Logout</a></span>
@@ -112,13 +113,14 @@
 				</div>
 				<div class="hideForMulti" id="boxArea">
 					<div id="box0" class="box">
-						<strong>TermStile Instructions:</strong> type a term in the box above then hit enter to get a short summary. Also, you can click the down arrow to get a large textbox where you can enter multiple terms at once (read: copy paste).
+						<strong id="headline">Termstile takes terms and generates summaries, automatically.</strong> 
+						<br /> 
+						<p>Enter a term in the box above to get a short summary</p>
+						<p>Turn summaries into study guides or flash cards with the buttons below</p>
+						<p>Click the down arrow to enter multiple terms at once</p>
+						<p>Sign up and log in to save study guides and flash cards for later</p>
 						<br />
-						<br />
-						<strong>TermStile is still in alpha, tread carefully.</strong> Thank you and enjoy!
-						<br />
-						<br />
-						Disclaimer: any bugs or errors found on this website are for the <strong>greater good</strong>.
+						<strong>Termstile is still in alpha, tread carefully.</strong> Thank you and enjoy!
 					</div>
 				</div>
 				<div class="hideForMulti" id="createButtons">
@@ -140,9 +142,9 @@
 		</div>
 		<div id="reportPopup" class="popup">
 			<center>
-				<h1>what's wrong!?</h1>
+				<h1>report a problem</h1>
 				<p>
-					Do you have a problem? Please tell us about it and we will work on fixing it!
+					Is there a problem? Please tell us about it and we will work on fixing it!
 				</p>
 				<textarea id="reportTextArea" rows="15" cols="30" placeholder="Enter problem here."/></textarea>
 				<br />
@@ -159,13 +161,13 @@
 				We are three MIT freshman who made this site for 6.470, a web development competition.
 			</p>
 			<p>
-				<strong>Victor Pontis</strong> Victor is from San Diego and can do a triple backflip.
+				<strong>Victor Pontis:</strong> Victor is from San Diego and can do a triple backflip.
 			</p>
 			<p>
-				<strong>Ryan Lau</strong> Ryan is from Hawaii and surfs every day, even at MIT!
+				<strong>Ryan Lau:</strong> Ryan is from Hawaii and surfs every day, even at MIT!
 			</p>
 			<p>
-				<strong>Akash Badshah</strong> Akash is from Seattle and is Sean White's new big competitor.
+				<strong>Akash Badshah:</strong> Akash is from Seattle and is Sean White's new big competitor.
 			</p>
 			<a class="popupClose">X</a>
 		</div>
@@ -218,8 +220,10 @@
 			<a class="popupClose"><img src="media/closebutton.png" /></a>
 		</div>
 		<div id="signupPopup" class="popup">
-			<h1>Sign Up!</h1>
-			<div style="float:left">
+			<h1>Sign Up</h1>
+			<h2>Save study guides and flash cards for later!</h2>
+			<!--<h3>Save study guides and notecards for later</h3>-->
+			<div>
 				<div style="width:400px; text-align:center; margin: 0px auto;">
 					<label for="suEmail">Email</label>
 					<input id="suEmail" name="email" placeholder="Email" title="email" tabindex="9" type="text">
@@ -232,15 +236,7 @@
 					Sign up!</button>
 				</div>
 			</div>
-			<div style="float:left;">
-				<h2>Benefits of Signing Up</h2>
-				<ul>
-					<li>Save study guides and notecards</li>
-					<li>Untold levels of popularity</li>
-					<li>Access to secret parts of the website</li>
-					<li>Costs less than your ugly haircut</li>
-				</ul>
-			</div>
+
 				<!-- Sign Up form End -->
 			<a class="popupClose">X</a>
 		</div>
