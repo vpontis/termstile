@@ -15,7 +15,7 @@
 				include 'dbconnect.php';
 				$email =  $_COOKIE['email'];
 				$passhash = $_COOKIE['passhash'];
-				$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");
+				$getUsers = mysql_query("SELECT * FROM `Users` WHERE Email = '$email'");
 				if(mysql_num_rows($getUsers)!=0){
 					while($info = mysql_fetch_array($getUsers)){
 						if($passhash == $info['PassHash']){

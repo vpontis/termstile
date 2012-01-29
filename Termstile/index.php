@@ -16,7 +16,7 @@
 			include 'dbconnect.php';
 			$email = $_COOKIE['email'];
 			$passhash = $_COOKIE['passhash'];
-			$getUsers = mysql_query("SELECT * FROM users WHERE Email = '$email'");
+			$getUsers = mysql_query("SELECT * FROM `Users` WHERE Email = '$email'");
 			if (mysql_num_rows($getUsers) != 0) {
 				while ($info = mysql_fetch_array($getUsers)) {
 					if ($passhash == $info['PassHash']) {
@@ -104,7 +104,7 @@
 							<div id="dropDownBar" onClick="toggleShowMultiSearch()"><img src="../media/down.png"/ width="20px" height="20px"></div>
 							<div id = "multiSearchButtons" >
 								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="../media/guide.png"/ width="20px" height="20px"> Study Guide!</div>
-								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="30px" height="30px"> Note Cards!</div>
+								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="25px" height="25px"> Note Cards!</div>
 							</div>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 					</div>
 					<div id="createCards">
 						<div class="button createCardsButton" id="createCardsButton" onClick="saveAsCards()">
-							<img src="../media/card.png"/ width="30px" height="30px"> Flash Cards
+							<img src="../media/card.png"/ width="25px" height="25px"> Flash Cards
 						</div>
 					</div>
 				</div>

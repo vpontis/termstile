@@ -5,7 +5,7 @@
 
 		$title = $_POST['title'];
 		$id = $_POST['id'];
-		$update = "UPDATE guides SET Title='$title' WHERE Id='$id'";
+		$update = "UPDATE `Guides` SET Title='$title' WHERE Id='$id'";
 		mysql_query($update);
 	}
 	

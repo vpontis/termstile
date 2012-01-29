@@ -1,7 +1,7 @@
 <?php
 	include 'dbconnect.php';
 	$term = $_POST['term'];
-	$check = mysql_query("SELECT * FROM terms WHERE Term = '$term'");
+	$check = mysql_query("SELECT * FROM `Terms` WHERE Term = '$term'");
 	if(mysql_num_rows($check)!=0){
 		while($info = mysql_fetch_array($check)){
 			$def0 = $info['Definition0'];
