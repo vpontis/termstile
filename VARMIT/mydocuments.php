@@ -101,7 +101,7 @@
 			<div id="guideMaterial">
 				Guide Information
 			</div>
-			<a class="popupClose"><img src="closebutton.png" /></a>
+			<a class="popupClose"><img src="media/closebutton.png" /></a>
 		</div>
 	<div id="noteCardPopup" class="popup">
 		<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
@@ -114,7 +114,7 @@
 				<div id="cardsRight" class="cardsSection">	
 				</div>
 		</div>
-		<a class="popupClose"><img src="closebutton.png" /></a>
+		<a class="popupClose"><img src="media/closebutton.png" /></a>
 	</div>
 	<div id="backgroundPopup"></div>  
 	</body>
