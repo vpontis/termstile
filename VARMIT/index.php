@@ -13,8 +13,9 @@
 		<link rel="icon" type="image/png" href="media/favicon.ico" />
 		<?php
 		if (isset($_COOKIE['email'])) {
-			include 'dbconnect.php';
+			include 'scripts/dbconnect.php';
 			$email = $_COOKIE['email'];
+			echo $email;
 			$passhash = $_COOKIE['passhash'];
 			$getUsers = mysql_query("SELECT * FROM `Users` WHERE Email = '$email'");
 			if (mysql_num_rows($getUsers) != 0) {

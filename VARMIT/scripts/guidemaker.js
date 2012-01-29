@@ -201,7 +201,7 @@ function saveGuideTitle(){
 	titleName = document.getElementById('cardsPopupTitle');
 	if(titleName.value!= null && titleName.value != ""){
 		saveTitle = titleName.value;
-		$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){	
+		$.post("scripts/saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){	
 		});
 		document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
 		document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
@@ -211,7 +211,7 @@ function saveGuideTitle(){
 		titleName = document.getElementById('guidePopupTitle');
 		if(titleName.value != null && titleName.value !=""){
 			saveTitle = titleName.value;
-			$.post("saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){
+			$.post("scripts/saveguide.php", {title:saveTitle, terms:saveTermsList}, function(data){
 			});	
 			document.getElementById('cardsPopupTitle').setAttribute('placeholder',saveTitle);
 			document.getElementById('guidePopupTitle').setAttribute('placeholder',saveTitle);
@@ -224,7 +224,7 @@ function updateGuideTitle(id){
 	titleName = document.getElementById('cardsPopupTitle');
 	if(titleName.value!= null && titleName.value != ""){
 		thisTitle = titleName.value;
-		$.post("changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
+		$.post("scripts/changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
 		});
 		var closeId = "close"+id;
 		var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\"onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+saveTitle+"<img src=\"media/card.png\" id='getCardsButton' class=\"smallButton\" onClick='getCards("+id+", \""+saveTitle+"\")\' alt=\"Create Flash Cards\"/><img src=\"media/guide.png\" alt=\"Create Study Guide\" id='getGuideButton' class=\"smallButton\" onClick='getGuide("+id+", \""+saveTitle+"\")\'/></div>";
@@ -238,7 +238,7 @@ function updateGuideTitle(id){
 		titleName = document.getElementById('guidePopupTitle');
 		if(titleName.value != null && titleName.value !=""){
 			thisTitle = titleName.value;
-			$.post("changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
+			$.post("scripts/changeguidetitle.php", {title:thisTitle, id:id}, function(data){	
 			});	
 			var closeId = "close"+id;
 			var text = "<div onMouseOver=\"showDeleteButton(\'" + closeId + "\')\"onMouseOut=\"hideDeleteButton(\'"+closeId+"\')\" ><strong>"+saveTitle+"<img src=\"media/card.png\" id='getCardsButton' class=\"smallButton\" onClick='getCards("+id+", \""+saveTitle+"\")\' alt=\"Create Flash Cards\"/><img src=\"media/guide.png\" alt=\"Create Study Guide\" id='getGuideButton' class=\"smallButton\" onClick='getGuide("+id+", \""+saveTitle+"\")\'/></div>";
