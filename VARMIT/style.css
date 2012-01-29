@@ -6,7 +6,7 @@ body {
 }
 @font-face {
 	font-family: HelveticaLight;
-	src: url('../design/Fonts/HelveticaNeueLTCom-Roman.ttf');
+	src: url('fonts/HelveticaNeueLTCom-Roman.ttf');
 }
 @font-face {
 	font-family: HelveticaLT25;
@@ -14,7 +14,7 @@ body {
 }
 @font-face{
 	font-family: HelveticaBold;
-	src: url('../design/Fonts/HelveticaNeueLTCom-MdCn.ttf')
+	src: url('fonts/HelveticaNeueLTCom-MdCn.ttf')
 }
 @font-face{
 	font-family: Roboto;
