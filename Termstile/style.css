@@ -28,6 +28,9 @@ body {
 strong {
 	font-family: HelveticaBold;
 }
+li {
+	font-size: 14px; /*Changes Height of Autocomplete sugggestions */
+}
 .header {
 	background-color: #F08C60;
 	height: 80px;
@@ -261,6 +264,7 @@ a img {
     text-decoration:none;
     font-weight:bold;
     color:#fff;
+    cursor: pointer;
 }
 #login{
 	-webkit-border-radius:4px 0px 0px 4px;
@@ -379,6 +383,16 @@ border:0;
 #signin_submit:hover, #signin_submit:focus {
     background-position:0 -5px;
     cursor:pointer;
+}
+#loginbutton{
+	background-color: white;
+	height: 18px;
+	width: 40px;
+	color: #F04900;
+	padding: 5px 2px 0px;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
 }
 /* Login CSS End */
 
