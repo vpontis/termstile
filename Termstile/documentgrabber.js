@@ -31,6 +31,7 @@ function hideDeleteButton(closeid){
 	//$(id).fadeOut('fast');
 }
 function getGuide(id,title){
+	$("body").css('cursor','wait');
 	$.post("getguideterms.php",{id:id},function(data){
 		var terms = data.split("|");
 		terms.pop();
@@ -51,6 +52,7 @@ function getGuide(id,title){
 }
 
 function getCards(id,title){
+	$("body").css('cursor','wait');
 	$.post("getguideterms.php",{id:id},function(data){
 		var terms = data.split("|");
 		terms.pop();

@@ -8,6 +8,7 @@ function createGuide() {
 	var terms = input.split(/\n|,\s/gm);
 	var summaries = new Array(terms.length);
 	var left = terms.length;
+	$("body").css('cursor','wait');
 	$.each(terms, function(index, value){
 		getText(terms[index],function(summary){
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
@@ -31,6 +32,7 @@ function createCards() {
 	var terms = input.split(/\n|,\s/gm);
 	var summaries = new Array(terms.length);
 	var left = terms.length;
+	$("body").css('cursor','wait');
 	$.each(terms, function(index, value){
 		getText(terms[index],function(summary){
 			summaries[index]=summary[0]+" "+summary[1]+" "+summary[2];
@@ -80,6 +82,7 @@ function makeDoc(title,terms,summaries){
 		guideTitle.setAttribute("placeholder",guideTitleVal);
 	}
 	$('#guideMaterial').html(guideText);
+	$("body").css('cursor','auto');
 	popupOpen = "#guidePopup";
 	centerPopup('#guidePopup');
 	loadPopup('#guidePopup');
@@ -126,6 +129,7 @@ function makeCards(title,terms,summaries){
 		cardsTitle.setAttribute("placeholder",guideTitleVal);
 		$('.guidePopupTitle').text(guideTitleVal);
 	}
+	$("body").css('cursor','auto');
 	popupOpen = "#noteCardPopup";
 	centerPopup('#noteCardPopup');
 	loadPopup('#noteCardPopup');
