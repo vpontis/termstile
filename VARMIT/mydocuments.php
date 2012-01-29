@@ -9,6 +9,7 @@
 		<script type="text/javascript" src="documentgrabber.js"></script>
 		<script type="text/javascript" src="guidemaker.js"></script>
 		<script type="text/javascript" src="usermanagement.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 		<link rel="icon" type="image/png" href="media/favicon.ico" />
 		<?php
 			if(isset($_COOKIE['email'])){

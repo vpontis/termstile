@@ -183,6 +183,7 @@ li {
 	padding: 10px;
 	width: 600px;
 	line-height: 140%;
+	font-size: 11pt;
 }
 
 .card {
@@ -196,7 +197,8 @@ li {
 	width: 320px;
 	text-align: justify;
 	padding: 10px 15px;
-	font-size: 15px;
+	font-size: 10pt;
+	line-height: 140%;
 	font-family: 'Droid Serif', serif;
 }
 .card strong {
@@ -720,9 +722,13 @@ border:0;
 #guideMaterial{
 	overflow: auto;
 	font-family: 'Droid Serif', serif;
+	font-size: 10pt;
+	line-height:140%;
 }
 #guideMaterial strong{
 	font-family: 'Droid Serif', serif;
+	font-size: 10pt;
+	line-height:140%;
 }
 #multiSearchButtonArea{
 	width: 200px;
