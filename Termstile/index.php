@@ -68,17 +68,12 @@
 						</button>
 					</div>
 					<!-- Login form end-->
-					<!-- Sign Up form -->
-					
 				</div>
 				<!-- Login End -->
 			</div>
 		</div>
 		<!-- Main Section Begin -->
 		<div class="main container" id="mainContainer">
-				<!--<div id="toggleInstaMultiButton" onClick="toggleInstaMulti()">
-					MultiSearch
-				</div>-->
 			<div id="singleSearchArea">
 				<div id="singleSearch">
 					<div id="searchBarArea">
@@ -137,16 +132,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div id="multipleSearch" style="display:none;">
-				<div id="guideInput">
-					<!--<input id="guideTitle"  type="text" placeholder="enter study guide title"/>-->
-					<div style="position:relative; height:365px;">
-						
-						<textarea id="manyTerm" rows="43" cols="60" placeholder="Enter your list of terms here." ></textarea>
-					</div>
-				</div>
-				
 			</div>
 			<div class="bottom container" id="bottomContainer">
 				<a id="report">report</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="about">about us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="contactUs">contact us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a id="donate">donate</a>
@@ -259,9 +244,9 @@
 			<a class="popupClose">X</a>
 		</div>
 		<div id="loginPopup" class="popup">
-			<h1>donate</h1>
+			<h1>Logging In</h1>
 			<p>
-				We don't have anything set up for donations right now. But if you want to donate to the site, please contact us! :)
+				We are currently logging you in, please hold. :)
 			</p>
 			<a class="popupClose">X</a>
 		</div>
