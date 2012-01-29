@@ -96,16 +96,16 @@
 							</div>
 							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>	
 							<div id="questionMark" ><img src="../media/info.png" width="30px" height="30px" onMouseOver="showInstructions()" onMouseOut="hideInstructions()"/></div>
-							<div id="dropDownBar" onClick="toggleShowMultiSearch()"><img src="../media/down.png"/ width="20px" height="20px"></div>
+							<div id="dropDownBar" onClick="toggleShowMultiSearch()"><img src="../media/down.png" width="20px" height="20px"/></div>
 							<div id = "multiSearchButtons" >
-								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="../media/guide.png"/ width="20px" height="20px"> Study Guide!</div>
-								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="25px" height="25px"> Note Cards!</div>
+								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="../media/guide.png" width="20px" height="20px" /> Study Guide!</div>
+								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png" width="25px" height="25px"/> Note Cards!</div>
 							</div>
 						</div>
 					</div>
 					<div style="display: inline; float: right;">
-						<div class="button hideForMulti" onClick="createBox()" id="summarize">
-						<img src="../media/search.png">
+						<div class="button hideForMulti" onClick="createBox()" alt="Search!"id="summarize">
+						<img src="../media/search.png"/>
 						</div>
 					</div>
 				</div>
@@ -123,12 +123,12 @@
 				<div class="hideForMulti" id="createButtons">
 					<div id="createGuide">
 						<div class="button createGuideButton" id="createGuideButton" style="float:left;" onClick="saveAsGuide()">
-							<img src="../media/guide.png"/ width="30px" height="30px"> Study Guide
+							<img src="../media/guide.png" width="30px" height="30px" /> Study Guide
 						</div>
 					</div>
 					<div id="createCards">
 						<div class="button createCardsButton" id="createCardsButton" onClick="saveAsCards()">
-							<img src="../media/card.png"/ width="30px" height="30px"> Flash Cards
+							<img src="../media/card.png" width="30px" height="30px" /> Flash Cards
 						</div>
 					</div>
 				</div>
