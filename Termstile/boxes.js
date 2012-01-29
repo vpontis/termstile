@@ -153,24 +153,24 @@ function centerPopup(id){
 instaSearchShown = true;
 function toggleInstaMulti(){
 	if(instaSearchShown == true){
-		$('#singleSearchArea').slideUp('slow',function()	{
-			$('#toggleInstaMultiButton').html("<img src='../media/down.png'/ width='20px' height='20px'>");
-			$('#multipleSearch').slideDown('slow',function()	{
-				$('#manyTerm').focus();
+		$('#toggleInstaMultiButton').html("<img src='../media/down.png'/ width='20px' height='20px'>", function(){
+			$('#singleSearchArea').slideUp('slow',function()	{
+				$('#multipleSearch').slideDown('slow',function()	{
+					$('#manyTerm').focus();
+				});
 			});
 		});
 		instaSearchShown = false;
-		
 	}
 	else{
-		$('#multipleSearch').slideUp('slow',function()	{
-			$('#toggleInstaMultiButton').html("<img src='../media/up.png'/ width='20px' height='20px'>");
-			$('#singleSearchArea').slideDown('slow',function(){
-				$('#oneTerm').focus();
+		$('#toggleInstaMultiButton').html("<img src='../media/up.png'/ width='20px' height='20px'>",function(){
+			$('#multipleSearch').slideUp('slow',function()	{
+				$('#singleSearchArea').slideDown('slow',function(){
+					$('#oneTerm').focus();
+				});
 			});
 		});
 		instaSearchShown = true;
-		
 	}
 }
 
