@@ -1,0 +1,806 @@
+
+body {
+	background-color: #4C4C4C;
+	padding: 0px;
+	margin: 0px;
+	font-family: HelveticaLight;
+}
+@font-face {
+	font-family: HelveticaLight;
+	src: url('../design/Fonts/HelveticaNeueLTCom-Roman.ttf');
+}
+@font-face {
+	font-family: HelveticaLT25;
+	src: url('http://web.mit.edu/rlau/www/Fonts/HelveticaLT25.ttf');
+}
+@font-face{
+	font-family: HelveticaBold;
+	src: url('../design/Fonts/HelveticaNeueLTCom-MdCn.ttf')
+}
+@font-face{
+	font-family: Roboto;
+	src: url('http://web.mit.edu/rlau/www/Fonts/Roboto-Thin.ttf')
+}
+@font-face{
+	font-family: RobotoBold;
+	src: url('http://web.mit.edu/rlau/www/Fonts/Roboto-Medium.ttf')
+}
+strong {
+	font-family: HelveticaBold;
+}
+li {
+	font-size: 14px; /*Changes Height of Autocomplete sugggestions */
+}
+.header {
+	background-color: #F08C60;
+	height: 80px;
+}
+.title{
+	display: inline;
+	float: left;
+}
+.midbar {
+	background-color: #D3D3D3;
+	height: 20px;
+}
+.container {
+	width: 850px;
+	/*height: inherit;*/
+	margin: 0px auto 0px;
+}
+.smallbutton{
+	background-color:#F05A18;
+	display: inline;
+	height: 20px;
+	width: 20px;
+	padding: 5px;
+	margin: 0px 10px 0px;
+	float: right;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.main {
+	background-color: #FAF6EC;
+	/*height: 80%;*/
+	position: relative;
+	border-radius: 0px 0px 5px 5px;
+	min-height: 400px;
+	padding: 1px 0px 0px;
+}
+.midbar {
+	height: 30px;
+	background-color: #999999;
+}
+.tab {
+	width: 500px;
+	background-color: #999999;
+	height: 30px;
+	text-align: center;
+}
+#multipleTerm {
+	float: right;
+	cursor: pointer;
+}
+#singleTerm {
+	float: left;
+	cursor: pointer;
+}
+.selected {
+	background-color: #FCFCF7;
+}
+#oneTerm {
+	background: url('form.png') repeat-x;
+	color: #888;
+	border: 1px solid #ccc;
+	font-family: HelveticaLight;
+	font-weight: bold;
+	font-size: 20px;
+	width: 500px;
+	height: 35px;
+	padding: 0 10px;
+	display: inline;
+	border-radius: 6px;
+}
+#multiSearchBox{
+	width: 500px;
+	height: 35px;
+	padding: 0px 0px;
+	display: inline;
+	position: relative;
+	z-index: 2;
+	display: none;
+	border-radius: 5px;
+	font-size: 17px;
+}
+#multiSearchBox::-webkit-input-placeholder{
+	font-size: 200%;
+}
+#searchBarArea{
+	height: 60px;
+	float: left;
+}
+#dropDownBar{
+	margin:0px auto;
+	width: 180px;
+	text-align: center;
+	/*border-style: solid;
+	border-width: 1px;*/
+	cursor: pointer;
+}
+#singlesearch {
+	height: 35px;
+	width: 630px;
+	margin: 20px auto 0px;
+}
+#multiplesearch {
+	height: 500px;
+	width: 750px;
+	margin: 0px auto 0px;
+	display: none;
+}
+#singleSearchArea{
+	position: relative;
+	z-index: 1;
+}
+#manyTerm {
+	width: 400px;
+	height: 350px;
+	/*padding: 0px;*/
+	float: left;
+	border-radius: 6px;
+	position: absolute;
+	top: 0px;
+	padding: 3px;
+}
+
+.bottom {
+	text-align: right;
+	height: 25px;
+	float: right;
+	color: #4C4C4C;
+	position: absolute;
+	bottom: 2px;
+	right: 8px;
+}
+.bottom a{
+	cursor: pointer;
+}
+.box {
+	border-style: solid;
+	border-color: #4C4C4C;
+	margin: 8px auto 8px;
+	padding: 5px;
+	background-color: white;
+	position:relative;
+	padding: 10px;
+	width: 600px;
+}
+
+.card {
+	border-style: solid;
+	border-color: #4C4C4C;
+	margin: 8px 4px;
+	padding: 5px;
+	background-color: white;
+	position:relative;
+	cursor: pointer;
+	width: 340px;
+	text-align: justify;
+}
+.card h2{
+	text-align: center;
+}
+#cardsLeft{
+	float: left;
+}
+#cardsRight{
+	float: right;
+}
+.cardsSection{
+	width: 360px;
+}
+#noteCardPopup{
+	overflow: visible;
+	width: 800px;
+}
+#noteCardMaterial{
+	width: 750px;
+	overflow: auto;
+	margin: 0px auto;
+}
+
+#boxarea{
+	width: 700px;
+	margin: 15px auto 0px;
+	/*max-height: 400px;*/
+	overflow: auto;
+}
+
+a{
+	text-decoration	:none;
+}
+a:hover{
+	color:gray;
+}
+
+/* Login CSS */
+#container1 {
+    width:590px;
+    margin:0 auto;
+    position: relative;
+}
+
+#content {
+    width:520px;
+    min-height:500px;
+}
+a:link, a:visited {
+    color:#27b;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+a img {
+    border-width:0;
+}
+
+#home {
+	border-radius: 4px 4px 4px 4px;
+}
+#logout{
+	border-radius: 4px 4px 4px 4px;
+}
+.topnav {
+    padding:10px 0px 12px;
+    font-size:11px;
+    line-height:23px;
+    text-align:right;
+    float: right;
+}
+.topnav a.signin {
+    background:#F05A18;
+    padding:4px 6px 6px;
+    text-decoration:none;
+    font-weight:bold;
+    color:#fff;
+    cursor: pointer;
+}
+#login{
+	-webkit-border-radius:4px 0px 0px 4px;
+    -moz-border-radius:4px 0px 0px 4px;
+    border-radius:4px 4px 4px 4px;
+    cursor: pointer;
+}
+#signup{
+	-webkit-border-radius:0px 4px 4px 0px;
+    -moz-border-radius:0px 4px 4px 0px;
+    border-radius:0px 4px 4px 0px;
+}
+.topnav a.signin:hover {
+    background:#F0AD90;
+}
+.topnav a.signin, .topnav a.signin:hover {
+    *background-position:0 3px!important;
+}
+
+a.signin {
+    position:relative;
+    margin: 0px -2px;
+}
+a.signin span {
+    background-image:url("images/toggle_down_light.png");
+    background-repeat:no-repeat;
+    background-position:100% 50%;
+    padding:4px 16px 6px 0;
+}
+.topnav a.menu-open {
+    background:#F04900;
+    color:#fff;
+    outline:none;
+}
+#small_signup {
+    display:inline;
+    float:none;
+    line-height:23px;
+    margin:25px 0 0;
+    width:170px;
+}
+a#login.menu-open span {
+    background-image:url("images/toggle_up_dark.png");
+    color:#789;
+}
+.signin_menu {
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    display:none;
+    background-color:#F04900;
+    position:absolute;
+    width:210px;
+    z-index:100;
+    border:1px transparent;
+    text-align:left;
+    padding:12px;
+    top: 24.5px; 
+    right: -2px; 
+    margin-top:5px;
+    margin-right: 0px;
+    *margin-right: -1px;
+    color:#fff;
+    font-size:11px;
+}
+
+.signin_menu input[type=text], .signin_menu input[type=password] {
+    display:block;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border:1px solid #ACE;
+    font-size:13px;
+    margin:0 0 5px;
+    padding:5px;
+    width:203px;
+}
+.signin_menu p {
+    margin:0;
+}
+.signin_menu a {
+    color:#6AC;
+}
+.signin_menu label {
+    font-weight:normal;
+}
+.signin_menu p.remember {
+    padding:10px 0;
+}
+.signin_menu p.forgot, .signin_menu p.complete {
+    clear:both;
+    margin:5px 0;
+}
+
+.signin_menu p a {
+    color:#27B!important;
+}
+#signin_submit {
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    background:#39d url('images/bg-btn-blue.png') repeat-x scroll 0 0;
+    border:1px solid #39D;
+    color:#fff;
+    text-shadow:0 -1px 0 #39d;
+    padding:4px 10px 5px;
+    font-size:11px;
+    margin:0 5px 0 0;
+    font-weight:bold;
+}
+#signin_submit::-moz-focus-inner {
+padding:0;
+border:0;
+}
+#signin_submit:hover, #signin_submit:focus {
+    background-position:0 -5px;
+    cursor:pointer;
+}
+/* Login CSS End */
+
+/*.bigthing{
+	height: 100%;
+}*/
+
+.signup_menu{
+	    -moz-border-radius-topleft:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -webkit-border-top-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+    display:none;
+    background-color:#ddeef6;
+    position:absolute;
+    width:210px;
+    z-index:100;
+    border:1px transparent;
+    text-align:left;
+    padding:12px;
+    top: 24.5px; 
+    right: -2px; 
+    margin-top:5px;
+    margin-right: 0px;
+    *margin-right: -1px;
+    color:#789;
+    font-size:11px;
+}
+.signup_menu input[type=text], .signup_menu input[type=password] {
+    display:block;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border:1px solid #ACE;
+    font-size:13px;
+    margin:0 0 5px;
+    padding:5px;
+    width:203px;
+}
+.signup_menu p {
+    margin:0;
+}
+.signup_menu a {
+    color:#6AC;
+}
+.signup_menu label {
+    font-weight:normal;
+}
+.signup_menu p.remember {
+    padding:10px 0;
+}
+.signup_menu p.forgot, .signup_menu p.complete {
+    clear:both;
+    margin:5px 0;
+}
+.signup_menu p a {
+    color:#27B!important;
+}
+.wikifavicon img{
+	display:inline;
+	height:15px;
+	width:15px;
+	vertical-align:-2px; 
+	position: absolute;
+	bottom: 4px; 
+	right: 4px;	
+}
+.close	{
+	position: absolute;
+	top: -12px;
+	right: -12px;
+	text-decoration:none;
+	cursor: pointer;
+	z-index: 1;
+}
+.close a{
+	color: green;
+}
+.close img{
+	height: 25px;
+	width: 25px;
+	overflow: visible;
+}
+.popup{  
+	display:none;  
+	position:fixed;  
+	/*height:500px; */ 
+	width:450px;  
+	background-color: #FAF6EC;
+	border:2px solid #cecece;  
+	z-index:2;  
+	padding:12px;  
+	font-size:13px; 
+	overflow:auto;
+}
+.popup h1{
+	text-align:center;
+}
+.popupClose	{
+	position:absolute;
+	top: 5px;
+	right: 5px;
+	cursor: pointer;
+}
+#backgroundPopup{  
+	display:none;  
+	position:fixed;  
+	height:100%;  
+	width:100%;  
+	top:0;  
+	left:0;  
+	background:#000000;  
+	border:1px solid #cecece;  
+	z-index:1; 
+	opacity: .7;
+}  
+#signupPopup{
+	width: 750px;
+}
+#signupPopup h2{
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+#signupPopup li{
+	margin-bottom: 4px;
+	font-size: 140%;
+}
+#signupPopup label{
+	float:left;
+	width: 10em;
+	text-align: right;
+	display: block;
+	margin-right: 1.5em;
+	margin-bottom: 10px;
+	position: relative;
+	top: 2px;
+}
+#signupPopup input{
+	width: 10em;
+	text-align:left;
+	display: block;
+	margin-bottom: 10px;
+}
+
+#guideTitle::-webkit-input-placeholder { 
+	text-align: center;
+}
+#guideTitle	{
+	border-radius: 5px;
+	margin-bottom: 10px;
+	width: 200px;
+	padding: 0px;
+	border-color: black;
+	border-width: 1px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+/*#guideInstructions	{
+	float: left;
+	width: 300px;
+	margin-left: 20px;
+	margin-top: 0px;
+	font-size: 120%;
+	margin-top: 20px
+}*/
+#guideInstructions h2, h1{
+	margin-top: 0px;
+}
+#guideInstructions li{
+	padding-bottom: 10px;
+}
+#manyTerm::-webkit-input-placeholder{
+	font-size: 200%;
+}
+#manyTerm{
+	font-size: 150%;
+	margin-top: 20px;
+}
+#guideInput	{
+	width: 400px;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+#dropdown {
+	cursor: pointer;
+	float: right;
+	height: 35px;
+	width: 15px;
+	border-radius: 0px 4px 4px 0px;
+	background-image: url(button.gif);
+	background-repeat-x: repeat;
+	background-color: #DDDDDD;
+	border-color: #BBBBBB;
+	border-style: solid;
+	border-width: 1px 1px 1px 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 10pt;
+	margin: 0px;
+}
+.button {
+	cursor: pointer;
+	background-color: #F05A18;
+	color: #fff;
+	font-size: 23px;
+	display: inline;
+	float:right;
+}
+.button img {
+	vertical-align: text-top;
+}
+#summarize img{
+	height: 24px;
+	width: 24px;
+}
+.createCardsButton{
+	padding: 7px 12px 7px 12px;
+	height: 26px;
+
+	margin-top: 3px;
+}
+.createCardsButton img {
+	margin: -5px 0px 0px;
+}
+.createGuideButton{
+	padding: 7px 12px 7px 12px;
+	height: 26px;
+	width: 165px;
+	margin-top: 3px;
+}
+#summarize {
+	padding: 5px 0px 5px;
+	height: 24px;
+	width: 96px;
+}
+#summarize img{
+	padding: 0px 36px 0px;
+}
+#createGuide{
+	float: left;
+}
+#createCards{
+	float: right;
+}
+#createButtons{
+	margin-left: auto;
+	margin-right: auto;
+	height: 40px;
+	width: 410px;
+}
+#createButtons button{
+	font-size: 20px;
+}
+#liveStudyGuide	{
+	width: 800px;
+}
+#loadingclose {
+	position: absolute;
+	top: -12px;
+	right: -12px;
+}
+#loadingclose img{
+	height: 25px;
+	width: 25px;
+}
+/*Autocomplete*/
+.guidePopupTitleArea	{
+	margin: 20px auto 4px;
+	width: 350px;
+}
+.guidePopupTitle{
+	width: 300px;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+	border: 0px;
+	background-color: #FAF6EC;
+}
+.guidePopupTitle::-webkit-input-placeholder {
+	color: black;
+}
+.guidePopupTitleSave{
+	display:none;
+	vertical-align: middle;
+}
+.guideTitleAssigned{
+	display: none;
+}
+#guidePopup{
+	width: 800px;
+	overflow: visible;
+}
+#guideMaterial{
+	overflow: auto;
+}
+#multiSearchButtonArea{
+	width: 200px;
+	text-align: center;
+	margin: 0px auto;
+}
+#multiSearchButton{
+	margin-top: 20px;
+	font-size: 140%;
+}
+#dropdownMenu{
+	display:none;
+	float:right;
+	width:100px;
+	background-color:orange;
+	position:relative;
+	text-align: center;
+}
+#multiSearchSelector{
+	cursor: pointer;
+}
+#instaSearchSelector{
+	cursor: pointer;
+}
+#toggleInstaMultiButton{
+	background-color: #F08C60;
+	font-size: 20px;
+	color: white;
+	border-radius: 0px 0px 5px 5px;
+	cursor: pointer;
+	border-top-style: solid;
+	border-top-color: black;
+	border-top-width: 1px;
+	position: relative;
+	top: -1px;
+	width: 120px;
+	margin: 0px auto;
+	text-align: center;
+}
+#toggleInstaMultiButton:hover{
+	background-color: orange;
+}
+#questionMark{
+	font-size: 25px;
+	cursor: help;
+	display:none;
+	margin-left: 20px;
+	position: absolute;
+	top: 60px;
+	left: 500px;
+	width: 180px;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+#arrow{
+	font-size: 30px;
+	position: absolute;
+	top: 10px;
+	left: 500px;
+	margin-left: 30px;
+	display:none;
+	width: 150px;
+	
+}
+#guideInstructions{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: white;
+	z-index: 3;
+	width: 478px;
+	height: 240px;
+	border-radius: 6px 6px 0px 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-bottom-width: 0px;
+	padding: 10px;
+	font-size: 120%;
+}
+#guideInstructions h1{
+	text-align: center;
+}
+#multiSearchGuideButton{
+	border-radius: 5px;
+	margin: 20px auto 0px;
+	font-size: 20px;
+	width: 150px;
+}
+#multiSearchCardsButton{
+	border-radius: 5px;
+	margin: 20px auto 0px;
+	font-size: 20px;
+	width: 150px;
+}
+#multiSearchButtons{
+	width:400px;
+	height: 35px;
+	margin: 15px auto;
+	display: none;
+}
+#logo{
+	display: inline;
+	float: left;
+	height: 80px; 
+	width: 240px;
+}
+.guideBox{
+	border-style: solid;
+	border-color: #4C4C4C;
+	margin: 8px;
+	padding: 5px;
+	background-color: white;
+	position:relative;
+	padding: 10px;
+	width: 300px;
+	float: left;
+	line-height: 30px;
+}
+.guideBox div{
+	text-align: left;
+	line-height: 30px;
+}
+.guideBox button{
+	float:right;
+}

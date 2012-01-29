@@ -5,12 +5,12 @@
 		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
-		<script type="text/javascript" src="tabswitch.js"></script>
-		<script type="text/javascript" src="badrank.js"></script>
-		<script type="text/javascript" src="boxes.js"></script>
-		<script type="text/javascript" src="guidemaker.js"></script>
-		<script type="text/javascript" src="usermanagement.js"></script>
-		<link rel="icon" type="image/png" href="../media/favicon.ico" />
+		<script type="text/javascript" src="scripts/tabswitch.js"></script>
+		<script type="text/javascript" src="scripts/badrank.js"></script>
+		<script type="text/javascript" src="scripts/boxes.js"></script>
+		<script type="text/javascript" src="scripts/guidemaker.js"></script>
+		<script type="text/javascript" src="scripts/usermanagement.js"></script>
+		<link rel="icon" type="image/png" href="media/favicon.ico" />
 		<?php
 		if (isset($_COOKIE['email'])) {
 			include 'dbconnect.php';
@@ -44,7 +44,7 @@
 		<div class="header" id="headerContainer">
 			<div class="container">
 				<div id="title">
-					<a href="index.php"><img src="../media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
+					<a href="index.php"><img src="media/termstile.png" id="logo"/></a><!--<h1 style="color: white; display: inline; float: left; padding: 20px 0px 0px;">Termstile</h1>-->
 				</div>
 				<!-- Login Start-->
 				<div id="container1" style="float: right;" >
@@ -95,17 +95,17 @@
 								</ol>
 							</div>
 							<input type="textarea" name="oneTerm" id="oneTerm" alt="Input a single term" placeholder="Input a term!" onKeyPress="enterPressed(event)"/>	
-							<div id="questionMark" ><img src="../media/info.png" width="30px" height="30px" onMouseOver="showInstructions()" onMouseOut="hideInstructions()"/></div>
-							<div id="dropDownBar" onClick="toggleShowMultiSearch()"><img src="../media/down.png"/ width="20px" height="20px"></div>
+							<div id="questionMark" ><img src="media/info.png" width="30px" height="30px" onMouseOver="showInstructions()" onMouseOut="hideInstructions()"/></div>
+							<div id="dropDownBar" onClick="toggleShowMultiSearch()"><img src="media/down.png"/ width="20px" height="20px"></div>
 							<div id = "multiSearchButtons" >
-								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="../media/guide.png"/ width="20px" height="20px"> Study Guide!</div>
-								<div class="button createCardsButton" onClick="createCards()"><img src="../media/card.png"/ width="25px" height="25px"> Note Cards!</div>
+								<div class="button createGuideButton" style="float:left;" onClick="createGuide()"><img src="media/guide.png"/ width="20px" height="20px"> Study Guide!</div>
+								<div class="button createCardsButton" onClick="createCards()"><img src="media/card.png"/ width="25px" height="25px"> Note Cards!</div>
 							</div>
 						</div>
 					</div>
 					<div style="display: inline; float: right;">
 						<div class="button hideForMulti" onClick="createBox()" id="summarize">
-						<img src="../media/search.png">
+						<img src="media/search.png">
 						</div>
 					</div>
 				</div>
@@ -123,12 +123,12 @@
 				<div class="hideForMulti" id="createButtons">
 					<div id="createGuide">
 						<div class="button createGuideButton" id="createGuideButton" style="float:left;" onClick="saveAsGuide()">
-							<img src="../media/guide.png"/ width="30px" height="30px"> Study Guide
+							<img src="media/guide.png"/ width="30px" height="30px"> Study Guide
 						</div>
 					</div>
 					<div id="createCards">
 						<div class="button createCardsButton" id="createCardsButton" onClick="saveAsCards()">
-							<img src="../media/card.png"/ width="30px" height="30px"> Flash Cards
+							<img src="media/card.png"/ width="30px" height="30px"> Flash Cards
 						</div>
 					</div>
 				</div>
@@ -197,24 +197,24 @@
 		<div id="guidePopup" class="popup">
 			<div id="guidePopupTitleArea" class="guidePopupTitleArea">
 				<input id="guidePopupTitle" class="guidePopupTitle" onKeyPress="enterSaveGuideTitle(event)" onFocus="addSaveButton()" onFocusOut="removeSaveButton()" type="text" placeholder="Enter Title Here To Save"/>
-				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
+				<img width="30px" height="30px" src="media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
 			</div>
 			<div id="guideMaterial">
 				Guide Information
 			</div>
-			<a class="popupClose"><img src="closebutton.png" /></a>
+			<a class="popupClose"><img src="media/closebutton.png" /></a>
 		</div>
 		<div id="noteCardPopup" class="popup" style="background-color: #FAF6EC">
 			<div id="cardsPopupTitleArea" class="guidePopupTitleArea">
 				<input id="cardsPopupTitle" class="guidePopupTitle" onKeyPress="enterSaveGuideTitle(event	)" onFocus="addSaveButton()" type="text" placeholder="Enter Title Here To Save"/>
-				<img width="30px" height="30px" src="../media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
+				<img width="30px" height="30px" src="media/save.png" class="guidePopupTitleSave" onClick="saveGuideTitle()"/>
 
 			</div>
 			<div id="noteCardMaterial">
 				<div id="cardsLeft" class="cardsSection"></div>
 				<div id="cardsRight" class="cardsSection"></div>
 			</div>
-			<a class="popupClose"><img src="closebutton.png" /></a>
+			<a class="popupClose"><img src="media/closebutton.png" /></a>
 		</div>
 		<div id="signupPopup" class="popup">
 			<h1>Sign Up!</h1>
