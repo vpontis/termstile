@@ -44,3 +44,8 @@ function logOut(){
 		});	
 		
 }
+
+function reportIssue(){
+	
+	$.post("scripts/report.php",{message: issue}, function(data){});
+}

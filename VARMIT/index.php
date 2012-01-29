@@ -144,9 +144,9 @@
 				<p>
 					Do you have a problem? Please tell us about it and we will work on fixing it!
 				</p>
-				<textarea rows="15" cols="30" placeholder="Enter problem here."/></textarea>
+				<textarea id="reportTextArea" rows="15" cols="30" placeholder="Enter problem here."/></textarea>
 				<br />
-				<button>
+				<button onclick="reportIssue()">
 					Submit
 				</button>
 				<h2>Thanks!</h2>
