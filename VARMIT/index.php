@@ -123,12 +123,12 @@
 				<div class="hideForMulti" id="createButtons">
 					<div id="createGuide">
 						<div class="button createGuideButton" id="createGuideButton" style="float:left;" onClick="saveAsGuide()">
-							<img src="media/guide.png"/ width="30px" height="30px"> Study Guide
+							<img src="media/guide.png"/ width="25px" height="25px"> Study Guide
 						</div>
 					</div>
 					<div id="createCards">
 						<div class="button createCardsButton" id="createCardsButton" onClick="saveAsCards()">
-							<img src="media/card.png"/ width="30px" height="30px"> Flash Cards
+							<img src="media/card.png"/ width="25px" height="25px"> Flash Cards
 						</div>
 					</div>
 				</div>
