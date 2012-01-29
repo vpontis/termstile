@@ -674,6 +674,10 @@ border:0;
 }
 #guidePopup{
 	width: 800px;
+	overflow: visible;
+}
+#guideMaterial{
+	overflow: auto;
 }
 #multiSearchButtonArea{
 	width: 200px;

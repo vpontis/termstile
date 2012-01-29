@@ -72,6 +72,7 @@ function initializePage()	{
 	$('#boxArea').css('max-height',boxAreaHeight);
 	$('.popup').css('max-height',mainHeight - 20);
 	$('#noteCardMaterial').css('height', noteCardMaterialHeight);
+	$('#guideMaterial').css('max-height',noteCardMaterialHeight);
 }
 
 var popupOpen = "";

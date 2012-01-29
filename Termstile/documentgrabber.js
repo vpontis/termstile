@@ -98,6 +98,7 @@ function initializePage(email)	{
 	$("#mainContainer").height(mainHeight);
 	$('.popup').css('max-height',mainHeight - 20);
 	$('#noteCardMaterial').css('height', noteCardMaterialHeight);
+	$('#guideMaterial').css('max-height',noteCardMaterialHeight);
 	$.post("getguideids.php",function(data){
 		var guideIds = data.split("|");
 		guideIds.pop();
