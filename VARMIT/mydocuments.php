@@ -66,7 +66,7 @@
 	    	<p>Do you have a problem? Please tell us about it and we will work on fixing it!</p>
 	    	<textarea  id="reportTextArea" rows="15" cols="30" placeholder="Enter problem here."/></textarea><br />
 	    	<button onclick="reportIssue()">Submit</button>
-	    	<h2>Thanks!</h2>
+	    	<h2 id="thanks">Thanks!</h2>
 	    </center>
 	    <a class="popupClose">X</a> 
     </div>

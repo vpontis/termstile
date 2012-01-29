@@ -2,6 +2,7 @@ body {
 	background-color: #4C4C4C;
 	padding: 0px;
 	margin: 0px;
+	font-family: HelveticaLight;
 }
 @font-face {
 	font-family: HelveticaLight;
@@ -24,6 +25,7 @@ body {
 	src: url('http://web.mit.edu/rlau/www/Fonts/Roboto-Medium.ttf')
 }
 strong {
+	font-family: HelveticaBold;
 }
 li {
 	font-size: 14px; /*Changes Height of Autocomplete sugggestions */
@@ -186,11 +188,13 @@ li {
 	text-align: justify;
 	padding: 10px 15px;
 	font-size: 15px;
+	font-family: serif;
 }
 .card h2{
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font-family: HelveticaLight;
 }
 #cardsLeft{
 	float: left;
@@ -216,6 +220,10 @@ li {
 	margin: 15px auto 0px;
 	/*max-height: 400px;*/
 	overflow: auto;
+	font-family: serif;
+}
+#boxarea strong{
+	font-family: serif;
 }
 
 a{
@@ -681,6 +689,10 @@ border:0;
 }
 #guideMaterial{
 	overflow: auto;
+	font-family: serif;
+}
+#guideMaterial strong{
+	font-family: serif;
 }
 #multiSearchButtonArea{
 	width: 200px;
