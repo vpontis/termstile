@@ -28,6 +28,9 @@ body {
 strong {
 	font-family: HelveticaBold;
 }
+li {
+	font-size: 14px; /*Changes Height of Autocomplete sugggestions */
+}
 .header {
 	background-color: #F08C60;
 	height: 80px;
@@ -261,6 +264,7 @@ a img {
     text-decoration:none;
     font-weight:bold;
     color:#fff;
+    cursor: pointer;
 }
 #login{
 	-webkit-border-radius:4px 0px 0px 4px;
@@ -597,6 +601,9 @@ border:0;
 	height: 26px;
 
 	margin-top: 3px;
+}
+.createCardsButton img {
+	margin: -5px 0px 0px;
 }
 .createGuideButton{
 	padding: 7px 12px 7px 12px;
