@@ -17,11 +17,11 @@ body {
 	src: url('fonts/HelveticaNeueLTCom-MdCn.ttf')
 }
 @font-face{
-	font-family: customSerif;
+	font-family: Cardif;
 	src: url('fonts/Cardif.TTF')
 }
 @font-face{
-	font-family: customSerifBold;
+	font-family: CardifBold;
 	src: url('fonts/CardifB.TTF')
 }
 @font-face{
@@ -182,7 +182,6 @@ li {
 	position:relative;
 	padding: 10px;
 	width: 600px;
-	line-height: 140%;
 }
 
 .card {
@@ -197,10 +196,10 @@ li {
 	text-align: justify;
 	padding: 10px 15px;
 	font-size: 15px;
-	font-family: 'Droid Serif', serif;
+	font-family: Cardif;
 }
 .card strong {
-	font-family: 'Droid Serif', serif;
+	font-family: CardifB;
 }
 .card h2{
 	text-align: center;
@@ -226,30 +225,18 @@ li {
 	overflow: auto;
 	margin: 0px auto;
 }
+
 #boxarea{
 	width: 700px;
 	margin: 15px auto 0px;
 	/*max-height: 400px;*/
 	overflow: auto;
-	font-family: 'Droid Serif', serif;
+	font-family: Cardif;
 }
 #boxarea strong{
-	font-family: 'Droid Serif', serif;
+	font-family: CardifB;
 }
-#box0{
-	font-size: 100%;
-}
-#headline{
-	font-size: 110%;	
-}
-#box0 p{
-	margin-left: 30px;
-	margin-bottom: 5px;
-	margin-top: 5px;
-}
-#alpha{
 
-}
 a{
 	text-decoration	:none;
 }
@@ -535,17 +522,11 @@ border:0;
 	opacity: .7;
 }  
 #signupPopup{
-	width: 550px;
-}
-#signupPopup h1{
-	margin-top: 0px;
-	margin-bottom: 5px;
-	text-align: center;
+	width: 750px;
 }
 #signupPopup h2{
-	margin-top: 5px;
-	margin-bottom: 10px;
-	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 5px;
 }
 #signupPopup li{
 	margin-bottom: 4px;
@@ -719,10 +700,10 @@ border:0;
 }
 #guideMaterial{
 	overflow: auto;
-	font-family: 'Droid Serif', serif;
+	font-family: Cardif;
 }
 #guideMaterial strong{
-	font-family: 'Droid Serif', serif;
+	font-family: CardifB;
 }
 #multiSearchButtonArea{
 	width: 200px;
