@@ -27,7 +27,7 @@ function getText(title, callback){
 				text = text.replace(patt4,"");
 				text = text.replace(patt5,"");
 				text = text.replace(patt6,"");
-				var patt7 = /may refer to:[\s\S]*?\*|can refer to:[\s\S]*?\*|also refers to:[\s\S]*?\*|commonly refers to:[\s\S]*?\*/gim;
+				var patt7 = /may refer to:[\s\S]*?\*|can refer to:[\s\S]*?\*|also refers to:[\s\S]*?\*|commonly refers to:[\s\S]*?\*|may stand for:[\s\S]*?\*/gim;
 				if(!patt7.test(text)){
 					if(text.indexOf("==")!=-1){
 						var beginning = text.substring(0,text.indexOf("=="));
