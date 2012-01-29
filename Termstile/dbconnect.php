@@ -1,7 +1,7 @@
 <?php
-		$url = "localhost";
+		$url = "127.0.0.1";
 		$username = "root";
-		$password = "root";
+		$password = "";
 		$con = mysql_connect($url,$username,$password);
 			if(!$con)
 			{

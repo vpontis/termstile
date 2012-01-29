@@ -63,9 +63,9 @@
 							<label class="loginmenu" for="liPassword">Password</label>
 							<input class="loginmenu" id="liPassword" name="password" placeholder="Password" title="password" tabindex="5" type="password" onKeyPress="enterLogIn(event)">
 						</p>
-						<div class="loginmenu" id="loginButton" onClick="logIn()">
+						<button class="loginmenu" id="loginButton" onClick="logIn()">
 							Log in!
-						</div>
+						</button>
 					</div>
 					<!-- Login form end-->
 					<!-- Sign Up form -->
