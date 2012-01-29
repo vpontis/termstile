@@ -149,7 +149,7 @@
 				<button onclick="reportIssue()">
 					Submit
 				</button>
-				<h2>Thanks!</h2>
+				<h2 id="thanks">Thanks!</h2>
 			</center>
 			<a class="popupClose">X</a>
 		</div>
@@ -176,7 +176,7 @@
 					The best way to contact us would be by email.
 				</p>
 				<p>
-					<strong>Victor Pontis</strong> <a href="mailto:victor@termstile.com">victor@termstile.com/a>
+					<strong>Victor Pontis</strong> <a href="mailto:victor@termstile.com">victor@termstile.com</a>
 				</p>
 				<p>
 					<strong>Akash Badshah</strong> <a href="mailto:akash@termstile.com">akash@termstile.com</a>

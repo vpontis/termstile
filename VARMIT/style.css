@@ -33,6 +33,7 @@ li {
 .header {
 	background-color: #F08C60;
 	height: 80px;
+	font-family: HelveticaLight;
 }
 .title{
 	display: inline;
@@ -144,7 +145,6 @@ li {
 #manyTerm {
 	width: 400px;
 	height: 350px;
-	/*padding: 0px;*/
 	float: left;
 	border-radius: 6px;
 	position: absolute;
@@ -160,6 +160,7 @@ li {
 	position: absolute;
 	bottom: 2px;
 	right: 8px;
+	font-family: HelveticaLight;
 }
 .bottom a{
 	cursor: pointer;
@@ -187,11 +188,13 @@ li {
 	text-align: justify;
 	padding: 10px 15px;
 	font-size: 15px;
+	font-family: serif;
 }
 .card h2{
 	text-align: center;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font-family: HelveticaLight;
 }
 #cardsLeft{
 	float: left;
@@ -217,6 +220,10 @@ li {
 	margin: 15px auto 0px;
 	/*max-height: 400px;*/
 	overflow: auto;
+	font-family: serif;
+}
+#boxarea strong{
+	font-family: serif;
 }
 
 a{
@@ -594,6 +601,7 @@ border:0;
 	font-size: 23px;
 	display: inline;
 	float:right;
+	font-family: HelveticaLight;
 }
 .button img {
 	vertical-align: text-top;
@@ -681,6 +689,10 @@ border:0;
 }
 #guideMaterial{
 	overflow: auto;
+	font-family: serif;
+}
+#guideMaterial strong{
+	font-family: serif;
 }
 #multiSearchButtonArea{
 	width: 200px;
