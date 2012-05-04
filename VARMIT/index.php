@@ -191,15 +191,21 @@
 				<p>
 					The best way to contact us would be by email.
 				</p>
-				<p>
-					<strong>Victor Pontis</strong> <a href="mailto:victor@termstile.com">victor@termstile.com</a>
-				</p>
-				<p>
-					<strong>Akash Badshah</strong> <a href="mailto:akash@termstile.com">akash@termstile.com</a>
-				</p>
-				<p>
-					<strong>Ryan Lau</strong> <a href="mailto:ryan@termstile.com">ryan@termstile.com</a>
-				</p>
+				<table border="0">
+					<tr>
+						<td align="right"><strong>Akash Badshah</strong></td>
+						<td><a href="mailto:akash@termstile.com">akash@termstile.com</a></td>
+					</tr>
+					<tr>
+						<td align="right"><strong>Victor Pontis</strong></td>
+						<td><a href="mailto:victor@termstile.com">victor@termstile.com</a></td>
+					</tr>
+					<tr>
+						<td align="right"><strong>Ryan Lau</strong></td>
+						<td><a href="mailto:ryan@termstile.com">ryan@termstile.com</a></td>
+					</tr>
+				</table>
+				
 				<a class="popupClose">X</a>
 			</center>
 		</div>
